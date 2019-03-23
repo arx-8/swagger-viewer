@@ -59,5 +59,8 @@
 
     /* Other */
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+      "dist"
+  ]
 }
