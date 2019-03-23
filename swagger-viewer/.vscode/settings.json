@@ -1,0 +1,33 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  // フォーマットはeslint.autoFixOnSave(Prettier)に任せるため、エディタ標準のフォーマットは不要
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  },
+  "[typescript]": {
+    // 今はまだTS + 拡張機能ESLintが正しく動作しないため、拡張機能Prettierに任せる
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2
+  },
+  /**
+   * UI/DX関係
+   */
+  "search.exclude": {
+    "**/dist": true
+  },
+  "files.watcherExclude": {
+    "**/dist/*": true
+  },
+  "workbench.colorTheme": "Default Dark+",
+  /**
+   * Extensions
+   */
+  "prettier.eslintIntegration": true
+}

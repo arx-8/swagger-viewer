@@ -7,6 +7,8 @@
     "build": "webextension-toolbox build"
   },
   "devDependencies": {
+    "ts-loader": "5.3.3",
+    "typescript": "3.3.4000",
     "webextension-toolbox": "3.0.0"
   }
 }
