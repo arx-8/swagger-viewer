@@ -2,5 +2,9 @@
   "name": "swagger-viewer-installer",
   "version": "1.0.0",
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "generator-web-extension": "0.0.5",
+    "yo": "^2.0.5"
+  }
 }
