@@ -29,5 +29,10 @@
   /**
    * Extensions
    */
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+
+  // ちゃんとprettier導入するまでの一時対応
+  "prettier.arrowParens": "always",
+  "prettier.semi": false,
+  "prettier.trailingComma": "all"
 }

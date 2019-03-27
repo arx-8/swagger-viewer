@@ -1,24 +1,23 @@
-import { extractYamlText, isAcceptableLocation } from "./util/utils";
+import { render } from "./app"
+import { extractYamlText, isAcceptableLocation } from "./util/utils"
 
 const main = (): void => {
+  console.log("contentscript.ts")
+
   if (!isAcceptableLocation(document.location.href)) {
-    return;
+    console.log("Not isAcceptableLocation")
+    return
   }
 
-  const yaml = extractYamlText();
+  const yaml = extractYamlText()
 
-  const html = `
-<div style="
-  color: red;
-  font-size: xx-large;
-">
-  Hello Chrome Extension
-</div>
-  `;
+  const injWrapper = document.createElement("div")
+  injWrapper.id = "swagger-viewer_root"
+  document.body.appendChild(injWrapper)
+  console.log("injected")
 
-  const injWrapper = document.createElement("div");
-  injWrapper.innerHTML = html;
-  document.body.appendChild(injWrapper);
-};
+  render()
+  console.log("rendered")
+}
 
-main();
+main()
