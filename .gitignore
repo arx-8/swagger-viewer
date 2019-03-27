@@ -82,3 +82,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Rubbish
+.DS_Store
+Thumbs.db

@@ -9,12 +9,19 @@
   "devDependencies": {
     "@types/react": "^16.8.9",
     "@types/react-dom": "^16.8.3",
+    "mobx": "^4.9.3",
     "ts-loader": "5.3.3",
     "typescript": "3.3.4000",
     "webextension-toolbox": "3.0.0"
   },
   "dependencies": {
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "redoc": "^2.0.0-rc.4",
+    "styled-components": "^4.2.0"
+  },
+  "browser": {
+    "http": true,
+    "https": true
   }
 }
