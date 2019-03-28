@@ -12,9 +12,16 @@ const main = (): void => {
   const yaml = extractYamlText()
 
   const injWrapper = document.createElement("div")
-  injWrapper.id = "swagger-viewer_root"
+  injWrapper.innerHTML = `
+  <script>
+    var global = global || window;
+  </script>
+  <div id="swagger-viewer_root"><div>
+  `
   document.body.appendChild(injWrapper)
   console.log("injected")
+
+  global.Buffer = global.Buffer || require("buffer").Buffer
 
   render()
   console.log("rendered")

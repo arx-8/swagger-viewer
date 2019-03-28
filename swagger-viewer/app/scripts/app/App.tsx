@@ -1,11 +1,12 @@
 import * as React from "react"
-import { RedocStandalone } from "redoc"
+import SwaggerUI from "swagger-ui-react"
+// import "swagger-ui-react/swagger-ui.css"
 
 export interface AppProps {}
 
 const App: React.SFC<AppProps> = () => (
   <>
-    <RedocStandalone specUrl="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v2.0/yaml/api-with-examples.yaml" />
+    <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json" />
   </>
 )
 

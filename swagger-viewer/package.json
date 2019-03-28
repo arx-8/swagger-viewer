@@ -15,10 +15,11 @@
     "webextension-toolbox": "3.0.0"
   },
   "dependencies": {
+    "buffer": "^5.2.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "redoc": "^2.0.0-rc.4",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "swagger-ui-react": "^3.22.0"
   },
   "browser": {
     "http": true,
