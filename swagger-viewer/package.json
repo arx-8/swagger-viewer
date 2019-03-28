@@ -9,7 +9,9 @@
   "devDependencies": {
     "@types/react": "^16.8.9",
     "@types/react-dom": "^16.8.3",
+    "css-loader": "^2.1.1",
     "mobx": "^4.9.3",
+    "style-loader": "^0.23.1",
     "ts-loader": "5.3.3",
     "typescript": "3.3.4000",
     "webextension-toolbox": "3.0.0"
