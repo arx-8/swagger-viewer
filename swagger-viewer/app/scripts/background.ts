@@ -1,6 +1,5 @@
-browser.runtime.onInstalled.addListener(details => {
-  console.log("previousVersion", details.previousVersion);
-});
-
-console.log(`'Allo 'Allo! Event Page`);
-console.log(document.title);
+chrome.tabs.onUpdated.addListener((tabId) => {
+  chrome.tabs.sendMessage(tabId, {
+    method: "chrome.tabs.onUpdated",
+  })
+})

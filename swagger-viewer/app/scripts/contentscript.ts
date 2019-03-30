@@ -46,3 +46,10 @@ const inject = (): void => {
 }
 
 main()
+
+chrome.runtime.onMessage.addListener((request) => {
+  console.log(request)
+  if (request.method == "chrome.tabs.onUpdated") {
+    console.log("onMessage contentscript")
+  }
+})
