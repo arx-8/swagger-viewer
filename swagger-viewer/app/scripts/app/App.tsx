@@ -2,17 +2,19 @@ import jsYaml from "js-yaml"
 import * as React from "react"
 import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
-import { swaggerStr } from "./swaggerYaml"
+import { extractSrc } from "../util/utils"
 
 export interface AppProps {}
 
-const ymlJson = jsYaml.safeLoad(swaggerStr)
-console.log(ymlJson)
+const srcCode = extractSrc()
+const swaggerJson = jsYaml.safeLoad(srcCode)
 
-const App: React.FC<AppProps> = () => (
-  <>
-    <SwaggerUI spec={ymlJson} />
-  </>
-)
+const App: React.FC<AppProps> = () => {
+  return (
+    <>
+      <SwaggerUI spec={swaggerJson} />
+    </>
+  )
+}
 
 export default App

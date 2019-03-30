@@ -1,19 +1,19 @@
-const RX_YML_PAGE = /^https:\/\/github\.com\/.*\.ya?ml$/
+const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)$/
 
 export const isAcceptableLocation = (locationHref: string): boolean => {
-  return RX_YML_PAGE.test(locationHref)
+  return RX_SWAGGER_PAGE.test(locationHref)
 }
 
-export const extractYamlText = (): string => {
-  const element = document.querySelector(
-    "#js-repo-pjax-container > div.container.new-discussion-timeline.experiment-repo-nav > div.repository-content > div.Box.mt-3.position-relative > div.Box-body.px-0.blob-wrapper.data.type-yaml > table > tbody",
-  )
+export const extractSrc = (): string => {
+  const selector = "div.container div.Box > div.Box-body > table > tbody"
+  const element = document.querySelector(selector)
 
   if (
     element == null ||
     element.textContent == null ||
     element.textContent.length === 0
   ) {
+    console.error("Unexpected DOM. selector:" + selector)
     return ""
   }
 

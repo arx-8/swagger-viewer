@@ -1,5 +1,5 @@
 import { render } from "./app"
-import { extractYamlText, isAcceptableLocation } from "./util/utils"
+import { isAcceptableLocation } from "./util/utils"
 
 const main = (): void => {
   console.log("contentscript.ts")
@@ -8,8 +8,6 @@ const main = (): void => {
     console.log("Not isAcceptableLocation")
     return
   }
-
-  const yaml = extractYamlText()
 
   const injWrapper = document.createElement("div")
   injWrapper.innerHTML = `
