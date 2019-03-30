@@ -30,7 +30,7 @@ export const removeSrcCodeDom = (): void => {
   elm.children[0].remove()
 }
 
-export const getElmOfSrcCode = (): Element => {
+export const getElmOfSrcCode = (): HTMLElement => {
   const selector = "div.container div.Box > div.Box-body > table"
   const element = document.querySelector(selector)
 
@@ -42,5 +42,5 @@ export const getElmOfSrcCode = (): Element => {
     throw new Error("Unexpected DOM. selector:" + selector)
   }
 
-  return element
+  return element as HTMLElement
 }

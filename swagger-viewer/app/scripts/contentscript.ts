@@ -38,6 +38,7 @@ const inject = (): void => {
 
   const elm = getElmOfSrcCode()
   elm.appendChild(injWrapper)
+  elm.style.width = "-webkit-fill-available"
 
   console.log("injected")
 
