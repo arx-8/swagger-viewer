@@ -1,18 +1,24 @@
 import jsYaml from "js-yaml"
 import { render } from "./app"
-import { EXEC_CONVERT_SWAGGER } from "./SendMessageKey"
+import { APP_RENDER_ID } from "./constants/App"
+import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageKey"
 import {
   extractSrc,
   getElmOfSrcCode,
   isAcceptableLocation,
+  isConverted,
   removeSrcCodeDom,
 } from "./util/utils"
 
-const main = (): void => {
-  console.log("contentscript.ts")
+const execConvertSwagger = (): void => {
+  console.log("Start convert")
 
   if (!isAcceptableLocation(document.location.href)) {
     console.log("Not isAcceptableLocation")
+    return
+  }
+  if (isConverted()) {
+    console.log("Already converted")
     return
   }
 
@@ -21,20 +27,20 @@ const main = (): void => {
 
   inject()
   render(swaggerJson)
-  console.log("rendered")
+  console.log("Convert completed")
 }
 
 const inject = (): void => {
   // 元srcを削除
   removeSrcCodeDom()
 
-  // 元srcのところにrenderするため
+  // 元srcのところにrenderする
   const injWrapper = document.createElement("div")
   injWrapper.innerHTML = `
   <script>
     var global = global || window;
   </script>
-  <div id="swagger-viewer_root"><div>
+  <div id="${APP_RENDER_ID}"><div>
   `
 
   const elm = getElmOfSrcCode()
@@ -46,10 +52,8 @@ const inject = (): void => {
   global.Buffer = global.Buffer || require("buffer").Buffer
 }
 
-main()
-
 chrome.runtime.onMessage.addListener((message) => {
   if (message.method == EXEC_CONVERT_SWAGGER) {
-    console.log("onMessage contentscript")
+    execConvertSwagger()
   }
 })

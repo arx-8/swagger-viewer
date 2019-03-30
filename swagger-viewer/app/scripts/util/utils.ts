@@ -1,7 +1,13 @@
+import { APP_RENDER_ID } from "../constants/App"
+
 const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)$/
 
 export const isAcceptableLocation = (locationHref: string): boolean => {
   return RX_SWAGGER_PAGE.test(locationHref)
+}
+
+export const isConverted = (): boolean => {
+  return document.querySelector(`#${APP_RENDER_ID}`) != null
 }
 
 export const extractSrc = (): string => {

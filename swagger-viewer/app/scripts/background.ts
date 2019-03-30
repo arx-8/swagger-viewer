@@ -1,4 +1,4 @@
-import { EXEC_CONVERT_SWAGGER } from "./SendMessageKey"
+import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageKey"
 
 // TIPS: background script の console.log の出力先は、「バックグラウンドページ」
 chrome.browserAction.onClicked.addListener((tab) => {
