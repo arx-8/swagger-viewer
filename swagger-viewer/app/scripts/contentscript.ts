@@ -1,5 +1,6 @@
 import jsYaml from "js-yaml"
 import { render } from "./app"
+import { EXEC_CONVERT_SWAGGER } from "./SendMessageKey"
 import {
   extractSrc,
   getElmOfSrcCode,
@@ -18,7 +19,6 @@ const main = (): void => {
   const srcCode = extractSrc()
   const swaggerJson = jsYaml.safeLoad(srcCode)
 
-  removeSrcCodeDom()
   inject()
   render(swaggerJson)
   console.log("rendered")
@@ -26,6 +26,7 @@ const main = (): void => {
 
 const inject = (): void => {
   // 元srcを削除
+  removeSrcCodeDom()
 
   // 元srcのところにrenderするため
   const injWrapper = document.createElement("div")
@@ -47,9 +48,8 @@ const inject = (): void => {
 
 main()
 
-chrome.runtime.onMessage.addListener((request) => {
-  console.log(request)
-  if (request.method == "chrome.tabs.onUpdated") {
+chrome.runtime.onMessage.addListener((message) => {
+  if (message.method == EXEC_CONVERT_SWAGGER) {
     console.log("onMessage contentscript")
   }
 })
