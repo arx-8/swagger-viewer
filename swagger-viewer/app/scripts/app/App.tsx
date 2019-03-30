@@ -9,9 +9,8 @@ export interface AppProps {}
 const ymlJson = jsYaml.safeLoad(swaggerStr)
 console.log(ymlJson)
 
-const App: React.SFC<AppProps> = () => (
+const App: React.FC<AppProps> = () => (
   <>
-    {/* <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json" /> */}
     <SwaggerUI spec={ymlJson} />
   </>
 )
