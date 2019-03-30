@@ -7,6 +7,7 @@
     "build": "webextension-toolbox build"
   },
   "devDependencies": {
+    "@types/js-yaml": "^3.12.0",
     "@types/react": "^16.8.9",
     "@types/react-dom": "^16.8.3",
     "css-loader": "^2.1.1",
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "buffer": "^5.2.1",
+    "js-yaml": "^3.13.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "styled-components": "^4.2.0",
