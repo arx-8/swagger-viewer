@@ -5,20 +5,14 @@ export const isAcceptableLocation = (locationHref: string): boolean => {
 }
 
 export const extractSrc = (): string => {
-  const selector = "div.container div.Box > div.Box-body > table > tbody"
-  const element = document.querySelector(selector)
+  const elm = getElmOfSrcCode()
 
-  if (
-    element == null ||
-    element.textContent == null ||
-    element.textContent.length === 0
-  ) {
-    console.error("Unexpected DOM. selector:" + selector)
-    return ""
+  if (!elm.textContent) {
+    throw new Error("Unexpected null")
   }
 
   return (
-    element.textContent
+    elm.textContent
       .trim()
       .split("\n")
       // 半角スペースだけの空行が取得できてしまうため
@@ -27,4 +21,26 @@ export const extractSrc = (): string => {
       .map((line) => line.replace(/^        /, ""))
       .join("\n")
   )
+}
+
+export const removeSrcCodeDom = (): void => {
+  const elm = getElmOfSrcCode()
+
+  // 今は必ず1要素。自身ごと削除すると、後でDOM injectするのが大変なためchildをremove
+  elm.children[0].remove()
+}
+
+export const getElmOfSrcCode = (): Element => {
+  const selector = "div.container div.Box > div.Box-body > table"
+  const element = document.querySelector(selector)
+
+  if (
+    element == null ||
+    element.textContent == null ||
+    element.textContent.length === 0
+  ) {
+    throw new Error("Unexpected DOM. selector:" + selector)
+  }
+
+  return element
 }

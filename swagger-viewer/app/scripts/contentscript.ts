@@ -1,5 +1,11 @@
+import jsYaml from "js-yaml"
 import { render } from "./app"
-import { isAcceptableLocation } from "./util/utils"
+import {
+  extractSrc,
+  getElmOfSrcCode,
+  isAcceptableLocation,
+  removeSrcCodeDom,
+} from "./util/utils"
 
 const main = (): void => {
   console.log("contentscript.ts")
@@ -9,6 +15,19 @@ const main = (): void => {
     return
   }
 
+  const srcCode = extractSrc()
+  const swaggerJson = jsYaml.safeLoad(srcCode)
+
+  removeSrcCodeDom()
+  inject()
+  render(swaggerJson)
+  console.log("rendered")
+}
+
+const inject = (): void => {
+  // 元srcを削除
+
+  // 元srcのところにrenderするため
   const injWrapper = document.createElement("div")
   injWrapper.innerHTML = `
   <script>
@@ -16,13 +35,13 @@ const main = (): void => {
   </script>
   <div id="swagger-viewer_root"><div>
   `
-  document.body.appendChild(injWrapper)
+
+  const elm = getElmOfSrcCode()
+  elm.appendChild(injWrapper)
+
   console.log("injected")
 
   global.Buffer = global.Buffer || require("buffer").Buffer
-
-  render()
-  console.log("rendered")
 }
 
 main()
