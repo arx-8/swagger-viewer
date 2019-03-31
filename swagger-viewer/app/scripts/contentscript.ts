@@ -1,8 +1,9 @@
 import jsYaml from "js-yaml"
 import { render } from "./app"
 import { APP_RENDER_ID } from "./constants/App"
-import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageKey"
-import { MaybeSwaggerJson } from "./types/App"
+import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageTypes"
+import { ExecConvertSwaggerMessage } from "./types/SendMessage"
+import { MaybeSwaggerJson } from "./types/Swagger"
 import {
   extractSrc,
   getElmOfSrcCode,
@@ -53,8 +54,8 @@ const inject = (): void => {
   global.Buffer = global.Buffer || require("buffer").Buffer
 }
 
-chrome.runtime.onMessage.addListener((message) => {
-  if (message.method == EXEC_CONVERT_SWAGGER) {
+chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
+  if (message.type == EXEC_CONVERT_SWAGGER) {
     execConvertSwagger()
   }
 })

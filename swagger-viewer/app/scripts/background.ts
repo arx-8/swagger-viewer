@@ -1,4 +1,5 @@
-import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageKey"
+import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageTypes"
+import { ExecConvertSwaggerMessage } from "./types/SendMessage"
 
 // TIPS: background script の console.log の出力先は、「バックグラウンドページ」
 chrome.browserAction.onClicked.addListener((tab) => {
@@ -7,6 +8,6 @@ chrome.browserAction.onClicked.addListener((tab) => {
   }
 
   chrome.tabs.sendMessage(tab.id, {
-    method: EXEC_CONVERT_SWAGGER,
-  })
+    type: EXEC_CONVERT_SWAGGER,
+  } as ExecConvertSwaggerMessage)
 })
