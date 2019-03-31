@@ -8,7 +8,7 @@
   "icons": {
     "16": "images/icon-48.png",
     "48": "images/icon-48.png",
-    "128": "images/icon-144.png"
+    "128": "images/icon-128.png"
   },
   "background": {
     "scripts": [
