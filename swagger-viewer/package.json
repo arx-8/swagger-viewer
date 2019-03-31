@@ -15,7 +15,7 @@
     "mobx": "^4.9.3",
     "style-loader": "^0.23.1",
     "ts-loader": "5.3.3",
-    "typescript": "3.3.4000",
+    "typescript": "3.4.1",
     "webextension-toolbox": "3.0.0"
   },
   "dependencies": {

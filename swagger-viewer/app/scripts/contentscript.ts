@@ -2,6 +2,7 @@ import jsYaml from "js-yaml"
 import { render } from "./app"
 import { APP_RENDER_ID } from "./constants/App"
 import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageKey"
+import { MaybeSwaggerJson } from "./types/App"
 import {
   extractSrc,
   getElmOfSrcCode,
@@ -23,7 +24,7 @@ const execConvertSwagger = (): void => {
   }
 
   const srcCode = extractSrc()
-  const swaggerJson = jsYaml.safeLoad(srcCode)
+  const swaggerJson: MaybeSwaggerJson = jsYaml.safeLoad(srcCode)
 
   inject()
   render(swaggerJson)
