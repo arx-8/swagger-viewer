@@ -7,26 +7,21 @@
   },
   "devDependencies": {
     "@types/chrome": "0.0.81",
-    "@types/js-yaml": "^3.12.0",
-    "@types/react": "^16.8.9",
-    "@types/react-dom": "^16.8.3",
-    "css-loader": "^2.1.1",
-    "mobx": "^4.9.3",
-    "style-loader": "^0.23.1",
+    "@types/js-yaml": "3.12.0",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
+    "css-loader": "2.1.1",
+    "style-loader": "0.23.1",
     "ts-loader": "5.3.3",
     "typescript": "3.4.1",
     "webextension-toolbox": "3.0.0"
   },
   "dependencies": {
-    "buffer": "^5.2.1",
-    "js-yaml": "^3.13.0",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "styled-components": "^4.2.0",
-    "swagger-ui-react": "^3.22.0"
-  },
-  "browser": {
-    "http": true,
-    "https": true
+    "buffer": "5.2.1",
+    "js-yaml": "3.13.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "styled-components": "4.2.0",
+    "swagger-ui-react": "3.22.0"
   }
 }
