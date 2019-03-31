@@ -18,7 +18,6 @@
   "browser_action": {
     "default_title": "Convert!"
   },
-  "options_page": "pages/options.html",
   "options_ui": {
     "page": "pages/options.html",
     "chrome_style": true
@@ -27,9 +26,6 @@
     {
       "matches": [
         "https://github.com/*"
-      ],
-      "css": [
-        "styles/contentscript.css"
       ],
       "js": [
         "scripts/contentscript.js"
