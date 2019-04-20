@@ -1,10 +1,7 @@
 ```sh
 # init
-mkdir swagger-viewer-installer && cd $_
-npm init
-npm i
-
 curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore --output .gitignore
+npm init
 
 # install
 npm install yo generator-web-extension
