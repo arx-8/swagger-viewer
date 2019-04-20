@@ -1,5 +1,6 @@
 const { resolve } = require("path")
 const GlobEntriesPlugin = require("webpack-watched-glob-entries-plugin")
+const babelOptions = require("./babel.config")
 
 module.exports = {
   webpack: (config) => {
@@ -22,17 +23,7 @@ module.exports = {
       use: [
         {
           loader: "babel-loader",
-          options: {
-            presets: [
-              "@babel/env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
-            ],
-            plugins: [
-              "@babel/proposal-class-properties",
-              "@babel/proposal-object-rest-spread",
-            ],
-          },
+          options: babelOptions,
         },
       ],
     })
