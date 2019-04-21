@@ -1,6 +1,15 @@
 import { convertToObject } from "./YmlUtils"
 
 describe("convertToObject", () => {
+  test("null", () => {
+    // ## Arrange ##
+    const src = null
+    // ## Act ##
+    const result = convertToObject(src as any)
+    // ## Assert ##
+    expect(result).toMatchInlineSnapshot(`null`)
+  })
+
   test("empty string", () => {
     // ## Arrange ##
     const src = ``
