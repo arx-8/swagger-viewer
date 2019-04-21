@@ -36,8 +36,7 @@ describe("Render test", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_2_0)
     if (!swaggerJson) {
-      fail("Invalid fixture")
-      return
+      throw new Error("Invalid fixture")
     }
     // ## Act ##
     const result = create(<App swaggerJson={swaggerJson} />)
@@ -49,8 +48,7 @@ describe("Render test", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_3_0)
     if (!swaggerJson) {
-      fail("Invalid fixture")
-      return
+      throw new Error("Invalid fixture")
     }
     // ## Act ##
     const result = create(<App swaggerJson={swaggerJson} />)
@@ -62,8 +60,7 @@ describe("Render test", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerJson_2_0)
     if (!swaggerJson) {
-      fail("Invalid fixture")
-      return
+      throw new Error("Invalid fixture")
     }
     // ## Act ##
     const result = create(<App swaggerJson={swaggerJson} />)
