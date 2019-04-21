@@ -1,9 +1,7 @@
-import { convertToObject } from "../../../util/YmlUtils"
-
 /**
  * @see https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/callback-example.yaml
  */
-export const swaggerYaml_3_0 = convertToObject(`\
+export const swaggerYaml_3_0 = `\
 openapi: 3.0.0
 info:
   title: Callback Example
@@ -64,4 +62,4 @@ paths:
                   description: |
                     Your server should return this HTTP status code if no longer interested
                     in further updates
-`)
+`

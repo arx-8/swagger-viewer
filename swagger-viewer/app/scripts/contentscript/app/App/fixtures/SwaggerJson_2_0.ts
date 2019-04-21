@@ -1,9 +1,7 @@
-import { convertToObject } from "../../../util/YmlUtils"
-
 /**
  * @see https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/json/petstore-simple.json
  */
-export const swaggerJson_2_0 = convertToObject(`\
+export const swaggerJson_2_0 = `\
 {
   "swagger": "2.0",
   "info": {
@@ -226,4 +224,4 @@ export const swaggerJson_2_0 = convertToObject(`\
     }
   }
 }
-`)
+`

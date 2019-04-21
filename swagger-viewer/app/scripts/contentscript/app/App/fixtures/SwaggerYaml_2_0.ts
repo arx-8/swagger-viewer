@@ -1,9 +1,7 @@
-import { convertToObject } from "../../../util/YmlUtils"
-
 /**
  * @see https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/yaml/api-with-examples.yaml
  */
-export const swaggerYaml_2_0 = convertToObject(`\
+export const swaggerYaml_2_0 = `\
 swagger: "2.0"
 info:
   title: Simple API overview
@@ -168,4 +166,4 @@ paths:
               }
 consumes:
 - application/json
-`)
+`
