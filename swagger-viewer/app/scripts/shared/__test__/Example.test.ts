@@ -73,4 +73,21 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
     const classInstance = new Human("taro", 20)
     expect(classInstance).toEqual(classInstance)
   })
+
+  /**
+   * @see https://jestjs.io/docs/en/expect#tostrictequalvalue
+   */
+  describe("さらに toStrictEqual の方が厳格である", () => {
+    class LaCroix {
+      flavor: string
+      constructor(flavor: string) {
+        this.flavor = flavor
+      }
+    }
+
+    test("are not semantically the same", () => {
+      expect(new LaCroix("lemon")).toEqual({ flavor: "lemon" })
+      expect(new LaCroix("lemon")).not.toStrictEqual({ flavor: "lemon" })
+    })
+  })
 })
