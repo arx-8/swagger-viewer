@@ -1,4 +1,4 @@
-import { APP_RENDER_ID } from "../constants/App"
+import { APP_RENDER_ID } from "../../shared/constants/App"
 
 const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)$/
 

@@ -1,15 +1,15 @@
-import { render } from "./app"
-import { APP_RENDER_ID } from "./constants/App"
-import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageTypes"
-import { ExecConvertSwaggerMessage } from "./types/SendMessage"
+import { render } from "./contentscript/app"
 import {
   extractSrc,
   getElmOfSrcCode,
   isAcceptableLocation,
   isConverted,
   removeSrcCodeDom,
-} from "./util/utils"
-import { convertToObject } from "./util/YmlUtils"
+} from "./contentscript/util/utils"
+import { convertToObject } from "./contentscript/util/YmlUtils"
+import { APP_RENDER_ID } from "./shared/constants/App"
+import { EXEC_CONVERT_SWAGGER } from "./shared/constants/SendMessageTypes"
+import { ExecConvertSwaggerMessage } from "./shared/types/SendMessage"
 
 const execConvertSwagger = (): void => {
   console.log("Start convert")
