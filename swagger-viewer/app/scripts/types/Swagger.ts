@@ -1,16 +1,16 @@
 export type OpenApi2Json = Readonly<{
   swagger: "2.0"
   openapi: undefined
-  info: Object
-  paths: Object
+  info: Record<string, any>
+  paths: Record<string, any>
 }>
 
 export type OpenApi3Json = Readonly<{
   swagger: undefined
   openapi: "3.0" | "3.0.0" | string
-  info: Object
-  paths: Object
-  servers: ReadonlyArray<Object>
+  info: Record<string, any>
+  paths: Record<string, any>
+  servers: ReadonlyArray<Record<string, any>>
 }>
 
 export type NotOpenApiJson = Readonly<{
