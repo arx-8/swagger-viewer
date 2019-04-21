@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render test shallow render and snapshot 1`] = `
+exports[`Render test invalid swagger 1`] = `
+<div
+  className="swagger-ui"
+>
+  <div
+    className="loading-container"
+  >
+    <h4>
+      No API definition provided.
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Shallow render test shallow render and snapshot 1`] = `
 <SwaggerUI
   spec=""
 />

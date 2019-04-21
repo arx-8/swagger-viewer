@@ -27,7 +27,7 @@ const execConvertSwagger = (): void => {
   const swaggerJson = convertToObject(srcCode)
 
   inject()
-  render(swaggerJson)
+  render(swaggerJson || "")
   console.log("Convert completed")
 }
 
