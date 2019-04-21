@@ -1,6 +1,6 @@
 import * as React from "react"
 import ShallowRenderer from "react-test-renderer/shallow"
-import App from "./App"
+import { App } from "."
 
 describe("Render test", () => {
   test("shallow render and snapshot", () => {

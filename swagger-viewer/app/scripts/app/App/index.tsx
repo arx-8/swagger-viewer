@@ -1,7 +1,7 @@
 import * as React from "react"
 import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
-import { MaybeSwaggerJson } from "../types/Swagger"
+import { MaybeSwaggerJson } from "../../types/Swagger"
 
 export interface AppProps {
   /**
@@ -11,12 +11,6 @@ export interface AppProps {
   swaggerJson: MaybeSwaggerJson | null
 }
 
-const App: React.FC<AppProps> = ({ swaggerJson }) => {
-  return (
-    <>
-      <SwaggerUI spec={swaggerJson} />
-    </>
-  )
+export const App: React.FC<AppProps> = ({ swaggerJson }) => {
+  return <SwaggerUI spec={swaggerJson} />
 }
-
-export default App
