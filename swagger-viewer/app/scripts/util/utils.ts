@@ -24,7 +24,7 @@ export const extractSrc = (): string => {
       // 半角スペースだけの空行が取得できてしまうため
       .filter((line) => line.trim().length !== 0)
       // 余分なインデントの削除
-      .map((line) => line.replace(/^        /, ""))
+      .map((line) => line.replace(/^ {8}/, ""))
       .join("\n")
   )
 }
@@ -45,7 +45,7 @@ export const getElmOfSrcCode = (): HTMLElement => {
     element.textContent == null ||
     element.textContent.length === 0
   ) {
-    throw new Error("Unexpected DOM. selector:" + selector)
+    throw new Error(`Unexpected DOM. selector:${selector}`)
   }
 
   return element as HTMLElement

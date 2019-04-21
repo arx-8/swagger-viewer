@@ -51,11 +51,12 @@ const inject = (): void => {
 
   console.log("injected")
 
+  // eslint-disable-next-line global-require
   global.Buffer = global.Buffer || require("buffer").Buffer
 }
 
 chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
-  if (message.type == EXEC_CONVERT_SWAGGER) {
+  if (message.type === EXEC_CONVERT_SWAGGER) {
     execConvertSwagger()
   }
 })
