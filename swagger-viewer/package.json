@@ -39,8 +39,7 @@
     "react-test-renderer": "16.8.6",
     "style-loader": "0.23.1",
     "typescript": "3.4.1",
-    "webextension-toolbox": "3.0.0",
-    "yaml": "1.5.0"
+    "webextension-toolbox": "3.0.0"
   },
   "dependencies": {
     "buffer": "5.2.1",
@@ -48,6 +47,7 @@
     "react-dom": "16.8.6",
     "react": "16.8.6",
     "styled-components": "4.2.0",
-    "swagger-ui-react": "3.22.0"
+    "swagger-ui-react": "3.22.0",
+    "yaml": "1.5.0"
   }
 }
