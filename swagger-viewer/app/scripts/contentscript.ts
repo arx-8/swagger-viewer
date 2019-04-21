@@ -1,9 +1,7 @@
-import jsYaml from "js-yaml"
 import { render } from "./app"
 import { APP_RENDER_ID } from "./constants/App"
 import { EXEC_CONVERT_SWAGGER } from "./constants/SendMessageTypes"
 import { ExecConvertSwaggerMessage } from "./types/SendMessage"
-import { MaybeSwaggerJson } from "./types/Swagger"
 import {
   extractSrc,
   getElmOfSrcCode,
@@ -11,6 +9,7 @@ import {
   isConverted,
   removeSrcCodeDom,
 } from "./util/utils"
+import { convertToObject } from "./util/YmlUtils"
 
 const execConvertSwagger = (): void => {
   console.log("Start convert")
@@ -25,7 +24,7 @@ const execConvertSwagger = (): void => {
   }
 
   const srcCode = extractSrc()
-  const swaggerJson: MaybeSwaggerJson = jsYaml.safeLoad(srcCode)
+  const swaggerJson = convertToObject(srcCode)
 
   inject()
   render(swaggerJson)

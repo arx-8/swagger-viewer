@@ -8,7 +8,7 @@ export interface AppProps {
    * Swaggerではないjsonを読み込んだ場合、エラーメッセージを表示可能で有用。
    * そのため、無効なjsonでも読み込ませる
    */
-  swaggerJson: MaybeSwaggerJson
+  swaggerJson: MaybeSwaggerJson | null
 }
 
 const App: React.FC<AppProps> = ({ swaggerJson }) => {
