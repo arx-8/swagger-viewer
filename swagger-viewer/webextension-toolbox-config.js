@@ -1,8 +1,12 @@
 const { resolve } = require("path")
 const GlobEntriesPlugin = require("webpack-watched-glob-entries-plugin")
+const babelOptions = require("./babel.config")
 
 module.exports = {
   webpack: (config) => {
+    // for Debug (JSON.stringifyでは一部の型のtoStringがnullになってしまうため、console.log(confg)も併用した方がよい)
+    // console.log(JSON.stringify(config))
+
     // for TypeScript build
     config.resolve.extensions = [
       ...config.resolve.extensions,
@@ -18,10 +22,8 @@ module.exports = {
       test: /\.tsx?$/,
       use: [
         {
-          loader: "ts-loader",
-          options: {
-            transpileOnly: true,
-          },
+          loader: "babel-loader",
+          options: babelOptions,
         },
       ],
     })
