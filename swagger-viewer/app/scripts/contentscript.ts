@@ -1,4 +1,4 @@
-import { render } from "./contentscript/app"
+import { render } from "./contentscript/presentation"
 import {
   extractSrc,
   getElmOfSrcCode,
