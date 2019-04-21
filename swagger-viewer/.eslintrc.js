@@ -66,6 +66,7 @@ module.exports = {
         trailingComma: "all",
       },
     ],
+    "react/prop-types": "off",
 
     // constructor のショートハンド（メンバーの省略記法）を使いたいため
     "@typescript-eslint/no-parameter-properties": "off",

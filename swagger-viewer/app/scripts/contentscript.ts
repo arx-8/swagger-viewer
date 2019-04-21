@@ -4,13 +4,13 @@ import {
   isAcceptableLocation,
   isConverted,
   removeSrcCodeDom,
-} from "./contentscript/data/DomRepository"
-import { getDocument } from "./contentscript/data/QuerySelector/Document"
-import { render } from "./contentscript/presentation"
-import { convertToObject } from "./contentscript/util/YmlUtils"
-import { APP_RENDER_ID } from "./shared/constants/App"
-import { EXEC_CONVERT_SWAGGER } from "./shared/constants/SendMessageTypes"
-import { ExecConvertSwaggerMessage } from "./shared/types/SendMessage"
+} from "../../app-src/contentscript/data/DomRepository"
+import { getDocument } from "../../app-src/contentscript/data/QuerySelector/Document"
+import { render } from "../../app-src/contentscript/presentation"
+import { convertToObject } from "../../app-src/contentscript/util/YmlUtils"
+import { APP_RENDER_ID } from "../../app-src/shared/constants/App"
+import { EXEC_CONVERT_SWAGGER } from "../../app-src/shared/constants/SendMessageTypes"
+import { ExecConvertSwaggerMessage } from "../../app-src/shared/types/SendMessage"
 
 /**
  * contentscriptのエントリーポイント

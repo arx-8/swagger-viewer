@@ -5,8 +5,8 @@
     "build": "webextension-toolbox build",
     "dev": "webextension-toolbox dev",
     "lint-dry": "npm-run-all --parallel lint:eslint-dry lint:tsc",
-    "lint:eslint-dry": "eslint -c .eslintrc.js app/**/*.ts",
-    "lint:eslint": "eslint -c .eslintrc.js --fix app/**/*.ts",
+    "lint:eslint-dry": "eslint -c .eslintrc.js . --ext .ts,.tsx",
+    "lint:eslint": "eslint -c .eslintrc.js . --ext .ts,.tsx",
     "lint:tsc": "tsc --noEmit",
     "lint": "npm-run-all --parallel lint:eslint lint:tsc",
     "test": "jest --watch"
@@ -36,7 +36,6 @@
     "jest": "24.7.1",
     "npm-run-all": "4.1.5",
     "prettier": "1.17.0",
-    "react-test-renderer": "16.8.6",
     "style-loader": "0.23.1",
     "typescript": "3.4.1",
     "webextension-toolbox": "3.0.0"
@@ -45,6 +44,7 @@
     "buffer": "5.2.1",
     "jsdom": "14.1.0",
     "react-dom": "16.8.6",
+    "react-test-renderer": "16.8.6",
     "react": "16.8.6",
     "styled-components": "4.2.0",
     "swagger-ui-react": "3.22.0",
