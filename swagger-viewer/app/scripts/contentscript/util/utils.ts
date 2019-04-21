@@ -1,4 +1,5 @@
 import { APP_RENDER_ID } from "../../shared/constants/App"
+import { getDocument } from "../data/QuerySelector/Document"
 
 const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)$/
 
@@ -7,7 +8,7 @@ export const isAcceptableLocation = (locationHref: string): boolean => {
 }
 
 export const isConverted = (): boolean => {
-  return document.querySelector(`#${APP_RENDER_ID}`) != null
+  return getDocument().querySelector(`#${APP_RENDER_ID}`) != null
 }
 
 export const extractSrc = (): string => {
@@ -38,7 +39,7 @@ export const removeSrcCodeDom = (): void => {
 
 export const getElmOfSrcCode = (): HTMLElement => {
   const selector = "div.container div.Box > div.Box-body > table"
-  const element = document.querySelector(selector)
+  const element = getDocument().querySelector(selector)
 
   if (
     element == null ||

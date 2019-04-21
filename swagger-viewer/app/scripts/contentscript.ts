@@ -1,3 +1,4 @@
+import { getDocument } from "./contentscript/data/QuerySelector/Document"
 import { render } from "./contentscript/presentation"
 import {
   extractSrc,
@@ -14,7 +15,7 @@ import { ExecConvertSwaggerMessage } from "./shared/types/SendMessage"
 const execConvertSwagger = (): void => {
   console.log("Start convert")
 
-  if (!isAcceptableLocation(document.location.href)) {
+  if (!isAcceptableLocation(getDocument().location.href)) {
     console.log("Not isAcceptableLocation")
     return
   }
@@ -36,7 +37,7 @@ const inject = (): void => {
   removeSrcCodeDom()
 
   // 元srcのところにrenderする
-  const injWrapper = document.createElement("div")
+  const injWrapper = getDocument().createElement("div")
   injWrapper.innerHTML = `
   <script>
     var global = global || window;
