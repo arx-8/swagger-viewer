@@ -7,7 +7,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
     throw new Error(`Unexpected tab.id:${tab.id}`)
   }
 
-  chrome.tabs.sendMessage(tab.id, {
+  chrome.tabs.sendMessage(tab.id, ({
     type: EXEC_CONVERT_SWAGGER,
-  } as ExecConvertSwaggerMessage)
+  } as any) as ExecConvertSwaggerMessage)
 })
