@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * @see https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/yaml/api-with-examples.yaml
  */
