@@ -80,6 +80,7 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
   describe("さらに toStrictEqual の方が厳格である", () => {
     class LaCroix {
       flavor: string
+
       constructor(flavor: string) {
         this.flavor = flavor
       }

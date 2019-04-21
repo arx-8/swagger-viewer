@@ -1,14 +1,32 @@
-import { APP_RENDER_ID } from "../../shared/constants/App"
-import { getDocument } from "../data/QuerySelector/Document"
+import { APP_RENDER_ID } from "../../../shared/constants/App"
+import { getDocument } from "../QuerySelector/Document"
 
+/**
+ * DOMアクセス全般を実装する
+ */
 const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)$/
 
-export const isAcceptableLocation = (locationHref: string): boolean => {
-  return RX_SWAGGER_PAGE.test(locationHref)
+export const isAcceptableLocation = (): boolean => {
+  return RX_SWAGGER_PAGE.test(getDocument().location.href)
 }
 
 export const isConverted = (): boolean => {
   return getDocument().querySelector(`#${APP_RENDER_ID}`) != null
+}
+
+export const getElmOfSrcCode = (): HTMLElement => {
+  const selector = "div.container div.Box > div.Box-body > table"
+  const element = getDocument().querySelector(selector)
+
+  if (
+    element == null ||
+    element.textContent == null ||
+    element.textContent.length === 0
+  ) {
+    throw new Error(`Unexpected DOM. selector:${selector}`)
+  }
+
+  return element as HTMLElement
 }
 
 export const extractSrc = (): string => {
@@ -35,19 +53,4 @@ export const removeSrcCodeDom = (): void => {
 
   // 今は必ず1要素。自身ごと削除すると、後でDOM injectするのが大変なためchildをremove
   elm.children[0].remove()
-}
-
-export const getElmOfSrcCode = (): HTMLElement => {
-  const selector = "div.container div.Box > div.Box-body > table"
-  const element = getDocument().querySelector(selector)
-
-  if (
-    element == null ||
-    element.textContent == null ||
-    element.textContent.length === 0
-  ) {
-    throw new Error(`Unexpected DOM. selector:${selector}`)
-  }
-
-  return element as HTMLElement
 }
