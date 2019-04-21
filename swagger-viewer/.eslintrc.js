@@ -86,6 +86,7 @@ module.exports = {
     "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
 
     // しょうがない
+    "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-explicit-any": "off",
   },
 }

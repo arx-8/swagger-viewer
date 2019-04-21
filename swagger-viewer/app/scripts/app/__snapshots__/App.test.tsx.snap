@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Render test shallow render and snapshot 1`] = `
-<React.Fragment>
-  <SwaggerUI
-    spec=""
-  />
-</React.Fragment>
-`;

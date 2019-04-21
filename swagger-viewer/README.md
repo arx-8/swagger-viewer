@@ -29,3 +29,11 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
 ## Swagger examples
 
 https://github.com/OAI/OpenAPI-Specification/tree/master/examples
+
+## License
+
+See: [License (Apache-2.0)](./LICENSE)
+
+### Notice
+
+This app contains the deliverables distributed under the Apache License Version 2.0 license.
