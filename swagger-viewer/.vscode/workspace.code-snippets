@@ -1,0 +1,14 @@
+{
+  "React.Fragment short syntax": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "ReactFragment",
+    "body": "<>$1</>",
+    "description": "React.Fragment short syntax"
+  },
+  "Lambda Function Type": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "_function",
+    "body": "() => void",
+    "description": "Lambda Function Type"
+  }
+}

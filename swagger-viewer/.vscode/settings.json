@@ -7,14 +7,20 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    // 今はまだTS + 拡張機能ESLintが正しく動作しないため、拡張機能Prettierに任せる
+    // 今はまだTS + 拡張機能ESLintが正しく動作しないため、VSCode + 拡張機能Prettierに任せる
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   /**
    * UI/DX関係
