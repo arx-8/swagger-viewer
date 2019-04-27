@@ -1,7 +1,9 @@
 import * as React from "react"
+import styled from "styled-components"
 import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
 import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
+import { Button } from "../Button"
 
 export interface AppProps {
   /**
@@ -12,5 +14,23 @@ export interface AppProps {
 }
 
 export const App: React.FC<AppProps> = ({ swaggerJson }) => {
-  return <SwaggerUI spec={swaggerJson} />
+  return (
+    <>
+      <Header>
+        <Button onClick={onClickExpandAll}>Expand All</Button>
+      </Header>
+      <SwaggerUI spec={swaggerJson} />
+    </>
+  )
 }
+
+const onClickExpandAll = () => {
+  // TODO
+  alert("Hello")
+}
+
+const Header = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 5px 0 0;
+`
