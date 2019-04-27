@@ -54,3 +54,31 @@ export const removeSrcCodeDom = (): void => {
   // 今は必ず1要素。自身ごと削除すると、後でDOM injectするのが大変なためchildをremove
   elm.children[0].remove()
 }
+
+/**
+ * Swaggerの各エンドポイント定義のヘッダー部分を取得して返す
+ * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
+ */
+export const getElmOfSwaggerEndPointDefHeaders = (
+  isOpened: boolean,
+): readonly HTMLDivElement[] => {
+  if (isOpened) {
+    return querySelectorAll("div.opblock.is-open > .opblock-summary") as any
+  }
+  return querySelectorAll("div.opblock:not(.is-open) > .opblock-summary") as any
+}
+
+/**
+ * Swaggerの各Model定義の開閉アイコン部分を取得して返す
+ * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
+ */
+export const getElmOfSwaggerSchemasModelHeaders = (
+  isOpened: boolean,
+): readonly HTMLDivElement[] => {
+  if (isOpened) {
+    return querySelectorAll(
+      "span.model-box span.model-toggle:not(.collapsed)",
+    ) as any
+  }
+  return querySelectorAll("span.model-box span.model-toggle.collapsed") as any
+}
