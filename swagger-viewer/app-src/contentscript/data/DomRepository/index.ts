@@ -1,4 +1,5 @@
 import { APP_RENDER_ID } from "../../../shared/constants/App"
+import { querySelector, querySelectorAll } from "../QuerySelector"
 import { getDocument } from "../QuerySelector/Document"
 
 /**
@@ -11,12 +12,12 @@ export const isAcceptableLocation = (): boolean => {
 }
 
 export const isConverted = (): boolean => {
-  return getDocument().querySelector(`#${APP_RENDER_ID}`) != null
+  return querySelector(`#${APP_RENDER_ID}`) != null
 }
 
 export const getElmOfSrcCode = (): HTMLElement => {
   const selector = "div.container div.Box > div.Box-body > table"
-  const element = getDocument().querySelector(selector)
+  const element = querySelector(selector)
 
   if (
     element == null ||

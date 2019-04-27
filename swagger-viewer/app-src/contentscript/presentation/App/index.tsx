@@ -43,6 +43,7 @@ const onClickExpandAll = async () => {
 
   // ネストしたModelを全て展開する
   // 無限ループにさせないため、ある程度の数で打ち切る
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   for (const _ of range(0, 10)) {
     const targets = getElmOfSwaggerSchemasModelHeaders(isOpend)
     if (targets.length === 0) {
