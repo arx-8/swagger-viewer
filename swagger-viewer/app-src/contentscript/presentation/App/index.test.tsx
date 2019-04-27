@@ -1,3 +1,4 @@
+import "jest-styled-components"
 import * as React from "react"
 import { create } from "react-test-renderer"
 import ShallowRenderer from "react-test-renderer/shallow"

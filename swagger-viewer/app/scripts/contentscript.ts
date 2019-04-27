@@ -1,3 +1,5 @@
+// regenerator-runtime/runtime for async/await
+import "regenerator-runtime/runtime"
 import {
   extractSrc,
   getElmOfSrcCode,

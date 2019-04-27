@@ -1,0 +1,20 @@
+{
+  "React.Fragment short syntax": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "react-fragment",
+    "body": "<>$1</>",
+    "description": "React.Fragment short syntax"
+  },
+  "Lambda Function Type": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "lambda-function",
+    "body": "() => void",
+    "description": "Lambda Function Type"
+  },
+  "eslint-disable-next-line RULE": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "eslint-disable-next-line",
+    "body": "// eslint-disable-next-line ${1:RULE}",
+    "description": "eslint-disable-next-line RULE"
+  }
+}
