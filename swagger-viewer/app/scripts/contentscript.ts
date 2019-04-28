@@ -14,6 +14,8 @@ import { APP_RENDER_ID } from "../../app-src/shared/constants/App"
 import { EXEC_CONVERT_SWAGGER } from "../../app-src/shared/constants/SendMessageTypes"
 import { ExecConvertSwaggerMessage } from "../../app-src/shared/types/SendMessage"
 
+/* eslint-disable no-alert */
+
 /**
  * contentscriptのエントリーポイント
  * backgroundからイベントを受け取って実行
