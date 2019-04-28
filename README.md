@@ -7,6 +7,7 @@ This is Chrome Extension.
 
 Shows swagger yaml/json rendered by Swagger-UI.  
 This extension replace swagger code into preview html in GitHub.  
+Works completely offline.  
 
 ## Demo
 
