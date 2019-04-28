@@ -28,23 +28,25 @@ const execConvertSwagger = (): void => {
   console.log("Start convert")
 
   if (!isAcceptableLocation()) {
-    console.log("Not isAcceptableLocation")
+    alert("No operation. Unsupported site.")
     return
   }
   if (isConverted()) {
-    console.log("Already converted")
+    alert("No operation. Already converted.")
     return
   }
 
+  // inject時に元のDOMを削除してしまうため、先にsrcを取り出しておく
   const srcCode = extractSrc()
   const swaggerJson = convertToObject(srcCode)
 
-  inject()
+  removeAndInject()
   render(swaggerJson || "")
+
   console.log("Convert completed")
 }
 
-const inject = (): void => {
+const removeAndInject = (): void => {
   // 元srcを削除
   removeSrcCodeDom()
 
