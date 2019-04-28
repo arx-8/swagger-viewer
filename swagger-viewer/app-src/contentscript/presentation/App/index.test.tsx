@@ -45,14 +45,30 @@ describe("Render test", () => {
     expect(result).toMatchSnapshot()
   })
 
-  test("Swagger yaml 3.0", () => {
+  test("Swagger yaml 3.0 + event", async () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_3_0)
     if (!swaggerJson) {
       throw new Error("Invalid fixture")
     }
+
     // ## Act ##
     const result = create(<App swaggerJson={swaggerJson} />)
+
+    // かなりDOM実装依存・fragileだが、1つめの「"Expand All" button」を探してクリック
+    const expandAllBtn = result.root.findAll((node) => {
+      return (
+        node.type === "button" &&
+        node.children &&
+        node.children[0] === "Expand All"
+      )
+    })[0]
+
+    // TODO この simulate がないため？、ReactDOM.findDOMNode を超えてクリックイベントを実行することができない
+    // よって、クリックイベント後の状態をassertすることは、現状不可能
+    console.log(expandAllBtn.simulate("click"))
+    await expandAllBtn.props.onClick()
+
     // ## Assert ##
     expect(result).toMatchSnapshot()
   })

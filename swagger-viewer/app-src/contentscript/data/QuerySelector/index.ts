@@ -51,3 +51,11 @@ export const exQuerySelectorStrict = <T extends HTMLElement>(
   }
   throw new Error(`Logic Failure: "${selector}" is always 1 element exists`)
 }
+
+export const exQuerySelectorAll = <T extends HTMLElement>(
+  dom: HTMLElement,
+  selector: string,
+): ReadonlyArray<T> => {
+  const founds = dom.querySelectorAll(selector)
+  return Array.prototype.slice.call(founds)
+}

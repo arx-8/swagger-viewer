@@ -11,7 +11,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 5px 0 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -640,7 +640,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 0 5px 5px 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -679,7 +679,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 5px 0 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -1002,7 +1002,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 0 5px 5px 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -1030,7 +1030,7 @@ Array [
 ]
 `;
 
-exports[`Render test Swagger yaml 3.0 1`] = `
+exports[`Render test Swagger yaml 3.0 + event 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -1041,7 +1041,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 5px 0 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -1337,7 +1337,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 0 5px 5px 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -1376,7 +1376,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 5px 0 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -1429,7 +1429,7 @@ Array [
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 0 5px 5px 0;
+  padding: 5px 5px 5px 0;
 }
 
 .c0 > button {
@@ -1459,34 +1459,18 @@ Array [
 
 exports[`Shallow render test shallow render and snapshot 1`] = `
 <React.Fragment>
-  <ForwardRef>
-    <Button
-      onClick={[Function]}
-    >
-      Expand All
-    </Button>
-    <Button
-      onClick={[Function]}
-    >
-      Collapse All
-    </Button>
-  </ForwardRef>
+  <ActionBar
+    onClickCollapseAll={[Function]}
+    onClickExpandAll={[Function]}
+  />
   <ForwardRef>
     <SwaggerUI
       spec=""
     />
   </ForwardRef>
-  <ForwardRef>
-    <Button
-      onClick={[Function]}
-    >
-      Expand All
-    </Button>
-    <Button
-      onClick={[Function]}
-    >
-      Collapse All
-    </Button>
-  </ForwardRef>
+  <ActionBar
+    onClickCollapseAll={[Function]}
+    onClickExpandAll={[Function]}
+  />
 </React.Fragment>
 `;
