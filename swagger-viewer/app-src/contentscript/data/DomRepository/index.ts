@@ -16,7 +16,7 @@ export const isConverted = (): boolean => {
 }
 
 export const getElmOfSrcCode = (): HTMLElement => {
-  const selector = "div.container div.Box > div.Box-body > table"
+  const selector = "div.repository-content > div.Box > div.Box-body > table"
   const element = querySelector(selector)
 
   if (
@@ -24,7 +24,7 @@ export const getElmOfSrcCode = (): HTMLElement => {
     element.textContent == null ||
     element.textContent.length === 0
   ) {
-    throw new Error(`Unexpected DOM. selector:${selector}`)
+    throw new Error(`Unexpected DOM. selector: "${selector}"`)
   }
 
   return element as HTMLElement
