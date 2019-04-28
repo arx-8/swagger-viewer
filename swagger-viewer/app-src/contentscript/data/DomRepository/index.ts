@@ -1,14 +1,13 @@
 import { APP_RENDER_ID } from "../../../shared/constants/App"
 import { querySelector, querySelectorAll } from "../QuerySelector"
-import { getDocument } from "../QuerySelector/Document"
 
 /**
  * DOMアクセス全般を実装する
  */
-const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)$/
+const RX_SWAGGER_PAGE = /^https:\/\/github\.com\/.*\.(ya?ml|json)($|#L\d+$|#L\d+-L\d+$)/
 
-export const isAcceptableLocation = (): boolean => {
-  return RX_SWAGGER_PAGE.test(getDocument().location.href)
+export const isAcceptableLocation = (documentInstance: Document): boolean => {
+  return RX_SWAGGER_PAGE.test(documentInstance.location.href)
 }
 
 export const isConverted = (): boolean => {

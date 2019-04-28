@@ -29,7 +29,7 @@ chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
 const execConvertSwagger = (): void => {
   console.log("Start convert")
 
-  if (!isAcceptableLocation()) {
+  if (!isAcceptableLocation(getDocument())) {
     alert("No operation. Unsupported site.")
     return
   }

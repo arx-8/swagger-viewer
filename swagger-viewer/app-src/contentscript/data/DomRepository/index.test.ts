@@ -5,6 +5,11 @@ import { html as swagger20JsonHtml } from "./fixtures/GitHubPageHtml_swagger_2_0
 import { html as swagger20YamlHtml_InPrivateBrowsing } from "./fixtures/GitHubPageHtml_swagger_2_0_yaml_InPrivateBrowsing"
 import { html as swagger30YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_yaml"
 
+/**
+ * 注意: DomRepository に直接アクセスすると、Mockが無効になってしまう。
+ * DomRepository を直接使うテストは、別ファイルにする必要がある。
+ */
+
 describe("GitHubPageHtml swagger 2.0 json tests", () => {
   let sut: typeof DomRepository
   // let mockDocument: jest.MockInstance<typeof Document>
@@ -30,11 +35,6 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
   })
 
   describe("whole tests", () => {
-    it("isAcceptableLocation", () => {
-      // ## Assert ##
-      expect(sut.isAcceptableLocation()).toEqual(true)
-    })
-
     it("isConverted", () => {
       // ## Assert ##
       expect(sut.isConverted()).toEqual(false)
@@ -83,11 +83,6 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
   })
 
   describe("whole tests", () => {
-    it("isAcceptableLocation", () => {
-      // ## Assert ##
-      expect(sut.isAcceptableLocation()).toEqual(true)
-    })
-
     it("isConverted", () => {
       // ## Assert ##
       expect(sut.isConverted()).toEqual(false)
@@ -133,11 +128,6 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
   })
 
   describe("whole tests", () => {
-    it("isAcceptableLocation", () => {
-      // ## Assert ##
-      expect(sut.isAcceptableLocation()).toEqual(true)
-    })
-
     it("isConverted", () => {
       // ## Assert ##
       expect(sut.isConverted()).toEqual(false)
