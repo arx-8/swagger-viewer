@@ -29,17 +29,17 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
   })
 
   describe("whole tests", () => {
-    test("isAcceptableLocation", () => {
+    it("isAcceptableLocation", () => {
       // ## Assert ##
       expect(sut.isAcceptableLocation()).toEqual(true)
     })
 
-    test("isConverted", () => {
+    it("isConverted", () => {
       // ## Assert ##
       expect(sut.isConverted()).toEqual(false)
     })
 
-    test("getElmOfSrcCode", () => {
+    it("getElmOfSrcCode", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
@@ -47,7 +47,7 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
       expect(result.children.length).toEqual(1)
     })
 
-    test("extractSrc", () => {
+    it("extractSrc", () => {
       // ## Assert ##
       expect(sut.extractSrc()).toMatchSnapshot()
     })
@@ -79,17 +79,17 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
   })
 
   describe("whole tests", () => {
-    test("isAcceptableLocation", () => {
+    it("isAcceptableLocation", () => {
       // ## Assert ##
       expect(sut.isAcceptableLocation()).toEqual(true)
     })
 
-    test("isConverted", () => {
+    it("isConverted", () => {
       // ## Assert ##
       expect(sut.isConverted()).toEqual(false)
     })
 
-    test("getElmOfSrcCode", () => {
+    it("getElmOfSrcCode", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
@@ -97,7 +97,7 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
       expect(result.children.length).toEqual(1)
     })
 
-    test("extractSrc", () => {
+    it("extractSrc", () => {
       // ## Assert ##
       expect(sut.extractSrc()).toMatchSnapshot()
     })

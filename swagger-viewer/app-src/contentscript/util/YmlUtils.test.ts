@@ -1,7 +1,7 @@
 import { convertToObject } from "./YmlUtils"
 
 describe("convertToObject", () => {
-  test("null", () => {
+  it("null", () => {
     // ## Arrange ##
     const src = null
     // ## Act ##
@@ -10,7 +10,7 @@ describe("convertToObject", () => {
     expect(result).toMatchInlineSnapshot(`null`)
   })
 
-  test("empty string", () => {
+  it("empty string", () => {
     // ## Arrange ##
     const src = ``
     // ## Act ##
@@ -19,7 +19,7 @@ describe("convertToObject", () => {
     expect(result).toMatchInlineSnapshot(`null`)
   })
 
-  test("no swagger string", () => {
+  it("no swagger string", () => {
     // ## Arrange ##
     const src = `any string literal`
     // ## Act ##
@@ -28,7 +28,7 @@ describe("convertToObject", () => {
     expect(result).toMatchInlineSnapshot(`null`)
   })
 
-  test("yaml string", () => {
+  it("yaml string", () => {
     // ## Arrange ##
     const src = `
 swagger: "2.0"
@@ -78,7 +78,7 @@ consumes:
     `)
   })
 
-  test("json string", () => {
+  it("json string", () => {
     // ## Arrange ##
     const src = `
 {
