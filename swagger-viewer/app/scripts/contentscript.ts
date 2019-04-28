@@ -14,6 +14,8 @@ import { APP_RENDER_ID } from "../../app-src/shared/constants/App"
 import { EXEC_CONVERT_SWAGGER } from "../../app-src/shared/constants/SendMessageTypes"
 import { ExecConvertSwaggerMessage } from "../../app-src/shared/types/SendMessage"
 
+/* eslint-disable no-alert */
+
 /**
  * contentscriptのエントリーポイント
  * backgroundからイベントを受け取って実行
@@ -28,23 +30,35 @@ const execConvertSwagger = (): void => {
   console.log("Start convert")
 
   if (!isAcceptableLocation()) {
-    console.log("Not isAcceptableLocation")
+    alert("No operation. Unsupported site.")
     return
   }
   if (isConverted()) {
-    console.log("Already converted")
+    alert("No operation. Already converted.")
     return
   }
 
+  // inject時に元のDOMを削除してしまうため、先にsrcを取り出しておく
   const srcCode = extractSrc()
-  const swaggerJson = convertToObject(srcCode)
+  let swaggerJson
+  try {
+    swaggerJson = convertToObject(srcCode)
+  } catch (error) {
+    alert(
+      `No operation.
+Sorry, could not convert.
+Swagger code is Invalid syntax or Unsupported yaml syntax.`,
+    )
+    return
+  }
 
-  inject()
+  removeAndInject()
   render(swaggerJson || "")
+
   console.log("Convert completed")
 }
 
-const inject = (): void => {
+const removeAndInject = (): void => {
   // 元srcを削除
   removeSrcCodeDom()
 

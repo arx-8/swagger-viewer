@@ -1,26 +1,40 @@
-# swagger-viewer
+# swagger-viewer for developer
 
 ## Install
 
-    $ npm install
+```sh
+npm i
+```
 
-## Development
+## npm scripts
 
-    npm run dev chrome
-    npm run dev firefox
-    npm run dev opera
-    npm run dev edge
+### Development
 
-## Build
+```sh
+npm run dev
+```
 
-    npm run build chrome
-    npm run build firefox
-    npm run build opera
-    npm run build edge
+And load `dist/chrome` as Chrome extension.
 
-## Environment
+### Build
 
-The build tool also defines a variable named `process.env.NODE_ENV` in your scripts.
+```sh
+npm run build
+```
+
+And register `packages/*.zip` as Chrome extension.
+
+### UnitTest
+
+```sh
+npm t
+```
+
+### Lint (ESLint autofix + type check)
+
+```
+npm run lint
+```
 
 ## Docs
 

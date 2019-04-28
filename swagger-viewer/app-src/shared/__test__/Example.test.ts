@@ -86,7 +86,7 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
       }
     }
 
-    test("are not semantically the same", () => {
+    it("are not semantically the same", () => {
       expect(new LaCroix("lemon")).toEqual({ flavor: "lemon" })
       expect(new LaCroix("lemon")).not.toStrictEqual({ flavor: "lemon" })
     })

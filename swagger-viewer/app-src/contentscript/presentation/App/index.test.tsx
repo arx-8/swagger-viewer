@@ -9,7 +9,7 @@ import { swaggerYaml_2_0 } from "./fixtures/SwaggerYaml_2_0"
 import { swaggerYaml_3_0 } from "./fixtures/SwaggerYaml_3_0"
 
 describe("Shallow render test", () => {
-  test("shallow render and snapshot", () => {
+  it("shallow render and snapshot", () => {
     // ## Arrange ##
     const renderer = ShallowRenderer.createRenderer()
     const swaggerJson = ""
@@ -24,7 +24,7 @@ describe("Shallow render test", () => {
 })
 
 describe("Render test", () => {
-  test("invalid swagger", () => {
+  it("invalid swagger", () => {
     // ## Arrange ##
     const swaggerJson = ""
     // ## Act ##
@@ -33,7 +33,7 @@ describe("Render test", () => {
     expect(result).toMatchSnapshot()
   })
 
-  test("Swagger yaml 2.0", () => {
+  it("Swagger yaml 2.0", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_2_0)
     if (!swaggerJson) {
@@ -45,7 +45,7 @@ describe("Render test", () => {
     expect(result).toMatchSnapshot()
   })
 
-  test("Swagger yaml 3.0", () => {
+  it("Swagger yaml 3.0", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_3_0)
     if (!swaggerJson) {
@@ -57,7 +57,7 @@ describe("Render test", () => {
     expect(result).toMatchSnapshot()
   })
 
-  test("Swagger json 2.0", () => {
+  it("Swagger json 2.0", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerJson_2_0)
     if (!swaggerJson) {

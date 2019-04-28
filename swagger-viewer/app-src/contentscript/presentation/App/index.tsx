@@ -11,7 +11,7 @@ import {
 } from "../../data/DomRepository"
 import { Button } from "../Button"
 
-export interface AppProps {
+type Props = {
   /**
    * Swaggerではないjsonを読み込んだ場合、エラーメッセージを表示可能で有用。
    * そのため、無効なjsonでも読み込ませる
@@ -19,7 +19,7 @@ export interface AppProps {
   swaggerJson: MaybeSwaggerJson | string
 }
 
-export const App: React.FC<AppProps> = ({ swaggerJson }) => {
+export const App: React.FC<Props> = ({ swaggerJson }) => {
   return (
     <>
       <Header>
