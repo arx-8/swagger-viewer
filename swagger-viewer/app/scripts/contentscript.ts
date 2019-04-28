@@ -38,7 +38,17 @@ const execConvertSwagger = (): void => {
 
   // inject時に元のDOMを削除してしまうため、先にsrcを取り出しておく
   const srcCode = extractSrc()
-  const swaggerJson = convertToObject(srcCode)
+  let swaggerJson
+  try {
+    swaggerJson = convertToObject(srcCode)
+  } catch (error) {
+    alert(
+      `No operation.
+Sorry, could not convert.
+Swagger code is Invalid syntax or Unsupported yaml syntax.`,
+    )
+    return
+  }
 
   removeAndInject()
   render(swaggerJson || "")
