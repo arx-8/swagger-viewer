@@ -15,7 +15,6 @@
   "files.watcherExclude": {
     "**/dist/*": true
   },
-  "workbench.colorTheme": "Default Dark+",
   /**
    * Extensions
    */
