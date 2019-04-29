@@ -18,6 +18,7 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json",
   },
+  parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "jest", "react"],
   rules: {
     "arrow-body-style": "off",

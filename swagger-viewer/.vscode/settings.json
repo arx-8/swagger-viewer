@@ -1,27 +1,11 @@
 {
+  // eslint --fix に import の整形がないため、VSCodeに任せる
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
   // フォーマットはeslint.autoFixOnSave(Prettier)に任せるため、エディタ標準のフォーマットは不要
-  "eslint.autoFixOnSave": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    // 今はまだTS + 拡張機能ESLintが正しく動作しないため、VSCode + 拡張機能Prettierに任せる
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
   /**
    * UI/DX関係
    */
@@ -35,10 +19,12 @@
   /**
    * Extensions
    */
-  "prettier.eslintIntegration": true,
-
-  // ちゃんとprettier導入するまでの一時対応
-  "prettier.arrowParens": "always",
-  "prettier.semi": false,
-  "prettier.trailingComma": "all"
+  /** dbaeumer.vscode-eslint */
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true },
+  ],
 }
