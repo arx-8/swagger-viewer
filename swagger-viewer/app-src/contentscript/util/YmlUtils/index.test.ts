@@ -1,4 +1,5 @@
-import { convertToObject } from "./YmlUtils"
+import { convertToObject } from "."
+import { yml as case2_yml } from "./fixtures/case2"
 
 describe("convertToObject", () => {
   it("null", () => {
@@ -76,6 +77,14 @@ consumes:
         "swagger": "2.0",
       }
     `)
+  })
+
+  it("yaml string case2", () => {
+    // ## Arrange ##
+    // ## Act ##
+    const result = convertToObject(case2_yml)
+    // ## Assert ##
+    expect(result).toMatchSnapshot()
   })
 
   it("json string", () => {

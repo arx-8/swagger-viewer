@@ -1,5 +1,5 @@
 import YAML from "yaml"
-import { MaybeSwaggerJson } from "../../shared/types/Swagger"
+import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 
 /**
  * @param str yml string | json string
