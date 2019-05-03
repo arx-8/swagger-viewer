@@ -18,11 +18,26 @@ And load `dist/chrome` as Chrome extension.
 
 ### Build
 
-```sh
-npm run build
-```
+~~npm run build~~
 
-And register `packages/*.zip` as Chrome extension.
+- Currently, Can not build because `npm run build` has a problem.
+    - Ref. https://github.com/arx-8/swagger-viewer/issues/1
+
+#### Alternative build way
+
+1. `npm run dev`
+2. Stop watch. (ctrl + c)
+3. Delete deve files.
+    ```sh
+    find ./dist/chrome/ -name "*.ts" | xargs rm -f
+    find ./dist/chrome/ -name "*.js.map" | xargs rm -f
+    rm -rf ./dist/chrome/webextension-toolbox
+    ```
+4. Edit `./dist/chrome/manifest.json`
+    - Remove value of `.background.scripts[] == "webextension-toolbox/client.js"`
+5. Zip `./dist/chrome` to `swagger-viewer.v${version}.chrome.zip`
+
+And register builded zip as Chrome extension.
 
 ### UnitTest
 
