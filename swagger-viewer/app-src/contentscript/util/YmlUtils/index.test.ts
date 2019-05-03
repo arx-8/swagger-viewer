@@ -1,7 +1,7 @@
 import { convertToObject } from "."
 import { yml as case2_yml } from "./fixtures/case2"
 
-describe("convertToObject", () => {
+describe("convertToObject / convertable", () => {
   it("null", () => {
     // ## Arrange ##
     const src = null
@@ -106,5 +106,109 @@ consumes:
         "cc": null,
       }
     `)
+  })
+})
+
+describe("convertToObject / broken string", () => {
+  describe("broken json string", () => {
+    it("case:1", () => {
+      // ## Arrange ##
+      const src = `
+{
+  "a": "a",
+  "b": 2,
+  "cc": null,
+`
+      // ## Act ##
+      // ## Assert ##
+      expect(() => {
+        convertToObject(src)
+      }).toThrowErrorMatchingInlineSnapshot(`
+"unexpected end of the stream within a flow collection at line 6, column 1:
+    
+    ^"
+`)
+    })
+
+    it("case:2", () => {
+      // ## Arrange ##
+      const src = `
+{
+  "a": "a"
+  "b": 2,
+  "cc": null,
+}
+`
+      // ## Act ##
+      // ## Assert ##
+      expect(() => {
+        convertToObject(src)
+      }).toThrowErrorMatchingInlineSnapshot(`
+"missed comma between flow collection entries at line 4, column 3:
+      \\"b\\": 2,
+      ^"
+`)
+    })
+  })
+
+  describe("broken yaml string", () => {
+    it("case:1", () => {
+      // ## Arrange ##
+      const src = `
+swagger: "2.0"
+info:
+                title: Simple API overview
+paths:
+  /:
+    get: operationId: listVersionsv2
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: |-
+            200 300 response
+consumes:
+- application/json
+`
+      // ## Act ##
+      // ## Assert ##
+      expect(() => {
+        convertToObject(src)
+      }).toThrowErrorMatchingInlineSnapshot(`
+"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 7, column 21:
+        get: operationId: listVersionsv2
+                        ^"
+`)
+    })
+
+    it("case:2", () => {
+      // ## Arrange ##
+      const src = `
+swagger: "2.0"
+info:
+  title: Simple API overview
+paths:
+  /:
+    get:
+              operationId: listVersionsv2
+      produces:
+application/json
+      responses:
+        "200":
+          description: |-
+            200 300 response
+consumes:
+
+`
+      // ## Act ##
+      // ## Assert ##
+      expect(() => {
+        convertToObject(src)
+      }).toThrowErrorMatchingInlineSnapshot(`
+"bad indentation of a mapping entry at line 9, column 7:
+          produces:
+          ^"
+`)
+    })
   })
 })

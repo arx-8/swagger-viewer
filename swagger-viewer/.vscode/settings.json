@@ -9,6 +9,7 @@
   /**
    * UI/DX関係
    */
+  "diffEditor.ignoreTrimWhitespace": false,
   "search.exclude": {
     "**/dist": true
   },
