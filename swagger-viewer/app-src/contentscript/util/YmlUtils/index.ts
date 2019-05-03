@@ -1,5 +1,5 @@
-import YAML from "yaml"
-import { MaybeSwaggerJson } from "../../shared/types/Swagger"
+import jsYaml from "js-yaml"
+import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 
 /**
  * @param str yml string | json string
@@ -10,7 +10,7 @@ export const convertToObject = (str: string): MaybeSwaggerJson | null => {
     return null
   }
 
-  const maybe = YAML.parse(str)
+  const maybe = jsYaml.load(str)
   if (maybe == null) {
     return null
   }
