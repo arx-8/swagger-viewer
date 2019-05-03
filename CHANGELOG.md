@@ -1,3 +1,15 @@
+## 1.1.0 (2019-05-03)
+
+Improved stability.
+
+### :rocket: New Features
+
+- Display a more detailed error message when conversion fails.
+
+### :bug: Bugfix
+
+- Fix to some out-of-spec yaml convertable. PR #23
+
 ## 1.0.0 (2019-04-28)
 
 Stable version release.

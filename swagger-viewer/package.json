@@ -1,6 +1,6 @@
 {
   "name": "swagger-viewer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "build": "webextension-toolbox build chrome",
     "dev": "webextension-toolbox dev chrome",
