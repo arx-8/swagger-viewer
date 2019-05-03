@@ -46,8 +46,8 @@ const execConvertSwagger = (): void => {
   } catch (error) {
     alert(
       `No operation.
-Sorry, could not convert.
-Swagger code is Invalid syntax or Unsupported yaml syntax.`,
+Could not convert.
+[Cause] ${error.message}`,
     )
     return
   }
