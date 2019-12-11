@@ -5,6 +5,9 @@ const babelOptions = require("./babel.config")
 /* eslint-enable */
 
 module.exports = {
+  /**
+   * @param {import('webpack').Configuration} config
+   */
   webpack: (config) => {
     // for Debug (JSON.stringifyでは一部の型のtoStringがnullになってしまうため、console.log(confg)も併用した方がよい)
     // console.log(JSON.stringify(config))
