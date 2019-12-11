@@ -28,9 +28,12 @@ module.exports = {
   ],
   rules: {
     "arrow-body-style": "off",
+    "import/extensions": "off",
     "import/first": "off",
     "import/no-default-export": "error",
     "import/prefer-default-export": "off",
+    "max-classes-per-file": "off",
+    "no-console": "off",
     "no-restricted-globals": [
       "error",
       {

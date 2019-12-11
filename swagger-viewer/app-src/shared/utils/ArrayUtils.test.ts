@@ -33,7 +33,12 @@ describe("zip", () => {
     // ## Act ##
     const result = zip([3, 2, 1, 0], ["三", "二", "一", ""])
     // ## Assert ##
-    expect(result).toEqual([[3, "三"], [2, "二"], [1, "一"], [0, ""]])
+    expect(result).toEqual([
+      [3, "三"],
+      [2, "二"],
+      [1, "一"],
+      [0, ""],
+    ])
   })
 
   it("lengthが異なる引数はダメ", () => {
