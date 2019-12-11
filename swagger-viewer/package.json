@@ -8,11 +8,12 @@
   "scripts": {
     "build": "webextension-toolbox build chrome",
     "dev": "webextension-toolbox dev chrome",
-    "lint-dry": "npm-run-all --parallel lint:eslint-dry lint:tsc",
+    "lint-dry": "npm-run-all --parallel --continue-on-error lint:eslint-dry lint:tsc",
     "lint:eslint-dry": "eslint -c .eslintrc.js . --ext .ts,.tsx",
     "lint:eslint": "eslint -c .eslintrc.js . --ext .ts,.tsx",
     "lint:tsc": "tsc --noEmit",
-    "lint": "npm-run-all --parallel lint:eslint lint:tsc",
+    "lint": "npm-run-all --parallel --continue-on-error lint:eslint lint:tsc",
+    "test-ci": "jest --ci",
     "test": "jest --watch"
   },
   "devDependencies": {
