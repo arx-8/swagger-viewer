@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "buffer": "5.4.3",
+    "eslint-plugin-only-error": "1.0.2",
     "jest-styled-components": "6.3.4",
     "js-yaml": "3.13.1",
     "jsdom": "15.2.1",
