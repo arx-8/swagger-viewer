@@ -6,6 +6,7 @@ import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 import { range } from "../../../shared/utils/ArrayUtils"
 import { sleep } from "../../../shared/utils/SystemUtils"
 import {
+  getElmOfSwaggerDefOpenerButtons,
   getElmOfSwaggerEndPointDefHeaders,
   getElmOfSwaggerSchemasModelHeaders,
 } from "../../data/DomRepository"
@@ -38,6 +39,9 @@ export const App: React.FC<Props> = ({ swaggerJson }) => {
 }
 
 const onClickExpandAll = async () => {
+  getElmOfSwaggerDefOpenerButtons().forEach((e) => e.click())
+  await sleep(100)
+
   const isOpened = false
   getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
 
@@ -61,6 +65,7 @@ const onClickCollapseAll = () => {
   // 全ての Open 状態に対して「閉じる」ため、再帰処理は不要
   getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
   getElmOfSwaggerSchemasModelHeaders(isOpened).forEach((e) => e.click())
+  getElmOfSwaggerDefOpenerButtons().forEach((e) => e.click())
 }
 
 const Header = styled.div`

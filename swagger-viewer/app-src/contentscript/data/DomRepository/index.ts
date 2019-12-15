@@ -56,6 +56,13 @@ export const removeSrcCodeDom = (): void => {
 }
 
 /**
+ * 定義のタイトル（サマリー）の開閉ボタンを取得して返す
+ */
+export const getElmOfSwaggerDefOpenerButtons = (): readonly HTMLButtonElement[] => {
+  return querySelectorAll(".opblock-tag-section .opblock-tag button") as any
+}
+
+/**
  * Swaggerの各エンドポイント定義のヘッダー部分を取得して返す
  * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
  */
