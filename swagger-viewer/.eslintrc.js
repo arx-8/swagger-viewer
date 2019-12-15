@@ -32,6 +32,7 @@ module.exports = {
     "import/first": "off",
     "import/no-default-export": "error",
     "import/prefer-default-export": "off",
+    "jest/prefer-strict-equal": "error",
     "max-classes-per-file": "off",
     "no-console": "off",
     "no-restricted-globals": [

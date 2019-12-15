@@ -37,15 +37,15 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
   describe("whole tests", () => {
     it("isConverted", () => {
       // ## Assert ##
-      expect(sut.isConverted()).toEqual(false)
+      expect(sut.isConverted()).toStrictEqual(false)
     })
 
     it("getElmOfSrcCode", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toEqual(null)
-      expect(result.children.length).toEqual(1)
+      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.children.length).toStrictEqual(1)
     })
 
     it("extractSrc", () => {
@@ -85,15 +85,15 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
   describe("whole tests", () => {
     it("isConverted", () => {
       // ## Assert ##
-      expect(sut.isConverted()).toEqual(false)
+      expect(sut.isConverted()).toStrictEqual(false)
     })
 
     it("getElmOfSrcCode", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toEqual(null)
-      expect(result.children.length).toEqual(1)
+      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.children.length).toStrictEqual(1)
     })
 
     it("extractSrc", () => {
@@ -130,15 +130,15 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
   describe("whole tests", () => {
     it("isConverted", () => {
       // ## Assert ##
-      expect(sut.isConverted()).toEqual(false)
+      expect(sut.isConverted()).toStrictEqual(false)
     })
 
     it("getElmOfSrcCode", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toEqual(null)
-      expect(result.children.length).toEqual(1)
+      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.children.length).toStrictEqual(1)
     })
 
     it("extractSrc", () => {
