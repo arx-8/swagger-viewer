@@ -20,6 +20,30 @@ describe("Basic test", () => {
     sut = require(".")
   })
 
+  describe("querySelectorAll", () => {
+    it("要素がない", () => {
+      // ## Arrange ##
+      // ## Act ##
+      const elements = sut.querySelectorAll("not found query")
+      // ## Assert ##
+      expect(elements).toStrictEqual([])
+    })
+    it("要素が1つある", () => {
+      // ## Arrange ##
+      // ## Act ##
+      const elements = sut.querySelectorAll("#test-id-unique")
+      // ## Assert ##
+      expect(elements.length).toStrictEqual(1)
+    })
+    it("要素が2つ以上ある", () => {
+      // ## Arrange ##
+      // ## Act ##
+      const elements = sut.querySelectorAll(".test-class-name-used-a-lot")
+      // ## Assert ##
+      expect(elements.length).toStrictEqual(3)
+    })
+  })
+
   describe("querySelector", () => {
     it("要素がない", () => {
       // ## Arrange ##

@@ -39,15 +39,3 @@ export const querySelectorStrict = <T extends HTMLElement>(
   }
   throw new Error(`Logic Failure: "${selector}" is always 1 element exists`)
 }
-
-export const exQuerySelectorStrict = <T extends HTMLElement>(
-  dom: HTMLElement,
-  selector: string,
-): T => {
-  const founds = dom.querySelectorAll(selector)
-  if (founds.length === 1) {
-    // なぜか型が合わないため無視
-    return founds[0] as any
-  }
-  throw new Error(`Logic Failure: "${selector}" is always 1 element exists`)
-}

@@ -17,8 +17,6 @@
     "test": "jest --watch"
   },
   "devDependencies": {
-    "@babel/preset-react": "7.7.4",
-    "@babel/preset-typescript": "7.7.4",
     "@types/chrome": "0.0.91",
     "@types/jest": "24.0.23",
     "@types/js-yaml": "3.12.1",
@@ -32,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "2.11.0",
     "@typescript-eslint/parser": "2.11.0",
     "babel-jest": "24.9.0",
+    "babel-preset-react-app": "9.1.0",
     "css-loader": "3.3.2",
     "eslint": "6.7.2",
     "eslint-config-airbnb": "18.0.1",
@@ -39,7 +38,7 @@
     "eslint-plugin-import": "2.19.1",
     "eslint-plugin-jest": "23.1.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.17.0",
     "jest": "24.9.0",
     "npm-run-all": "4.1.5",
@@ -60,6 +59,6 @@
     "react-test-renderer": "16.12.0",
     "regenerator-runtime": "0.13.3",
     "styled-components": "4.4.1",
-    "swagger-ui-react": "3.22.0"
+    "swagger-ui-react": "3.24.3"
   }
 }

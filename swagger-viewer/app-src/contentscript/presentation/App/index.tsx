@@ -6,6 +6,7 @@ import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 import { range } from "../../../shared/utils/ArrayUtils"
 import { sleep } from "../../../shared/utils/SystemUtils"
 import {
+  getElmOfSwaggerDefOpenerButtons,
   getElmOfSwaggerEndPointDefHeaders,
   getElmOfSwaggerSchemasModelHeaders,
 } from "../../data/DomRepository"
@@ -38,14 +39,17 @@ export const App: React.FC<Props> = ({ swaggerJson }) => {
 }
 
 const onClickExpandAll = async () => {
-  const isOpend = false
-  getElmOfSwaggerEndPointDefHeaders(isOpend).forEach((e) => e.click())
+  getElmOfSwaggerDefOpenerButtons().forEach((e) => e.click())
+  await sleep(100)
+
+  const isOpened = false
+  getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
 
   // ネストしたModelを全て展開する
   // 無限ループにさせないため、ある程度の数で打ち切る
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   for (const _ of range(0, 10)) {
-    const targets = getElmOfSwaggerSchemasModelHeaders(isOpend)
+    const targets = getElmOfSwaggerSchemasModelHeaders(isOpened)
     if (targets.length === 0) {
       break
     }
@@ -57,10 +61,11 @@ const onClickExpandAll = async () => {
 }
 
 const onClickCollapseAll = () => {
-  const isOpend = true
+  const isOpened = true
   // 全ての Open 状態に対して「閉じる」ため、再帰処理は不要
-  getElmOfSwaggerEndPointDefHeaders(isOpend).forEach((e) => e.click())
-  getElmOfSwaggerSchemasModelHeaders(isOpend).forEach((e) => e.click())
+  getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
+  getElmOfSwaggerSchemasModelHeaders(isOpened).forEach((e) => e.click())
+  getElmOfSwaggerDefOpenerButtons().forEach((e) => e.click())
 }
 
 const Header = styled.div`

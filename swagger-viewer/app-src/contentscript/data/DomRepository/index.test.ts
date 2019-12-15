@@ -147,3 +147,54 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
     })
   })
 })
+
+describe("empty page", () => {
+  let sut: typeof DomRepository
+  // let mockDocument: jest.MockInstance<typeof Document>
+  let mockDocument: typeof Document
+
+  beforeAll(() => {
+    // ## Arrange ##
+    jest.mock("../QuerySelector/Document")
+
+    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    mockDocument = require("../QuerySelector/Document")
+    // mock化しているため、mockReturnValueは必ず存在する
+    // 型の書き方が不明なため、any castしている
+    ;(mockDocument as any).getDocument.mockReturnValue(
+      createMockDocumentBy(
+        `<!DOCTYPE html><html lang="en"><head><title>empty</title></head><body></body></html>`,
+        "https://example.com",
+      ),
+    )
+
+    // eslint-disable-next-line global-require
+    sut = require(".")
+  })
+
+  describe("whole tests", () => {
+    it("isConverted", () => {
+      // ## Assert ##
+      expect(sut.isConverted()).toStrictEqual(false)
+    })
+
+    it("getElmOfSrcCode", () => {
+      // ## Assert ##
+      expect(() => {
+        sut.getElmOfSrcCode()
+      }).toThrowErrorMatchingInlineSnapshot(
+        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`,
+      )
+    })
+
+    it("extractSrc", () => {
+      // ## Assert ##
+      // ## Assert ##
+      expect(() => {
+        sut.extractSrc()
+      }).toThrowErrorMatchingInlineSnapshot(
+        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`,
+      )
+    })
+  })
+})

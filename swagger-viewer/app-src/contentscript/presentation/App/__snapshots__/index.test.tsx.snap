@@ -247,11 +247,11 @@ Array [
             <div>
               <span>
                 <div
-                  className="opblock-tag-section is-open"
+                  className="opblock-tag-section"
                 >
                   <h4
                     className="opblock-tag no-desc"
-                    data-is-open={true}
+                    data-is-open={false}
                     data-tag="default"
                     id="operations-tag-default"
                     onClick={[Function]}
@@ -270,7 +270,7 @@ Array [
                     <button
                       className="expand-operation"
                       onClick={[Function]}
-                      title="Collapse operation"
+                      title="Expand operation"
                     >
                       <svg
                         className="arrow"
@@ -278,177 +278,13 @@ Array [
                         width="20"
                       >
                         <use
-                          href="#large-arrow-down"
-                          xlinkHref="#large-arrow-down"
+                          href="#large-arrow"
+                          xlinkHref="#large-arrow"
                         />
                       </svg>
                     </button>
                   </h4>
-                  <div
-                    style={
-                      Object {
-                        "border": "none",
-                        "height": "auto",
-                        "margin": 0,
-                        "padding": 0,
-                      }
-                    }
-                  >
-                     
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-findPets"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-post"
-                        id="operations-default-addPet"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-post"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            POST
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-findPetById"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets/{id}"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets​/{id}
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-delete"
-                        id="operations-default-deletePet"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-delete"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            DELETE
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets/{id}"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets​/{id}
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                     
-                  </div>
+                  <noscript />
                 </div>
               </span>
             </div>
@@ -823,11 +659,7 @@ Array [
                 </hgroup>
                 <div
                   className="description"
-                >
-                  <div
-                    className="markdown"
-                  />
-                </div>
+                />
               </div>
             </div>
           </section>
@@ -847,11 +679,11 @@ Array [
             <div>
               <span>
                 <div
-                  className="opblock-tag-section is-open"
+                  className="opblock-tag-section"
                 >
                   <h4
                     className="opblock-tag no-desc"
-                    data-is-open={true}
+                    data-is-open={false}
                     data-tag="default"
                     id="operations-tag-default"
                     onClick={[Function]}
@@ -870,7 +702,7 @@ Array [
                     <button
                       className="expand-operation"
                       onClick={[Function]}
-                      title="Collapse operation"
+                      title="Expand operation"
                     >
                       <svg
                         className="arrow"
@@ -878,101 +710,13 @@ Array [
                         width="20"
                       >
                         <use
-                          href="#large-arrow-down"
-                          xlinkHref="#large-arrow-down"
+                          href="#large-arrow"
+                          xlinkHref="#large-arrow"
                         />
                       </svg>
                     </button>
                   </h4>
-                  <div
-                    style={
-                      Object {
-                        "border": "none",
-                        "height": "auto",
-                        "margin": 0,
-                        "padding": 0,
-                      }
-                    }
-                  >
-                     
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-listVersionsv2"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            List API versions
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-getVersionDetailsv2"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/v2"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/v2
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            Show API version details
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                     
-                  </div>
+                  <noscript />
                 </div>
               </span>
             </div>
@@ -1220,11 +964,11 @@ Array [
             <div>
               <span>
                 <div
-                  className="opblock-tag-section is-open"
+                  className="opblock-tag-section"
                 >
                   <h4
                     className="opblock-tag no-desc"
-                    data-is-open={true}
+                    data-is-open={false}
                     data-tag="default"
                     id="operations-tag-default"
                     onClick={[Function]}
@@ -1243,7 +987,7 @@ Array [
                     <button
                       className="expand-operation"
                       onClick={[Function]}
-                      title="Collapse operation"
+                      title="Expand operation"
                     >
                       <svg
                         className="arrow"
@@ -1251,63 +995,13 @@ Array [
                         width="20"
                       >
                         <use
-                          href="#large-arrow-down"
-                          xlinkHref="#large-arrow-down"
+                          href="#large-arrow"
+                          xlinkHref="#large-arrow"
                         />
                       </svg>
                     </button>
                   </h4>
-                  <div
-                    style={
-                      Object {
-                        "border": "none",
-                        "height": "auto",
-                        "margin": 0,
-                        "padding": 0,
-                      }
-                    }
-                  >
-                     
-                    <span>
-                      <div
-                        className="opblock opblock-post"
-                        id="operations-default-post_streams"
-                      >
-                        <div
-                          className="opblock-summary opblock-summary-post"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            POST
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/streams"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/streams
-                              </span>
-                            </a>
-                          </span>
-                          <div
-                            className="opblock-summary-description"
-                          >
-                            
-                          </div>
-                        </div>
-                        <noscript />
-                      </div>
-                    </span>
-                     
-                  </div>
+                  <noscript />
                 </div>
               </span>
             </div>

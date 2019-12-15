@@ -19,8 +19,7 @@ export const getElmOfSrcCode = (): HTMLElement => {
   const element = querySelector(selector)
 
   if (
-    element == null ||
-    element.textContent == null ||
+    element?.textContent?.length == null ||
     element.textContent.length === 0
   ) {
     throw new Error(`Unexpected DOM. selector: "${selector}"`)
@@ -53,6 +52,13 @@ export const removeSrcCodeDom = (): void => {
 
   // 今は必ず1要素。自身ごと削除すると、後でDOM injectするのが大変なためchildをremove
   elm.children[0].remove()
+}
+
+/**
+ * 定義のタイトル（サマリー）の開閉ボタンを取得して返す
+ */
+export const getElmOfSwaggerDefOpenerButtons = (): readonly HTMLButtonElement[] => {
+  return querySelectorAll(".opblock-tag-section .opblock-tag button") as any
 }
 
 /**
