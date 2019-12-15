@@ -1,3 +1,7 @@
+## 1.1.1 (2019-12-15)
+
+Security update (Update all dependencies).
+
 ## 1.1.0 (2019-05-03)
 
 Improved stability.

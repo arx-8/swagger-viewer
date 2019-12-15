@@ -27,7 +27,7 @@ And load `dist/chrome` as Chrome extension.
 
 1. `npm run dev`
 2. Stop watch. (ctrl + c)
-3. Delete deve files.
+3. Delete dev files.
     ```sh
     find ./dist/chrome/ -name "*.ts" | xargs rm -f
     find ./dist/chrome/ -name "*.js.map" | xargs rm -f
