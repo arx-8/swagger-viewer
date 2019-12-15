@@ -1459,7 +1459,7 @@ Array [
 
 exports[`Shallow render test shallow render and snapshot 1`] = `
 <React.Fragment>
-  <ForwardRef>
+  <ForwardRef(styled.div)>
     <Button
       onClick={[Function]}
     >
@@ -1470,13 +1470,13 @@ exports[`Shallow render test shallow render and snapshot 1`] = `
     >
       Collapse All
     </Button>
-  </ForwardRef>
-  <ForwardRef>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
     <SwaggerUI
       spec=""
     />
-  </ForwardRef>
-  <ForwardRef>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
     <Button
       onClick={[Function]}
     >
@@ -1487,6 +1487,6 @@ exports[`Shallow render test shallow render and snapshot 1`] = `
     >
       Collapse All
     </Button>
-  </ForwardRef>
+  </ForwardRef(styled.div)>
 </React.Fragment>
 `;

@@ -15,7 +15,7 @@ describe("Example", () => {
       .reduce((l, r) => l + r)
 
     // ## Assert ##
-    expect(result).toEqual(12)
+    expect(result).toStrictEqual(12)
   })
 })
 
@@ -52,6 +52,7 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
   })
 
   it("toEqual は deepEqual", () => {
+    /* eslint-disable jest/prefer-strict-equal */
     // Literal
     expect(2).not.toEqual("2")
     expect(2).not.toEqual(true)
@@ -72,6 +73,7 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
     expect(new Human("taro", 20)).toEqual(new Human("taro", 20))
     const classInstance = new Human("taro", 20)
     expect(classInstance).toEqual(classInstance)
+    /* eslint-enable */
   })
 
   /**
@@ -87,8 +89,10 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
     }
 
     it("are not semantically the same", () => {
+      /* eslint-disable jest/prefer-strict-equal */
       expect(new LaCroix("lemon")).toEqual({ flavor: "lemon" })
       expect(new LaCroix("lemon")).not.toStrictEqual({ flavor: "lemon" })
+      /* eslint-enable */
     })
   })
 })

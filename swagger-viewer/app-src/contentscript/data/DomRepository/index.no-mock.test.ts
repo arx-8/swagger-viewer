@@ -20,35 +20,35 @@ describe("isAcceptableLocation", () => {
             "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.yaml",
           ),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
     it("line link (1-9)", () => {
       expect(
         isAcceptableLocation(
           createMockDocument("https://github.com/some/any.yml#L5"),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
     it("line link (> 9)", () => {
       expect(
         isAcceptableLocation(
           createMockDocument("https://github.com/some/any.yaml#L9999"),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
     it("range link (1-9)", () => {
       expect(
         isAcceptableLocation(
           createMockDocument("https://github.com/some/any.yaml#L2-L3"),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
     it("range link (> 9)", () => {
       expect(
         isAcceptableLocation(
           createMockDocument("https://github.com/some/any.yml#L9999-L10000"),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
   })
 
@@ -60,21 +60,21 @@ describe("isAcceptableLocation", () => {
             "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.json",
           ),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
     it("line link (> 9)", () => {
       expect(
         isAcceptableLocation(
           createMockDocument("https://github.com/some/any.json#L9999"),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
     it("range link (> 9)", () => {
       expect(
         isAcceptableLocation(
           createMockDocument("https://github.com/some/any.json#L9-L10"),
         ),
-      ).toEqual(true)
+      ).toStrictEqual(true)
     })
   })
 
@@ -86,7 +86,7 @@ describe("isAcceptableLocation", () => {
             "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.yam",
           ),
         ),
-      ).toEqual(false)
+      ).toStrictEqual(false)
     })
     it("no json", () => {
       expect(
@@ -95,7 +95,7 @@ describe("isAcceptableLocation", () => {
             "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.js",
           ),
         ),
-      ).toEqual(false)
+      ).toStrictEqual(false)
     })
     it("no GitHub", () => {
       expect(
@@ -104,7 +104,7 @@ describe("isAcceptableLocation", () => {
             "https://gitlab.com/gitlab-com/sales-team/field-operations/channel/blob/master/swagger.yaml",
           ),
         ),
-      ).toEqual(false)
+      ).toStrictEqual(false)
     })
   })
 })

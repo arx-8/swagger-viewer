@@ -17,7 +17,7 @@ import { JSDOM } from "jsdom"
  */
 export const createMockDocumentBy = (
   html: string,
-  url: string = "about:blank",
+  url = "about:blank",
 ): Document => {
   return new JSDOM(html, {
     url,

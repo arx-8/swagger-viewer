@@ -19,12 +19,21 @@ module.exports = {
     project: "./tsconfig.json",
   },
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "jest", "react"],
+  plugins: [
+    "@typescript-eslint",
+    "jest",
+    "react",
+    // CircleCI で warn も検知可能にするため、全て error にする
+    "only-error",
+  ],
   rules: {
     "arrow-body-style": "off",
+    "import/extensions": "off",
     "import/first": "off",
     "import/no-default-export": "error",
     "import/prefer-default-export": "off",
+    "jest/prefer-strict-equal": "error",
+    "max-classes-per-file": "off",
     "no-console": "off",
     "no-restricted-globals": [
       "error",
