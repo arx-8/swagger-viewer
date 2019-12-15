@@ -1,8 +1,13 @@
 // build と jest で共通化するため、このファイルに外出しして定義している
 module.exports = {
-  presets: ["@babel/env", "@babel/preset-react", "@babel/preset-typescript"],
-  plugins: [
-    "@babel/proposal-class-properties",
-    "@babel/proposal-object-rest-spread",
+  // @see https://github.com/facebook/create-react-app/tree/v3.3.0/packages/babel-preset-react-app
+  presets: [
+    [
+      "react-app",
+      {
+        flow: false,
+        typescript: true,
+      },
+    ],
   ],
 }

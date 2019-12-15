@@ -19,8 +19,7 @@ export const getElmOfSrcCode = (): HTMLElement => {
   const element = querySelector(selector)
 
   if (
-    element == null ||
-    element.textContent == null ||
+    element?.textContent?.length == null ||
     element.textContent.length === 0
   ) {
     throw new Error(`Unexpected DOM. selector: "${selector}"`)
