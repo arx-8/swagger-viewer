@@ -28,8 +28,6 @@ chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
 })
 
 const execConvertSwagger = (): void => {
-  console.log("Start convert")
-
   if (!isAcceptableLocation(getDocument())) {
     alert("No operation. Unsupported site.")
     return
@@ -58,8 +56,6 @@ const execConvertSwagger = (): void => {
 
   // App のアイコンをクリックされるたびに、src と swagger-ui を toggle する
   toggleAppOrSrcCodeDom()
-
-  console.log("Convert completed")
 }
 
 /**
@@ -82,6 +78,4 @@ const injectApp = (): void => {
   // swagger-ui-reactの依存ライブラリのため追加
   // eslint-disable-next-line global-require
   global.Buffer = global.Buffer || require("buffer").Buffer
-
-  console.log("injected")
 }
