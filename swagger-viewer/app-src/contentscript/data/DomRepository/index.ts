@@ -1,6 +1,10 @@
 import { APP_RENDER_ID } from "../../../shared/constants/App"
 import { CastAny } from "../../../shared/types/utils"
-import { querySelector, querySelectorAll } from "../QuerySelector"
+import {
+  querySelector,
+  querySelectorAll,
+  querySelectorStrict,
+} from "../QuerySelector"
 
 /**
  * DOMアクセス全般を実装する
@@ -48,18 +52,41 @@ export const extractSrc = (): string => {
   )
 }
 
-export const removeSrcCodeDom = (): void => {
+export const toggleAppOrSrcCodeDom = (): void => {
   const elm = getElmOfSrcCode()
 
-  // 今は必ず1要素。自身ごと削除すると、後でDOM injectするのが大変なためchildをremove
-  elm.children[0].remove()
+  // 今は必ず1要素。自身ごと削除すると、DOM injectするのが大変なためchildを扱う
+  const srcDom = elm.children[0] as HTMLElement
+  if (srcDom.style.display === "none") {
+    // App -> src
+    srcDom.style.display = ""
+    querySelectorStrict(`#${APP_RENDER_ID}`).style.display = "none"
+  } else {
+    // src -> App
+    srcDom.style.display = "none"
+    querySelectorStrict(`#${APP_RENDER_ID}`).style.display = ""
+  }
 }
 
 /**
- * 定義のタイトル（サマリー）の開閉ボタンを取得して返す
+ * API定義・Modelsのタイトル（サマリー）の開閉エリアを取得して返す
  */
-export const getElmOfSwaggerDefOpenerButtons = (): readonly HTMLButtonElement[] => {
-  return querySelectorAll(".opblock-tag-section .opblock-tag button") as CastAny
+export const getElmOfSwaggerDefOpener = (
+  isOpened: boolean
+): readonly HTMLButtonElement[] => {
+  if (isOpened) {
+    const apiDefs = querySelectorAll(
+      `.opblock-tag-section .opblock-tag[data-is-open="true"]`
+    )
+    const modelDefs = querySelectorAll(`section.models.is-open > h4`)
+    return [...apiDefs, ...modelDefs] as CastAny
+  }
+
+  const apiDefs = querySelectorAll(
+    `.opblock-tag-section .opblock-tag[data-is-open="false"] button`
+  )
+  const modelDefs = querySelectorAll(`section.models:not(.is-open) > h4`)
+  return [...apiDefs, ...modelDefs] as CastAny
 }
 
 /**
