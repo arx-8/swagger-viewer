@@ -1,11 +1,15 @@
 {
-  // eslint --fix に import の整形がないため、VSCodeに任せる
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  // To prevent misdetection
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescript]": {
+    "editor.tabSize": 2
   },
-  // フォーマットはeslint.autoFixOnSave(Prettier)に任せるため、エディタ標準のフォーマットは不要
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
   /**
    * UI/DX関係
    */
@@ -20,11 +24,14 @@
    * Extensions
    */
   /** dbaeumer.vscode-eslint */
-  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSaveTimeout": 2000,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true },
+    "typescript",
+    "typescriptreact"
   ],
 }

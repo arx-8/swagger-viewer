@@ -1,5 +1,5 @@
-export const sleep = (milliSecs: number) => {
-  return new Promise((r) => {
-    setTimeout(() => r(), milliSecs)
+export const sleep = (milliSecs: number): Promise<void> => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(), milliSecs)
   })
 }

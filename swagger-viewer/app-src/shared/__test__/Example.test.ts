@@ -21,7 +21,7 @@ describe("Example", () => {
 
 describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
   class Human {
-    constructor(private name: string, private age: number) {}
+    constructor(private readonly name: string, private readonly age: number) {}
 
     public getGreet(): string {
       return `My name is ${this.name}. ${this.age} years old`
@@ -41,7 +41,7 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
 
     // Object
     expect({ v1: 1, v2: 2 }).not.toBe({ v1: 1, v2: 2 })
-    expect({ v1: 1, v2: 2 }).not.toBe({ v2: 2, v1: 1 })
+    expect({ v1: 1, v2: 2 }).not.toBe({ v1: 1, v2: 2 })
     const objInstance = { v1: 1, v2: 2 }
     expect(objInstance).toBe(objInstance)
 
@@ -65,7 +65,7 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
 
     // Object
     expect({ v1: 1, v2: 2 }).toEqual({ v1: 1, v2: 2 })
-    expect({ v1: 1, v2: 2 }).toEqual({ v2: 2, v1: 1 })
+    expect({ v1: 1, v2: 2 }).toEqual({ v1: 1, v2: 2 })
     const objInstance = { v1: 1, v2: 2 }
     expect(objInstance).toEqual(objInstance)
 
