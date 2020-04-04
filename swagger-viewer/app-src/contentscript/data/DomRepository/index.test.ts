@@ -1,9 +1,10 @@
-import * as DomRepository from "."
+import { CastAny } from "../../../shared/types/utils"
 import { createMockDocumentBy } from "../../__test__/Helper"
 import * as Document from "../QuerySelector/Document"
 import { html as swagger20JsonHtml } from "./fixtures/GitHubPageHtml_swagger_2_0_json"
 import { html as swagger20YamlHtml_InPrivateBrowsing } from "./fixtures/GitHubPageHtml_swagger_2_0_yaml_InPrivateBrowsing"
 import { html as swagger30YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_yaml"
+import * as DomRepository from "."
 
 /**
  * 注意: DomRepository に直接アクセスすると、Mockが無効になってしまう。
@@ -23,11 +24,11 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
-    ;(mockDocument as any).getDocument.mockReturnValue(
+    ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         swagger20JsonHtml,
-        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_2_0.json",
-      ),
+        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_2_0.json"
+      )
     )
 
     // eslint-disable-next-line global-require
@@ -71,11 +72,11 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
-    ;(mockDocument as any).getDocument.mockReturnValue(
+    ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         swagger20YamlHtml_InPrivateBrowsing,
-        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_2_0.yaml",
-      ),
+        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_2_0.yaml"
+      )
     )
 
     // eslint-disable-next-line global-require
@@ -116,11 +117,11 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
-    ;(mockDocument as any).getDocument.mockReturnValue(
+    ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         swagger30YamlHtml,
-        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.yaml",
-      ),
+        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.yaml"
+      )
     )
 
     // eslint-disable-next-line global-require
@@ -161,11 +162,11 @@ describe("empty page", () => {
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
-    ;(mockDocument as any).getDocument.mockReturnValue(
+    ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         `<!DOCTYPE html><html lang="en"><head><title>empty</title></head><body></body></html>`,
-        "https://example.com",
-      ),
+        "https://example.com"
+      )
     )
 
     // eslint-disable-next-line global-require
@@ -183,17 +184,16 @@ describe("empty page", () => {
       expect(() => {
         sut.getElmOfSrcCode()
       }).toThrowErrorMatchingInlineSnapshot(
-        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`,
+        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`
       )
     })
 
     it("extractSrc", () => {
       // ## Assert ##
-      // ## Assert ##
       expect(() => {
         sut.extractSrc()
       }).toThrowErrorMatchingInlineSnapshot(
-        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`,
+        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`
       )
     })
   })

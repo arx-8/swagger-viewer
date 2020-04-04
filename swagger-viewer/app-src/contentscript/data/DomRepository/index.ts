@@ -1,4 +1,5 @@
 import { APP_RENDER_ID } from "../../../shared/constants/App"
+import { CastAny } from "../../../shared/types/utils"
 import { querySelector, querySelectorAll } from "../QuerySelector"
 
 /**
@@ -58,7 +59,7 @@ export const removeSrcCodeDom = (): void => {
  * 定義のタイトル（サマリー）の開閉ボタンを取得して返す
  */
 export const getElmOfSwaggerDefOpenerButtons = (): readonly HTMLButtonElement[] => {
-  return querySelectorAll(".opblock-tag-section .opblock-tag button") as any
+  return querySelectorAll(".opblock-tag-section .opblock-tag button") as CastAny
 }
 
 /**
@@ -66,12 +67,14 @@ export const getElmOfSwaggerDefOpenerButtons = (): readonly HTMLButtonElement[] 
  * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
  */
 export const getElmOfSwaggerEndPointDefHeaders = (
-  isOpened: boolean,
+  isOpened: boolean
 ): readonly HTMLDivElement[] => {
   if (isOpened) {
-    return querySelectorAll("div.opblock.is-open > .opblock-summary") as any
+    return querySelectorAll("div.opblock.is-open > .opblock-summary") as CastAny
   }
-  return querySelectorAll("div.opblock:not(.is-open) > .opblock-summary") as any
+  return querySelectorAll(
+    "div.opblock:not(.is-open) > .opblock-summary"
+  ) as CastAny
 }
 
 /**
@@ -79,12 +82,14 @@ export const getElmOfSwaggerEndPointDefHeaders = (
  * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
  */
 export const getElmOfSwaggerSchemasModelHeaders = (
-  isOpened: boolean,
+  isOpened: boolean
 ): readonly HTMLDivElement[] => {
   if (isOpened) {
     return querySelectorAll(
-      "span.model-box span.model-toggle:not(.collapsed)",
-    ) as any
+      "span.model-box span.model-toggle:not(.collapsed)"
+    ) as CastAny
   }
-  return querySelectorAll("span.model-box span.model-toggle.collapsed") as any
+  return querySelectorAll(
+    "span.model-box span.model-toggle.collapsed"
+  ) as CastAny
 }

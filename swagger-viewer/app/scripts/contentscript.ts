@@ -1,5 +1,6 @@
 // regenerator-runtime/runtime for async/await
 import "regenerator-runtime/runtime"
+
 import {
   extractSrc,
   getElmOfSrcCode,
@@ -47,7 +48,7 @@ const execConvertSwagger = (): void => {
     alert(
       `No operation.
 Could not convert.
-[Cause] ${error.message}`,
+[Cause] ${error.message}`
     )
     return
   }

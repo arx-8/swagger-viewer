@@ -1,12 +1,13 @@
-import { convertToObject } from "."
+import { CastAny } from "../../../shared/types/utils"
 import { yml as case2_yml } from "./fixtures/case2"
+import { convertToObject } from "."
 
 describe("convertToObject / convertable", () => {
   it("null", () => {
     // ## Arrange ##
     const src = null
     // ## Act ##
-    const result = convertToObject(src as any)
+    const result = convertToObject(src as CastAny)
     // ## Assert ##
     expect(result).toMatchInlineSnapshot(`null`)
   })

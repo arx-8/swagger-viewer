@@ -5,14 +5,19 @@ module.exports = {
     webextensions: true,
   },
   extends: [
-    "airbnb",
+    "standard",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:jest/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
+    "react-app",
     /** @see https://github.com/prettier/eslint-config-prettier#installation */
-    "prettier/react",
+    "prettier/standard",
     "prettier/@typescript-eslint",
+    "prettier/react",
+    "plugin:prettier/recommended",
   ],
   parserOptions: {
     sourceType: "module",
@@ -23,18 +28,14 @@ module.exports = {
     "@typescript-eslint",
     "jest",
     "react",
+    "typescript-sort-keys",
+    "sort-keys-fix",
     // CircleCI で warn も検知可能にするため、全て error にする
     "only-error",
   ],
   rules: {
-    "arrow-body-style": "off",
-    "import/extensions": "off",
-    "import/first": "off",
     "import/no-default-export": "error",
-    "import/prefer-default-export": "off",
     "jest/prefer-strict-equal": "error",
-    "max-classes-per-file": "off",
-    "no-console": "off",
     "no-restricted-globals": [
       "error",
       {
@@ -54,29 +55,34 @@ module.exports = {
           "Use 'textContent' instead. Because 'innerText' is (almost) not recommended.",
       },
     ],
-    "no-underscore-dangle": [
+    "no-restricted-syntax": [
       "error",
       {
-        allowAfterSuper: true,
-        allowAfterThis: true,
-      },
-    ],
-    "prefer-arrow-callback": [
-      "error",
-      {
-        allowNamedFunctions: false,
-        allowUnboundThis: false,
+        selector: "TSEnumDeclaration",
+        message:
+          "Do not declare enums. Use `Plain Object` or `Literal Types` instead.",
       },
     ],
     "prettier/prettier": [
       "error",
       {
-        arrowParens: "always",
         semi: false,
-        trailingComma: "all",
       },
     ],
+    "react/jsx-boolean-value": "error",
+    // jsx pragma 次第で Short Syntax が使えないため
+    "react/jsx-fragments": ["error", "element"],
+    "react/jsx-sort-props": "error",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-array-index-key": "error",
+    "react/no-did-mount-set-state": "error",
+    "react/no-unsafe": ["error", { checkAliases: true }],
+    "react/prefer-stateless-function": "error",
     "react/prop-types": "off",
+    "react/jsx-boolean-value": "error",
+    "react/prop-types": "off",
+    "react/void-dom-elements-no-children": "error",
+    "sort-keys-fix/sort-keys-fix": "error",
 
     // constructor のショートハンド（メンバーの省略記法）を使いたいため
     "@typescript-eslint/no-parameter-properties": "off",
@@ -98,27 +104,45 @@ module.exports = {
 
     // for-of-awaitを使用するため
     "no-await-in-loop": "off",
-    "no-restricted-syntax": [
+
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error",
+
+    // constructor のショートハンド（メンバーの省略記法）を許可
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+
+    // React Component のボイラープレートコードを減らすため
+    "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
-        selector: "ForInStatement",
-        message:
-          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
+        allowExpressions: true,
+        allowTypedFunctionExpressions: true,
       },
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+
+    // バグの温床になりやすいコードを防ぐため
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
       {
-        selector: "LabeledStatement",
-        message:
-          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
-      },
-      {
-        selector: "WithStatement",
-        message:
-          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
+        allowShortCircuit: false,
+        allowTernary: false,
+        allowTaggedTemplates: false,
       },
     ],
 
-    // しょうがない
+    // 有用なケースがあるため
     "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+
+    // Other
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/prefer-readonly": "error",
+
+    // note you must disable the base rule as it can report incorrect errors
+    "require-await": "off",
+    "@typescript-eslint/require-await": "error",
   },
 }

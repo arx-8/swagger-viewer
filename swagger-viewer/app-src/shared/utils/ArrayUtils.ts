@@ -15,7 +15,7 @@ export const range = (from: number, to: number): readonly number[] => {
 
 export const zip = <T1, T2>(
   ary1: T1[],
-  ary2: T2[],
+  ary2: T2[]
 ): ReadonlyArray<readonly [T1, T2]> => {
   if (ary1.length !== ary2.length) {
     throw new Error("Universal error: Illegal arg. Should same length.")

@@ -1,7 +1,9 @@
+import "swagger-ui-react/swagger-ui.css"
+
 import * as React from "react"
 import styled from "styled-components"
 import SwaggerUI from "swagger-ui-react"
-import "swagger-ui-react/swagger-ui.css"
+
 import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 import { range } from "../../../shared/utils/ArrayUtils"
 import { sleep } from "../../../shared/utils/SystemUtils"
@@ -22,7 +24,7 @@ type Props = {
 
 export const App: React.FC<Props> = ({ swaggerJson }) => {
   return (
-    <>
+    <React.Fragment>
       <Header>
         <Button onClick={onClickExpandAll}>Expand All</Button>
         <Button onClick={onClickCollapseAll}>Collapse All</Button>
@@ -34,11 +36,11 @@ export const App: React.FC<Props> = ({ swaggerJson }) => {
         <Button onClick={onClickExpandAll}>Expand All</Button>
         <Button onClick={onClickCollapseAll}>Collapse All</Button>
       </Footer>
-    </>
+    </React.Fragment>
   )
 }
 
-const onClickExpandAll = async () => {
+const onClickExpandAll = async (): Promise<void> => {
   getElmOfSwaggerDefOpenerButtons().forEach((e) => e.click())
   await sleep(100)
 
@@ -60,7 +62,7 @@ const onClickExpandAll = async () => {
   }
 }
 
-const onClickCollapseAll = () => {
+const onClickCollapseAll = (): void => {
   const isOpened = true
   // 全ての Open 状態に対して「閉じる」ため、再帰処理は不要
   getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
