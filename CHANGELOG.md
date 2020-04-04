@@ -1,3 +1,18 @@
+## 1.2.0 (2020-04-04)
+
+### :rocket: New Features
+
+- Add toggle when click App icon.
+  - Toggle `src code` &lt;-> `swagger-ui`
+
+### :bug: Bugfix
+
+- Fix bugs of `Expand All / Collapse All` definitions button.
+
+### :hammer: Other
+
+- Security update (Update all dependencies).
+
 ## 1.1.1 (2019-12-15)
 
 Security update (Update all dependencies).
