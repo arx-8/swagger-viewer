@@ -1,6 +1,10 @@
 import { APP_RENDER_ID } from "../../../shared/constants/App"
 import { CastAny } from "../../../shared/types/utils"
-import { querySelector, querySelectorAll } from "../QuerySelector"
+import {
+  querySelector,
+  querySelectorAll,
+  querySelectorStrict,
+} from "../QuerySelector"
 
 /**
  * DOMアクセス全般を実装する
@@ -48,11 +52,20 @@ export const extractSrc = (): string => {
   )
 }
 
-export const removeSrcCodeDom = (): void => {
+export const toggleAppOrSrcCodeDom = (): void => {
   const elm = getElmOfSrcCode()
 
-  // 今は必ず1要素。自身ごと削除すると、後でDOM injectするのが大変なためchildをremove
-  elm.children[0].remove()
+  // 今は必ず1要素。自身ごと削除すると、DOM injectするのが大変なためchildを扱う
+  const srcDom = elm.children[0] as HTMLElement
+  if (srcDom.style.display === "none") {
+    // App -> src
+    srcDom.style.display = ""
+    querySelectorStrict(`#${APP_RENDER_ID}`).style.display = "none"
+  } else {
+    // src -> App
+    srcDom.style.display = "none"
+    querySelectorStrict(`#${APP_RENDER_ID}`).style.display = ""
+  }
 }
 
 /**

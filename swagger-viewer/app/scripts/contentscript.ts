@@ -6,7 +6,7 @@ import {
   getElmOfSrcCode,
   isAcceptableLocation,
   isConverted,
-  removeSrcCodeDom,
+  toggleAppOrSrcCodeDom,
 } from "../../app-src/contentscript/data/DomRepository"
 import { getDocument } from "../../app-src/contentscript/data/QuerySelector/Document"
 import { render } from "../../app-src/contentscript/presentation"
@@ -34,35 +34,36 @@ const execConvertSwagger = (): void => {
     alert("No operation. Unsupported site.")
     return
   }
-  if (isConverted()) {
-    alert("No operation. Already converted.")
-    return
+
+  if (!isConverted()) {
+    // 描画前に、そもそも対象を処理できるか検査・変換しておく
+    const srcCode = extractSrc()
+    let swaggerJson
+    try {
+      swaggerJson = convertToObject(srcCode)
+    } catch (error) {
+      alert(
+        `No operation.
+  Could not convert.
+  [Cause] ${error.message}`
+      )
+      return
+    }
+
+    injectApp()
+    render(swaggerJson || "")
   }
 
-  // inject時に元のDOMを削除してしまうため、先にsrcを取り出しておく
-  const srcCode = extractSrc()
-  let swaggerJson
-  try {
-    swaggerJson = convertToObject(srcCode)
-  } catch (error) {
-    alert(
-      `No operation.
-Could not convert.
-[Cause] ${error.message}`
-    )
-    return
-  }
-
-  removeAndInject()
-  render(swaggerJson || "")
+  // App のアイコンをクリックされるたびに、src と swagger-ui を toggle する
+  toggleAppOrSrcCodeDom()
 
   console.log("Convert completed")
 }
 
-const removeAndInject = (): void => {
-  // 元srcを削除
-  removeSrcCodeDom()
-
+/**
+ * この App を描画するための DOM 等を inject する
+ */
+const injectApp = (): void => {
   // 元srcのところにrenderする
   const injWrapper = getDocument().createElement("div")
   injWrapper.innerHTML = `
@@ -76,9 +77,9 @@ const removeAndInject = (): void => {
   elm.appendChild(injWrapper)
   elm.style.width = "-webkit-fill-available"
 
-  console.log("injected")
-
   // swagger-ui-reactの依存ライブラリのため追加
   // eslint-disable-next-line global-require
   global.Buffer = global.Buffer || require("buffer").Buffer
+
+  console.log("injected")
 }
