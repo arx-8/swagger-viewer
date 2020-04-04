@@ -41,12 +41,14 @@ const execConvertSwagger = (): void => {
     let swaggerJson
     try {
       swaggerJson = convertToObject(srcCode)
-    } catch (error) {
+    } catch (_error) {
+      const error: Error = _error
       alert(
         `No operation.
   Could not convert.
   [Cause] ${error.message}`
       )
+      console.error(error.stack)
       return
     }
 
