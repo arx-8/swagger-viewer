@@ -8,6 +8,7 @@
   "scripts": {
     "build": "webextension-toolbox build chrome",
     "dev": "webextension-toolbox dev chrome",
+    "eslint-print-config": "eslint --print-config src/index.tsx > misc/eslint-print-config.json",
     "lint-dry": "npm-run-all --parallel --continue-on-error lint:eslint-dry lint:tsc",
     "lint:eslint-dry": "eslint -c .eslintrc.js --ext .js,.ts,.tsx .",
     "lint:eslint": "eslint -c .eslintrc.js --fix --ext .js,.ts,.tsx .",
