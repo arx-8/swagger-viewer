@@ -69,10 +69,24 @@ export const toggleAppOrSrcCodeDom = (): void => {
 }
 
 /**
- * 定義のタイトル（サマリー）の開閉ボタンを取得して返す
+ * API定義・Modelsのタイトル（サマリー）の開閉エリアを取得して返す
  */
-export const getElmOfSwaggerDefOpenerButtons = (): readonly HTMLButtonElement[] => {
-  return querySelectorAll(".opblock-tag-section .opblock-tag button") as CastAny
+export const getElmOfSwaggerDefOpener = (
+  isOpened: boolean
+): readonly HTMLButtonElement[] => {
+  if (isOpened) {
+    const apiDefs = querySelectorAll(
+      `.opblock-tag-section .opblock-tag[data-is-open="true"]`
+    )
+    const modelDefs = querySelectorAll(`section.models.is-open > h4`)
+    return [...apiDefs, ...modelDefs] as CastAny
+  }
+
+  const apiDefs = querySelectorAll(
+    `.opblock-tag-section .opblock-tag[data-is-open="false"] button`
+  )
+  const modelDefs = querySelectorAll(`section.models:not(.is-open) > h4`)
+  return [...apiDefs, ...modelDefs] as CastAny
 }
 
 /**
