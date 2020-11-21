@@ -11,13 +11,12 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended",
     "react-app",
     /** @see https://github.com/prettier/eslint-config-prettier#installation */
+    "prettier",
     "prettier/standard",
     "prettier/@typescript-eslint",
     "prettier/react",
-    "plugin:prettier/recommended",
   ],
   parserOptions: {
     sourceType: "module",
@@ -28,8 +27,9 @@ module.exports = {
     "@typescript-eslint",
     "jest",
     "react",
-    "typescript-sort-keys",
+    "sort-destructure-keys",
     "sort-keys-fix",
+    "typescript-sort-keys",
     // CircleCI で warn も検知可能にするため、全て error にする
     "only-error",
   ],
@@ -63,12 +63,6 @@ module.exports = {
           "Do not declare enums. Use `Plain Object` or `Literal Types` instead.",
       },
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        semi: false,
-      },
-    ],
     "react/jsx-boolean-value": "error",
     // jsx pragma 次第で Short Syntax が使えないため
     "react/jsx-fragments": ["error", "element"],
@@ -82,6 +76,7 @@ module.exports = {
     "react/jsx-boolean-value": "error",
     "react/prop-types": "off",
     "react/void-dom-elements-no-children": "error",
+    "sort-destructure-keys/sort-destructure-keys": "error",
     "sort-keys-fix/sort-keys-fix": "error",
 
     // constructor のショートハンド（メンバーの省略記法）を使いたいため
@@ -133,6 +128,7 @@ module.exports = {
     ],
 
     // 有用なケースがあるため
+    camelcase: "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
 
