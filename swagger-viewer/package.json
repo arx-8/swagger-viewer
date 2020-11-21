@@ -2,7 +2,7 @@
   "name": "swagger-viewer",
   "version": "1.2.0",
   "engines": {
-    "node": ">=10",
+    "node": ">=12",
     "npm": ">=6"
   },
   "scripts": {
@@ -22,7 +22,7 @@
     "@types/jest": "25.2.1",
     "@types/js-yaml": "3.12.3",
     "@types/jsdom": "16.2.0",
-    "@types/node": "13.11.0",
+    "@types/node": "12.12.6",
     "@types/react": "16.9.32",
     "@types/react-dom": "16.9.6",
     "@types/react-test-renderer": "16.9.2",
