@@ -11,13 +11,12 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended",
     "react-app",
     /** @see https://github.com/prettier/eslint-config-prettier#installation */
+    "prettier",
     "prettier/standard",
     "prettier/@typescript-eslint",
     "prettier/react",
-    "plugin:prettier/recommended",
   ],
   parserOptions: {
     sourceType: "module",
@@ -61,12 +60,6 @@ module.exports = {
         selector: "TSEnumDeclaration",
         message:
           "Do not declare enums. Use `Plain Object` or `Literal Types` instead.",
-      },
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        semi: false,
       },
     ],
     "react/jsx-boolean-value": "error",
@@ -133,7 +126,7 @@ module.exports = {
     ],
 
     // 有用なケースがあるため
-    "camelcase": "off",
+    camelcase: "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
 
