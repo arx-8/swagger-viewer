@@ -27,8 +27,9 @@ module.exports = {
     "@typescript-eslint",
     "jest",
     "react",
-    "typescript-sort-keys",
+    "sort-destructure-keys",
     "sort-keys-fix",
+    "typescript-sort-keys",
     // CircleCI で warn も検知可能にするため、全て error にする
     "only-error",
   ],
@@ -75,6 +76,7 @@ module.exports = {
     "react/jsx-boolean-value": "error",
     "react/prop-types": "off",
     "react/void-dom-elements-no-children": "error",
+    "sort-destructure-keys/sort-destructure-keys": "error",
     "sort-keys-fix/sort-keys-fix": "error",
 
     // constructor のショートハンド（メンバーの省略記法）を使いたいため
