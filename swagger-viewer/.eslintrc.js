@@ -133,6 +133,7 @@ module.exports = {
     ],
 
     // 有用なケースがあるため
+    "camelcase": "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
 

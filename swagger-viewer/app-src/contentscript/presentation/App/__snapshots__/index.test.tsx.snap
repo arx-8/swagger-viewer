@@ -48,13 +48,7 @@ Array [
     >
       <div>
         <svg
-          style={
-            Object {
-              "height": 0,
-              "position": "absolute",
-              "width": 0,
-            }
-          }
+          className="svg-assets"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
@@ -124,11 +118,6 @@ Array [
         >
           <section
             className="block col-12"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <div>
               <div
@@ -196,6 +185,12 @@ Array [
                     MIT
                   </span>
                 </div>
+                <a
+                  className="info__extdocs link"
+                  href=""
+                  rel="noopener noreferrer"
+                  target="_blank"
+                />
               </div>
             </div>
           </section>
@@ -205,11 +200,6 @@ Array [
         >
           <section
             className="schemes wrapper block col-12"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <label
               htmlFor="schemes"
@@ -238,20 +228,15 @@ Array [
         >
           <section
             className="block col-12 block-desktop col-12-desktop"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <div>
               <span>
                 <div
-                  className="opblock-tag-section"
+                  className="opblock-tag-section is-open"
                 >
                   <h4
                     className="opblock-tag no-desc"
-                    data-is-open={false}
+                    data-is-open={true}
                     data-tag="default"
                     id="operations-tag-default"
                     onClick={[Function]}
@@ -270,7 +255,7 @@ Array [
                     <button
                       className="expand-operation"
                       onClick={[Function]}
-                      title="Expand operation"
+                      title="Collapse operation"
                     >
                       <svg
                         className="arrow"
@@ -278,13 +263,170 @@ Array [
                         width="20"
                       >
                         <use
-                          href="#large-arrow"
-                          xlinkHref="#large-arrow"
+                          href="#large-arrow-down"
+                          xlinkHref="#large-arrow-down"
                         />
                       </svg>
                     </button>
                   </h4>
-                  <noscript />
+                  <div
+                    className="no-margin"
+                  >
+                     
+                    <span>
+                      <div
+                        className="opblock opblock-get"
+                        id="operations-default-findPets"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-get"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            GET
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/pets"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/pets
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                    <span>
+                      <div
+                        className="opblock opblock-post"
+                        id="operations-default-addPet"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-post"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            POST
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/pets"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/pets
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                    <span>
+                      <div
+                        className="opblock opblock-get"
+                        id="operations-default-findPetById"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-get"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            GET
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/pets/{id}"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/pets​/{id}
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                    <span>
+                      <div
+                        className="opblock opblock-delete"
+                        id="operations-default-deletePet"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-delete"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            DELETE
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/pets/{id}"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/pets​/{id}
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                     
+                  </div>
                 </div>
               </span>
             </div>
@@ -295,11 +437,6 @@ Array [
         >
           <section
             className="block col-12 block-desktop col-12-desktop"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <section
               className="models is-open"
@@ -320,18 +457,12 @@ Array [
                 </svg>
               </h4>
               <div
-                style={
-                  Object {
-                    "border": "none",
-                    "height": "auto",
-                    "margin": 0,
-                    "padding": 0,
-                  }
-                }
+                className="no-margin"
               >
                  
                 <div
                   className="model-container"
+                  data-name="Pet"
                   id="model-Pet"
                 >
                   <span
@@ -341,12 +472,8 @@ Array [
                     className="model-box"
                   >
                     <span
+                      className="pointer"
                       onClick={[Function]}
-                      style={
-                        Object {
-                          "cursor": "pointer",
-                        }
-                      }
                     >
                       <span
                         className="model-box"
@@ -359,12 +486,8 @@ Array [
                       </span>
                     </span>
                     <span
+                      className="pointer"
                       onClick={[Function]}
-                      style={
-                        Object {
-                          "cursor": "pointer",
-                        }
-                      }
                     >
                       <span
                         className="model-toggle collapsed"
@@ -375,6 +498,7 @@ Array [
                 </div>
                 <div
                   className="model-container"
+                  data-name="NewPet"
                   id="model-NewPet"
                 >
                   <span
@@ -384,12 +508,8 @@ Array [
                     className="model-box"
                   >
                     <span
+                      className="pointer"
                       onClick={[Function]}
-                      style={
-                        Object {
-                          "cursor": "pointer",
-                        }
-                      }
                     >
                       <span
                         className="model-box"
@@ -402,12 +522,8 @@ Array [
                       </span>
                     </span>
                     <span
+                      className="pointer"
                       onClick={[Function]}
-                      style={
-                        Object {
-                          "cursor": "pointer",
-                        }
-                      }
                     >
                       <span
                         className="model-toggle collapsed"
@@ -418,6 +534,7 @@ Array [
                 </div>
                 <div
                   className="model-container"
+                  data-name="ErrorModel"
                   id="model-ErrorModel"
                 >
                   <span
@@ -427,12 +544,8 @@ Array [
                     className="model-box"
                   >
                     <span
+                      className="pointer"
                       onClick={[Function]}
-                      style={
-                        Object {
-                          "cursor": "pointer",
-                        }
-                      }
                     >
                       <span
                         className="model-box"
@@ -445,12 +558,8 @@ Array [
                       </span>
                     </span>
                     <span
+                      className="pointer"
                       onClick={[Function]}
-                      style={
-                        Object {
-                          "cursor": "pointer",
-                        }
-                      }
                     >
                       <span
                         className="model-toggle collapsed"
@@ -552,13 +661,7 @@ Array [
     >
       <div>
         <svg
-          style={
-            Object {
-              "height": 0,
-              "position": "absolute",
-              "width": 0,
-            }
-          }
+          className="svg-assets"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
@@ -628,11 +731,6 @@ Array [
         >
           <section
             className="block col-12"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <div>
               <div
@@ -660,6 +758,12 @@ Array [
                 <div
                   className="description"
                 />
+                <a
+                  className="info__extdocs link"
+                  href=""
+                  rel="noopener noreferrer"
+                  target="_blank"
+                />
               </div>
             </div>
           </section>
@@ -670,20 +774,15 @@ Array [
         >
           <section
             className="block col-12 block-desktop col-12-desktop"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <div>
               <span>
                 <div
-                  className="opblock-tag-section"
+                  className="opblock-tag-section is-open"
                 >
                   <h4
                     className="opblock-tag no-desc"
-                    data-is-open={false}
+                    data-is-open={true}
                     data-tag="default"
                     id="operations-tag-default"
                     onClick={[Function]}
@@ -702,7 +801,7 @@ Array [
                     <button
                       className="expand-operation"
                       onClick={[Function]}
-                      title="Expand operation"
+                      title="Collapse operation"
                     >
                       <svg
                         className="arrow"
@@ -710,13 +809,94 @@ Array [
                         width="20"
                       >
                         <use
-                          href="#large-arrow"
-                          xlinkHref="#large-arrow"
+                          href="#large-arrow-down"
+                          xlinkHref="#large-arrow-down"
                         />
                       </svg>
                     </button>
                   </h4>
-                  <noscript />
+                  <div
+                    className="no-margin"
+                  >
+                     
+                    <span>
+                      <div
+                        className="opblock opblock-get"
+                        id="operations-default-listVersionsv2"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-get"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            GET
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            List API versions
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                    <span>
+                      <div
+                        className="opblock opblock-get"
+                        id="operations-default-getVersionDetailsv2"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-get"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            GET
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/v2"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/v2
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            Show API version details
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                     
+                  </div>
                 </div>
               </span>
             </div>
@@ -727,11 +907,6 @@ Array [
         >
           <section
             className="block col-12 block-desktop col-12-desktop"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           />
         </div>
       </div>
@@ -822,13 +997,7 @@ Array [
     >
       <div>
         <svg
-          style={
-            Object {
-              "height": 0,
-              "position": "absolute",
-              "width": 0,
-            }
-          }
+          className="svg-assets"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
@@ -898,11 +1067,6 @@ Array [
         >
           <section
             className="block col-12"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <div>
               <div
@@ -926,11 +1090,7 @@ Array [
                         </pre>
                       </small>
                       <small
-                        style={
-                          Object {
-                            "backgroundColor": "#89bf04",
-                          }
-                        }
+                        className="version-stamp"
                       >
                         <pre
                           className="version"
@@ -945,6 +1105,12 @@ Array [
                 <div
                   className="description"
                 />
+                <a
+                  className="info__extdocs link"
+                  href=""
+                  rel="noopener noreferrer"
+                  target="_blank"
+                />
               </div>
             </div>
           </section>
@@ -955,20 +1121,15 @@ Array [
         >
           <section
             className="block col-12 block-desktop col-12-desktop"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           >
             <div>
               <span>
                 <div
-                  className="opblock-tag-section"
+                  className="opblock-tag-section is-open"
                 >
                   <h4
                     className="opblock-tag no-desc"
-                    data-is-open={false}
+                    data-is-open={true}
                     data-tag="default"
                     id="operations-tag-default"
                     onClick={[Function]}
@@ -987,7 +1148,7 @@ Array [
                     <button
                       className="expand-operation"
                       onClick={[Function]}
-                      title="Expand operation"
+                      title="Collapse operation"
                     >
                       <svg
                         className="arrow"
@@ -995,13 +1156,56 @@ Array [
                         width="20"
                       >
                         <use
-                          href="#large-arrow"
-                          xlinkHref="#large-arrow"
+                          href="#large-arrow-down"
+                          xlinkHref="#large-arrow-down"
                         />
                       </svg>
                     </button>
                   </h4>
-                  <noscript />
+                  <div
+                    className="no-margin"
+                  >
+                     
+                    <span>
+                      <div
+                        className="opblock opblock-post"
+                        id="operations-default-post_streams"
+                      >
+                        <div
+                          className="opblock-summary opblock-summary-post"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="opblock-summary-method"
+                          >
+                            POST
+                          </span>
+                          <span
+                            className="opblock-summary-path"
+                            data-path="/streams"
+                            onCopyCapture={[Function]}
+                          >
+                            <a
+                              className="nostyle"
+                              href={null}
+                              onClick={null}
+                            >
+                              <span>
+                                ​/streams
+                              </span>
+                            </a>
+                          </span>
+                          <div
+                            className="opblock-summary-description"
+                          >
+                            
+                          </div>
+                        </div>
+                        <noscript />
+                      </div>
+                    </span>
+                     
+                  </div>
                 </div>
               </span>
             </div>
@@ -1012,11 +1216,6 @@ Array [
         >
           <section
             className="block col-12 block-desktop col-12-desktop"
-            style={
-              Object {
-                "display": null,
-              }
-            }
           />
         </div>
       </div>
@@ -1167,7 +1366,24 @@ exports[`Shallow render test shallow render and snapshot 1`] = `
   </styled.div>
   <styled.div>
     <SwaggerUI
+      deepLinking={false}
+      defaultModelsExpandDepth={1}
+      docExpansion="list"
+      layout="BaseLayout"
+      presets={Array []}
       spec=""
+      supportedSubmitMethods={
+        Array [
+          "get",
+          "put",
+          "post",
+          "delete",
+          "options",
+          "head",
+          "patch",
+          "trace",
+        ]
+      }
     />
   </styled.div>
   <styled.div>

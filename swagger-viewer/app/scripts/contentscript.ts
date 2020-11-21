@@ -76,6 +76,6 @@ const injectApp = (): void => {
   elm.style.width = "-webkit-fill-available"
 
   // swagger-ui-reactの依存ライブラリのため追加
-  // eslint-disable-next-line global-require
+  // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
   global.Buffer = global.Buffer || require("buffer").Buffer
 }
