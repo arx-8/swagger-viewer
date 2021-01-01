@@ -24,7 +24,7 @@ type Props = {
 
 export const App: React.FC<Props> = ({ swaggerJson }) => {
   return (
-    <React.Fragment>
+    <Root>
       <Header>
         <Button onClick={onClickExpandAll}>Expand All</Button>
         <Button onClick={onClickCollapseAll}>Collapse All</Button>
@@ -36,7 +36,7 @@ export const App: React.FC<Props> = ({ swaggerJson }) => {
         <Button onClick={onClickExpandAll}>Expand All</Button>
         <Button onClick={onClickCollapseAll}>Collapse All</Button>
       </Footer>
-    </React.Fragment>
+    </Root>
   )
 }
 
@@ -69,6 +69,10 @@ const onClickCollapseAll = (): void => {
   getElmOfSwaggerSchemasModelHeaders(isOpened).forEach((e) => e.click())
   getElmOfSwaggerDefOpener(isOpened).forEach((e) => e.click())
 }
+
+const Root = styled.div`
+  background-color: #fff;
+`
 
 const Header = styled.div`
   display: flex;

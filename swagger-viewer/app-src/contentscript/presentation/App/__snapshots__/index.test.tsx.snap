@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render test Swagger json 2.0 1`] = `
-Array [
-  .c0 {
+.c0 {
+  background-color: #fff;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,12 +17,35 @@ Array [
   padding: 5px 5px 0 0;
 }
 
-.c0 > button {
+.c1 > button {
   margin-left: 3px;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0 5px 5px 0;
+}
+
+.c3 > button {
+  margin-left: 3px;
+}
+
+.c2 > .swagger-ui .information-container.wrapper .info {
+  margin: 0 !important;
+}
+
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
   >
     <button
       className="btn"
@@ -35,13 +61,9 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-  .c0 > .swagger-ui .information-container.wrapper .info {
-  margin: 0 !important;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c2"
   >
     <div
       className="swagger-ui"
@@ -575,25 +597,9 @@ Array [
         </div>
       </div>
     </div>
-  </div>,
-  .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0 5px 5px 0;
-}
-
-.c0 > button {
-  margin-left: 3px;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c3"
   >
     <button
       className="btn"
@@ -609,13 +615,16 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Render test Swagger yaml 2.0 1`] = `
-Array [
-  .c0 {
+.c0 {
+  background-color: #fff;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -627,12 +636,35 @@ Array [
   padding: 5px 5px 0 0;
 }
 
-.c0 > button {
+.c1 > button {
   margin-left: 3px;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0 5px 5px 0;
+}
+
+.c3 > button {
+  margin-left: 3px;
+}
+
+.c2 > .swagger-ui .information-container.wrapper .info {
+  margin: 0 !important;
+}
+
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
   >
     <button
       className="btn"
@@ -648,13 +680,9 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-  .c0 > .swagger-ui .information-container.wrapper .info {
-  margin: 0 !important;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c2"
   >
     <div
       className="swagger-ui"
@@ -911,25 +939,9 @@ Array [
         </div>
       </div>
     </div>
-  </div>,
-  .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0 5px 5px 0;
-}
-
-.c0 > button {
-  margin-left: 3px;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c3"
   >
     <button
       className="btn"
@@ -945,13 +957,16 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Render test Swagger yaml 3.0 1`] = `
-Array [
-  .c0 {
+.c0 {
+  background-color: #fff;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -963,12 +978,35 @@ Array [
   padding: 5px 5px 0 0;
 }
 
-.c0 > button {
+.c1 > button {
   margin-left: 3px;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0 5px 5px 0;
+}
+
+.c3 > button {
+  margin-left: 3px;
+}
+
+.c2 > .swagger-ui .information-container.wrapper .info {
+  margin: 0 !important;
+}
+
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
   >
     <button
       className="btn"
@@ -984,13 +1022,9 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-  .c0 > .swagger-ui .information-container.wrapper .info {
-  margin: 0 !important;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c2"
   >
     <div
       className="swagger-ui"
@@ -1220,25 +1254,9 @@ Array [
         </div>
       </div>
     </div>
-  </div>,
-  .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0 5px 5px 0;
-}
-
-.c0 > button {
-  margin-left: 3px;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c3"
   >
     <button
       className="btn"
@@ -1254,13 +1272,16 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Render test invalid swagger 1`] = `
-Array [
-  .c0 {
+.c0 {
+  background-color: #fff;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1272,12 +1293,35 @@ Array [
   padding: 5px 5px 0 0;
 }
 
-.c0 > button {
+.c1 > button {
   margin-left: 3px;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0 5px 5px 0;
+}
+
+.c3 > button {
+  margin-left: 3px;
+}
+
+.c2 > .swagger-ui .information-container.wrapper .info {
+  margin: 0 !important;
+}
+
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
   >
     <button
       className="btn"
@@ -1293,13 +1337,9 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-  .c0 > .swagger-ui .information-container.wrapper .info {
-  margin: 0 !important;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c2"
   >
     <div
       className="swagger-ui"
@@ -1312,25 +1352,9 @@ Array [
         </h4>
       </div>
     </div>
-  </div>,
-  .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0 5px 5px 0;
-}
-
-.c0 > button {
-  margin-left: 3px;
-}
-
-<div
-    className="c0"
+  </div>
+  <div
+    className="c3"
   >
     <button
       className="btn"
@@ -1346,12 +1370,12 @@ Array [
     >
       Collapse All
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Shallow render test shallow render and snapshot 1`] = `
-<React.Fragment>
+<styled.div>
   <styled.div>
     <Button
       onClick={[Function]}
@@ -1398,5 +1422,5 @@ exports[`Shallow render test shallow render and snapshot 1`] = `
       Collapse All
     </Button>
   </styled.div>
-</React.Fragment>
+</styled.div>
 `;
