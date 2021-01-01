@@ -1,6 +1,6 @@
 {
   "name": "swagger-viewer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "engines": {
     "node": ">=12",
     "npm": ">=6"

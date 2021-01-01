@@ -1,3 +1,13 @@
+## 1.2.1 (2021-01-01)
+
+### :bug: Bugfix
+
+- Fix design collapse with [GitHub Dark mode](https://github.blog/2020-12-08-new-from-universe-2020-dark-mode-github-sponsors-for-companies-and-more/).
+
+### :hammer: Other
+
+- Security update (Update all dependencies).
+
 ## 1.2.0 (2020-04-04)
 
 ### :rocket: New Features

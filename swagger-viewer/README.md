@@ -31,11 +31,16 @@ And load `dist/chrome` as Chrome extension.
    ```sh
    find ./dist/chrome/ -name "*.ts" | xargs rm -f
    find ./dist/chrome/ -name "*.js.map" | xargs rm -f
+   find ./dist/chrome/ -name "*react-syntax-highlighter*.js" | xargs rm -f
    rm -rf ./dist/chrome/webextension-toolbox
    ```
 4. Edit `./dist/chrome/manifest.json`
    - Remove value of `.background.scripts[] == "webextension-toolbox/client.js"`
 5. Zip `./dist/chrome` to `swagger-viewer.v${version}.chrome.zip`
+   ```sh
+   cd ./dist
+   zip -r "swagger-viewer.v${version}.chrome.zip" chrome
+   ```
 
 And register builded zip as Chrome extension.
 
