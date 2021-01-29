@@ -1,3 +1,9 @@
+## 2.0.0 (2021-01-29)
+
+### :fire: Breaking changes
+
+- Fix for breaking changes on GitHub.
+
 ## 1.2.1 (2021-01-01)
 
 ### :bug: Bugfix
