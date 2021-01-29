@@ -187,7 +187,7 @@ describe("empty page", () => {
       expect(() => {
         sut.getElmOfSrcCode()
       }).toThrowErrorMatchingInlineSnapshot(
-        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`
+        `"Unexpected DOM. selector: \\"#repo-content-pjax-container div.Box > div.Box-body > table\\""`
       )
     })
 
@@ -196,7 +196,7 @@ describe("empty page", () => {
       expect(() => {
         sut.extractSrc()
       }).toThrowErrorMatchingInlineSnapshot(
-        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`
+        `"Unexpected DOM. selector: \\"#repo-content-pjax-container div.Box > div.Box-body > table\\""`
       )
     })
   })

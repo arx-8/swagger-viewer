@@ -20,7 +20,7 @@ export const isConverted = (): boolean => {
 }
 
 export const getElmOfSrcCode = (): HTMLElement => {
-  const selector = "div.repository-content > div.Box > div.Box-body > table"
+  const selector = "#repo-content-pjax-container div.Box > div.Box-body > table"
   const element = querySelector(selector)
 
   if (
