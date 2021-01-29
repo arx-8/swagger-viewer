@@ -26,6 +26,7 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
     // 型の書き方が不明なため、any castしている
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
+        // No login
         swagger20JsonHtml,
         "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_2_0.json"
       )
@@ -74,6 +75,7 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
     // 型の書き方が不明なため、any castしている
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
+        // No login
         swagger20YamlHtml_InPrivateBrowsing,
         "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_2_0.yaml"
       )
@@ -119,6 +121,7 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
     // 型の書き方が不明なため、any castしている
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
+        // logged in + dark mode
         swagger30YamlHtml,
         "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_0.yaml"
       )
@@ -184,7 +187,7 @@ describe("empty page", () => {
       expect(() => {
         sut.getElmOfSrcCode()
       }).toThrowErrorMatchingInlineSnapshot(
-        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`
+        `"Unexpected DOM. selector: \\"#repo-content-pjax-container div.Box > div.Box-body > table\\""`
       )
     })
 
@@ -193,7 +196,7 @@ describe("empty page", () => {
       expect(() => {
         sut.extractSrc()
       }).toThrowErrorMatchingInlineSnapshot(
-        `"Unexpected DOM. selector: \\"div.repository-content > div.Box > div.Box-body > table\\""`
+        `"Unexpected DOM. selector: \\"#repo-content-pjax-container div.Box > div.Box-body > table\\""`
       )
     })
   })
