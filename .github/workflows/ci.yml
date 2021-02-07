@@ -2,8 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches:
-      - feature/*
+    branches-ignore:
+      - temp/*
+      - experiment/*
 
 jobs:
   build:
