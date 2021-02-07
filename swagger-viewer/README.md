@@ -24,6 +24,8 @@ npm run build
 
 #### Alternative build way
 
+If `npm run build` command has problems:
+
 1. `npm run dev`
 2. Stop watch. (ctrl + c)
 3. Delete dev files.
