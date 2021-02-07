@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires, import/no-extraneous-dependencies */
 const { resolve } = require("path")
 const GlobEntriesPlugin = require("webpack-watched-glob-entries-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
 const babelOptions = require("./babel.config")
 /* eslint-enable */
 
@@ -18,6 +19,16 @@ module.exports = {
       ...config.resolve.extensions,
       ...[".ts", ".tsx"],
     ]
+
+    config.optimization = {
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            output: { ascii_only: true },
+          }
+        })
+      ]
+    }
 
     // eslint-disable-next-line no-param-reassign
     config.entry = GlobEntriesPlugin.getEntries([

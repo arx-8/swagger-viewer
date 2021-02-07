@@ -18,10 +18,9 @@ And load `dist/chrome` as Chrome extension.
 
 ### Build
 
-~~npm run build~~
-
-- Currently, Can not build because `npm run build` has a problem.
-  - Ref. https://github.com/arx-8/swagger-viewer/issues/1
+```sh
+npm run build
+```
 
 #### Alternative build way
 
