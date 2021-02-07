@@ -25,9 +25,9 @@ module.exports = {
         new TerserPlugin({
           terserOptions: {
             output: { ascii_only: true },
-          }
-        })
-      ]
+          },
+        }),
+      ],
     }
 
     // eslint-disable-next-line no-param-reassign
