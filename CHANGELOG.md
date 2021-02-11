@@ -1,3 +1,13 @@
+## 2.0.1 (2021-02-08)
+
+### :bug: Bugfix
+
+- [#50](https://github.com/arx-8/swagger-viewer/issues/50) Fix an error when installing.
+
+### :hammer: Other
+
+- [#47](https://github.com/arx-8/swagger-viewer/pull/47) Fix `npm run build` command. (Thank you, [@cubenoy22](https://github.com/cubenoy22) !)
+
 ## 2.0.0 (2021-01-29)
 
 ### :fire: Breaking changes
