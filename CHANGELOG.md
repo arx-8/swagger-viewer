@@ -1,3 +1,10 @@
+## 2.0.2 (2021-02-20)
+
+### :hammer: Other
+
+- Security update (Update all dependencies).
+- Improved error messages.
+
 ## 2.0.1 (2021-02-11)
 
 ### :bug: Bugfix
