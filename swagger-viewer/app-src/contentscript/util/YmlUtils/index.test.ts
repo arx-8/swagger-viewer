@@ -1,15 +1,14 @@
-import { CastAny } from "../../../shared/types/utils"
-import { yml as case2_yml } from "./fixtures/case2"
 import { convertToObject } from "."
+import { yml as case2_yml } from "./fixtures/case2"
 
 describe("convertToObject / convertable", () => {
-  it("null", () => {
+  it("undefined", () => {
     // ## Arrange ##
-    const src = null
+    const src = undefined
     // ## Act ##
-    const result = convertToObject(src as CastAny)
+    const result = convertToObject(src)
     // ## Assert ##
-    expect(result).toMatchInlineSnapshot(`null`)
+    expect(result).toMatchInlineSnapshot(`undefined`)
   })
 
   it("empty string", () => {
@@ -18,7 +17,7 @@ describe("convertToObject / convertable", () => {
     // ## Act ##
     const result = convertToObject(src)
     // ## Assert ##
-    expect(result).toMatchInlineSnapshot(`null`)
+    expect(result).toMatchInlineSnapshot(`undefined`)
   })
 
   it("no swagger string", () => {
@@ -27,7 +26,7 @@ describe("convertToObject / convertable", () => {
     // ## Act ##
     const result = convertToObject(src)
     // ## Assert ##
-    expect(result).toMatchInlineSnapshot(`null`)
+    expect(result).toMatchInlineSnapshot(`undefined`)
   })
 
   it("yaml string", () => {
@@ -125,10 +124,14 @@ describe("convertToObject / broken string", () => {
       expect(() => {
         convertToObject(src)
       }).toThrowErrorMatchingInlineSnapshot(`
-"unexpected end of the stream within a flow collection at line 6, column 1:
-    
-    ^"
-`)
+        "unexpected end of the stream within a flow collection (6:1)
+
+         3 |   \\"a\\": \\"a\\",
+         4 |   \\"b\\": 2,
+         5 |   \\"cc\\": null,
+         6 | 
+        -----^"
+      `)
     })
 
     it("case:2", () => {
@@ -145,10 +148,16 @@ describe("convertToObject / broken string", () => {
       expect(() => {
         convertToObject(src)
       }).toThrowErrorMatchingInlineSnapshot(`
-"missed comma between flow collection entries at line 4, column 3:
-      \\"b\\": 2,
-      ^"
-`)
+        "missed comma between flow collection entries (4:3)
+
+         1 | 
+         2 | {
+         3 |   \\"a\\": \\"a\\"
+         4 |   \\"b\\": 2,
+        -------^
+         5 |   \\"cc\\": null,
+         6 | }"
+      `)
     })
   })
 
@@ -176,10 +185,16 @@ consumes:
       expect(() => {
         convertToObject(src)
       }).toThrowErrorMatchingInlineSnapshot(`
-"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 7, column 21:
-        get: operationId: listVersionsv2
-                        ^"
-`)
+        "bad indentation of a mapping entry (7:21)
+
+         4 |                 title: Simple API overview
+         5 | paths:
+         6 |   /:
+         7 |     get: operationId: listVersionsv2
+        -------------------------^
+         8 |       produces:
+         9 |       - application/json"
+      `)
     })
 
     it("case:2", () => {
@@ -206,10 +221,16 @@ consumes:
       expect(() => {
         convertToObject(src)
       }).toThrowErrorMatchingInlineSnapshot(`
-"bad indentation of a mapping entry at line 9, column 7:
-          produces:
-          ^"
-`)
+        "bad indentation of a mapping entry (9:7)
+
+          6 |   /:
+          7 |     get:
+          8 |               operationId: listVersionsv2
+          9 |       produces:
+        ------------^
+         10 | application/json
+         11 |       responses:"
+      `)
     })
   })
 })

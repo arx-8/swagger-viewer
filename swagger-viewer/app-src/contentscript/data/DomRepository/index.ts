@@ -30,7 +30,7 @@ export const getElmOfSrcCode = (): HTMLElement => {
     throw new Error(`Unexpected DOM. selector: "${selector}"`)
   }
 
-  return element as HTMLElement
+  return element
 }
 
 export const extractSrc = (): string => {

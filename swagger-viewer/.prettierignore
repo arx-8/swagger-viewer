@@ -1,3 +1,4 @@
+app-src/shared/__test__/fixtures/swagger_3_0_broken.yaml
 dist/*
 package-lock.json
 packages/*

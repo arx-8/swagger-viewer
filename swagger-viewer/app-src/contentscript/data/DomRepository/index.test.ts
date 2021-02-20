@@ -1,10 +1,10 @@
+import * as DomRepository from "."
 import { CastAny } from "../../../shared/types/utils"
 import { createMockDocumentBy } from "../../__test__/Helper"
 import * as Document from "../QuerySelector/Document"
 import { html as swagger20JsonHtml } from "./fixtures/GitHubPageHtml_swagger_2_0_json"
 import { html as swagger20YamlHtml_InPrivateBrowsing } from "./fixtures/GitHubPageHtml_swagger_2_0_yaml_InPrivateBrowsing"
 import { html as swagger30YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_yaml"
-import * as DomRepository from "."
 
 /**
  * 注意: DomRepository に直接アクセスすると、Mockが無効になってしまう。
@@ -46,7 +46,7 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.textContent != null).toStrictEqual(true)
       expect(result.children.length).toStrictEqual(1)
     })
 
@@ -95,7 +95,7 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.textContent != null).toStrictEqual(true)
       expect(result.children.length).toStrictEqual(1)
     })
 
@@ -141,7 +141,7 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.textContent != null).toStrictEqual(true)
       expect(result.children.length).toStrictEqual(1)
     })
 

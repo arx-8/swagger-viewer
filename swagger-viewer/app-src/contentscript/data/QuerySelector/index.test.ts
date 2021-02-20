@@ -1,6 +1,6 @@
+import * as DocumentRepository from "."
 import { createMockDocumentBy } from "../../__test__/Helper"
 import { testHtml } from "./index.test.data"
-import * as DocumentRepository from "."
 
 describe("Basic test", () => {
   let sut: typeof DocumentRepository
@@ -50,14 +50,23 @@ describe("Basic test", () => {
       // ## Act ##
       const element = sut.querySelector("not found query")
       // ## Assert ##
-      expect(element).toBeNull()
+      expect(element).toStrictEqual(undefined)
     })
     it("要素が1つある", () => {
       // ## Arrange ##
       // ## Act ##
       const element = sut.querySelector("#test-id-unique")
       // ## Assert ##
-      expect(element).toBeDefined()
+      expect(element).toMatchInlineSnapshot(`
+        <p
+          id="test-id-unique"
+        >
+          
+              This domain is established to be used for illustrative examples in documents.
+              You may use this domain in examples without prior coordination or asking for permission.
+            
+        </p>
+      `)
     })
     it("要素が2つ以上ある", () => {
       // ## Arrange ##

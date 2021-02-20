@@ -1,22 +1,20 @@
 import jsYaml from "js-yaml"
-
 import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 
 /**
  * @param str yml string | json string
  */
-export const convertToObject = (str: string): MaybeSwaggerJson | null => {
+export const convertToObject = (
+  str: string | undefined
+): MaybeSwaggerJson | undefined => {
   if (str == null) {
-    // type check しているが、元ネタが信用できないケースがあるため
-    return null
+    return
   }
 
   const maybe = jsYaml.load(str)
-  if (maybe == null) {
-    return null
+  if (maybe == null || typeof maybe === "string" || typeof maybe === "number") {
+    return
   }
-  if (typeof maybe === "string") {
-    return null
-  }
-  return maybe
+
+  return maybe as MaybeSwaggerJson
 }

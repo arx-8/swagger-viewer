@@ -14,6 +14,7 @@ module.exports = {
     "react-app",
     /** @see https://github.com/prettier/eslint-config-prettier#installation */
     "prettier",
+    "prettier/prettier",
     "prettier/standard",
     "prettier/@typescript-eslint",
     "prettier/react",
