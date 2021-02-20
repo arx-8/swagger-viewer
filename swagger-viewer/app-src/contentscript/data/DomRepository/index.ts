@@ -27,7 +27,9 @@ export const getElmOfSrcCode = (): HTMLElement => {
     element?.textContent?.length == null ||
     element.textContent.length === 0
   ) {
-    throw new Error(`Unexpected DOM. selector: "${selector}"`)
+    throw new Error(
+      `Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: "${selector}"`
+    )
   }
 
   return element
