@@ -37,5 +37,6 @@
   /** esbenp.prettier-vscode */
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "prettier.prettierPath": "./node_modules/prettier"
+  "prettier.prettierPath": "./node_modules/prettier",
+  "cSpell.words": ["contentscript", "destructure", "webextension"]
 }
