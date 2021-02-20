@@ -1,15 +1,14 @@
-import { CastAny } from "../../../shared/types/utils"
 import { yml as case2_yml } from "./fixtures/case2"
 import { convertToObject } from "."
 
 describe("convertToObject / convertable", () => {
-  it("null", () => {
+  it("undefined", () => {
     // ## Arrange ##
-    const src = null
+    const src = undefined
     // ## Act ##
-    const result = convertToObject(src as CastAny)
+    const result = convertToObject(src)
     // ## Assert ##
-    expect(result).toMatchInlineSnapshot(`null`)
+    expect(result).toMatchInlineSnapshot(`undefined`)
   })
 
   it("empty string", () => {
@@ -18,7 +17,7 @@ describe("convertToObject / convertable", () => {
     // ## Act ##
     const result = convertToObject(src)
     // ## Assert ##
-    expect(result).toMatchInlineSnapshot(`null`)
+    expect(result).toMatchInlineSnapshot(`undefined`)
   })
 
   it("no swagger string", () => {
@@ -27,7 +26,7 @@ describe("convertToObject / convertable", () => {
     // ## Act ##
     const result = convertToObject(src)
     // ## Assert ##
-    expect(result).toMatchInlineSnapshot(`null`)
+    expect(result).toMatchInlineSnapshot(`undefined`)
   })
 
   it("yaml string", () => {

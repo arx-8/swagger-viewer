@@ -14,10 +14,10 @@ export const querySelectorAll = (
  *
  * @throws 2要素以上見つかった
  */
-export const querySelector = (selector: string): HTMLElement | null => {
+export const querySelector = (selector: string): HTMLElement | undefined => {
   const founds = querySelectorAll(selector)
   if (founds.length === 0) {
-    return null
+    return undefined
   }
   if (founds.length === 1) {
     return founds[0]

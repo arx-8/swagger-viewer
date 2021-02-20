@@ -46,7 +46,7 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.textContent != null).toStrictEqual(true)
       expect(result.children.length).toStrictEqual(1)
     })
 
@@ -95,7 +95,7 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.textContent != null).toStrictEqual(true)
       expect(result.children.length).toStrictEqual(1)
     })
 
@@ -141,7 +141,7 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
       // ## Act ##
       const result = sut.getElmOfSrcCode()
       // ## Assert ##
-      expect(result.textContent).not.toStrictEqual(null)
+      expect(result.textContent != null).toStrictEqual(true)
       expect(result.children.length).toStrictEqual(1)
     })
 

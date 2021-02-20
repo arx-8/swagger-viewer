@@ -50,14 +50,23 @@ describe("Basic test", () => {
       // ## Act ##
       const element = sut.querySelector("not found query")
       // ## Assert ##
-      expect(element).toBeNull()
+      expect(element).toStrictEqual(undefined)
     })
     it("要素が1つある", () => {
       // ## Arrange ##
       // ## Act ##
       const element = sut.querySelector("#test-id-unique")
       // ## Assert ##
-      expect(element).toBeDefined()
+      expect(element).toMatchInlineSnapshot(`
+        <p
+          id="test-id-unique"
+        >
+          
+              This domain is established to be used for illustrative examples in documents.
+              You may use this domain in examples without prior coordination or asking for permission.
+            
+        </p>
+      `)
     })
     it("要素が2つ以上ある", () => {
       // ## Arrange ##
