@@ -1,5 +1,4 @@
 import jsYaml from "js-yaml"
-
 import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 
 /**

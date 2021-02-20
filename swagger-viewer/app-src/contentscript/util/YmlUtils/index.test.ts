@@ -1,5 +1,5 @@
-import { yml as case2_yml } from "./fixtures/case2"
 import { convertToObject } from "."
+import { yml as case2_yml } from "./fixtures/case2"
 
 describe("convertToObject / convertable", () => {
   it("undefined", () => {

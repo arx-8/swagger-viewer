@@ -1,5 +1,5 @@
-import { CastAny } from "../../../shared/types/utils"
 import { isAcceptableLocation } from "."
+import { CastAny } from "../../../shared/types/utils"
 
 describe("isAcceptableLocation", () => {
   /**

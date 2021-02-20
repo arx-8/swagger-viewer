@@ -1,14 +1,12 @@
 import "jest-styled-components"
-
 import * as React from "react"
 import { create } from "react-test-renderer"
 import ShallowRenderer from "react-test-renderer/shallow"
-
+import { App } from "."
 import { convertToObject } from "../../util/YmlUtils"
 import { swaggerJson_2_0 } from "./fixtures/SwaggerJson_2_0"
 import { swaggerYaml_2_0 } from "./fixtures/SwaggerYaml_2_0"
 import { swaggerYaml_3_0 } from "./fixtures/SwaggerYaml_3_0"
-import { App } from "."
 
 describe("Shallow render test", () => {
   beforeAll(() => {

@@ -1,6 +1,6 @@
+import * as DocumentRepository from "."
 import { createMockDocumentBy } from "../../__test__/Helper"
 import { testHtml } from "./index.test.data"
-import * as DocumentRepository from "."
 
 describe("Basic test", () => {
   let sut: typeof DocumentRepository

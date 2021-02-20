@@ -1,9 +1,7 @@
-import "swagger-ui-react/swagger-ui.css"
-
 import * as React from "react"
 import styled from "styled-components"
 import SwaggerUI from "swagger-ui-react"
-
+import "swagger-ui-react/swagger-ui.css"
 import { MaybeSwaggerJson } from "../../../shared/types/Swagger"
 import { range } from "../../../shared/utils/ArrayUtils"
 import { sleep } from "../../../shared/utils/SystemUtils"

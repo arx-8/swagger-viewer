@@ -1,10 +1,10 @@
+import * as DomRepository from "."
 import { CastAny } from "../../../shared/types/utils"
 import { createMockDocumentBy } from "../../__test__/Helper"
 import * as Document from "../QuerySelector/Document"
 import { html as swagger20JsonHtml } from "./fixtures/GitHubPageHtml_swagger_2_0_json"
 import { html as swagger20YamlHtml_InPrivateBrowsing } from "./fixtures/GitHubPageHtml_swagger_2_0_yaml_InPrivateBrowsing"
 import { html as swagger30YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_yaml"
-import * as DomRepository from "."
 
 /**
  * 注意: DomRepository に直接アクセスすると、Mockが無効になってしまう。
