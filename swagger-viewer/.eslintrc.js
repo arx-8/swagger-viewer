@@ -37,6 +37,7 @@ module.exports = {
   rules: {
     "import/no-default-export": "error",
     "jest/prefer-strict-equal": "error",
+    "no-alert": "error",
     "no-restricted-globals": [
       "error",
       {

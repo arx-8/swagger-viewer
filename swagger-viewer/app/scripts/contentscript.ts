@@ -14,32 +14,17 @@ import { APP_RENDER_ID } from "../../app-src/shared/constants/App"
 import { EXEC_CONVERT_SWAGGER } from "../../app-src/shared/constants/SendMessageTypes"
 import { ExecConvertSwaggerMessage } from "../../app-src/shared/types/SendMessage"
 
-/* eslint-disable no-alert */
-
 /**
  * contentscriptのエントリーポイント
  * backgroundからイベントを受け取って実行
  */
 chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
   if (message.type === EXEC_CONVERT_SWAGGER) {
-    execConvertSwagger()
-  }
-})
-
-const execConvertSwagger = (): void => {
-  if (!isAcceptableLocation(getDocument())) {
-    alert("No operation. Unsupported site.")
-    return
-  }
-
-  if (!isConverted()) {
-    // 描画前に、そもそも対象を処理できるか検査・変換しておく
-    const srcCode = extractSrc()
-    let swaggerJson
     try {
-      swaggerJson = convertToObject(srcCode)
+      execConvertSwagger()
     } catch (_error) {
       const error: Error = _error
+      // eslint-disable-next-line no-alert
       alert(
         `No operation. Can not convert.
 
@@ -47,8 +32,19 @@ const execConvertSwagger = (): void => {
 ${error.message}`
       )
       console.error(error.stack)
-      return
     }
+  }
+})
+
+const execConvertSwagger = (): void => {
+  if (!isAcceptableLocation(getDocument())) {
+    throw new Error("Unsupported site or filename-extension.")
+  }
+
+  if (!isConverted()) {
+    // 描画前に、そもそも対象を処理できるか検査・変換しておく
+    const srcCode = extractSrc()
+    const swaggerJson = convertToObject(srcCode)
 
     injectApp()
     render(swaggerJson || "")
