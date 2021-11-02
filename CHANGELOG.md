@@ -1,3 +1,11 @@
+## 3.0.0 (2021-11-03)
+
+### :fire: Breaking changes
+
+- Fix for breaking changes on GitHub.
+  - There are still bugs. I have confirmed that the conversion behavior of some pages is not correct. This is being fixed now.
+  - e.g. https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/uspto.yaml
+
 ## 2.0.2 (2021-02-20)
 
 ### :hammer: Other
