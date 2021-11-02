@@ -46,10 +46,10 @@ export const extractSrc = (): string => {
     elm.textContent
       .trim()
       .split("\n")
-      // 半角スペースだけの空行が取得できてしまうため
+      // 各行の間に半角スペースだけの空行が取得できてしまうため
       .filter((line) => line.trim().length !== 0)
-      // 余分なインデントの削除
-      .map((line) => line.replace(/^ {8}/, ""))
+      // 各行の prefix に余分なインデントが付いているため、それを削除する
+      .map((line) => line.replace(/^ {10}/, ""))
       .join("\n")
   )
 }
