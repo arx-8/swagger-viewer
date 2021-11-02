@@ -152,6 +152,52 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
   })
 })
 
+describe("GitHubPageHtml swagger 3.1 yaml tests", () => {
+  let sut: typeof DomRepository
+  // let mockDocument: jest.MockInstance<typeof Document>
+  let mockDocument: typeof Document
+
+  beforeAll(() => {
+    // ## Arrange ##
+    jest.mock("../QuerySelector/Document")
+
+    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    mockDocument = require("../QuerySelector/Document")
+    // mock化しているため、mockReturnValueは必ず存在する
+    // 型の書き方が不明なため、any castしている
+    ;(mockDocument as CastAny).getDocument.mockReturnValue(
+      createMockDocumentBy(
+        // logged in + dark mode
+        swagger30YamlHtml,
+        "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__test__/fixtures/swagger_3_1.yaml"
+      )
+    )
+
+    // eslint-disable-next-line global-require
+    sut = require(".")
+  })
+
+  describe("whole tests", () => {
+    it("isConverted", () => {
+      // ## Assert ##
+      expect(sut.isConverted()).toStrictEqual(false)
+    })
+
+    it("getElmOfSrcCode", () => {
+      // ## Act ##
+      const result = sut.getElmOfSrcCode()
+      // ## Assert ##
+      expect(result.textContent != null).toStrictEqual(true)
+      expect(result.children.length).toStrictEqual(1)
+    })
+
+    it("extractSrc", () => {
+      // ## Assert ##
+      expect(sut.extractSrc()).toMatchSnapshot()
+    })
+  })
+})
+
 describe("empty page", () => {
   let sut: typeof DomRepository
   // let mockDocument: jest.MockInstance<typeof Document>
