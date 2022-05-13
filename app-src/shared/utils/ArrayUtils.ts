@@ -2,6 +2,8 @@
  * lodashは重いため、機能を削った代替実装
  */
 
+import { CastAny } from "../types/utils"
+
 export const range = (from: number, to: number): readonly number[] => {
   if (to < from) {
     throw new Error("Universal error: Illegal arg")
@@ -20,5 +22,6 @@ export const zip = <T1, T2>(
   if (ary1.length !== ary2.length) {
     throw new Error("Universal error: Illegal arg. Should same length.")
   }
-  return ary1.map((e1, index) => [e1, ary2[index]])
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+  return ary1.map((e1, index) => [e1, ary2[index]]) as CastAny
 }
