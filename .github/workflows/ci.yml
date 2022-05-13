@@ -36,12 +36,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./swagger-viewer
 
       - name: Lint
         run: npm run lint-dry
-        working-directory: ./swagger-viewer
 
       - name: Test
         run: npm run test-ci
-        working-directory: ./swagger-viewer
