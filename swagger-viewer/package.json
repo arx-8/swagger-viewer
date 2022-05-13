@@ -2,8 +2,8 @@
   "name": "swagger-viewer",
   "version": "3.0.0",
   "engines": {
-    "node": ">=12",
-    "npm": ">=6"
+    "node": "^12",
+    "npm": "^6"
   },
   "scripts": {
     "build": "webextension-toolbox build chrome",
