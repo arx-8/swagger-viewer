@@ -81,6 +81,7 @@ export const getElmOfSwaggerDefOpener = (
       `.opblock-tag-section .opblock-tag[data-is-open="true"]`
     )
     const modelDefs = querySelectorAll(`section.models.is-open > h4`)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return [...apiDefs, ...modelDefs] as CastAny
   }
 
@@ -88,6 +89,7 @@ export const getElmOfSwaggerDefOpener = (
     `.opblock-tag-section .opblock-tag[data-is-open="false"] button`
   )
   const modelDefs = querySelectorAll(`section.models:not(.is-open) > h4`)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return [...apiDefs, ...modelDefs] as CastAny
 }
 
@@ -99,8 +101,10 @@ export const getElmOfSwaggerEndPointDefHeaders = (
   isOpened: boolean
 ): readonly HTMLDivElement[] => {
   if (isOpened) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return querySelectorAll("div.opblock.is-open > .opblock-summary") as CastAny
   }
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return querySelectorAll(
     "div.opblock:not(.is-open) > .opblock-summary"
   ) as CastAny
@@ -114,10 +118,12 @@ export const getElmOfSwaggerSchemasModelHeaders = (
   isOpened: boolean
 ): readonly HTMLDivElement[] => {
   if (isOpened) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return querySelectorAll(
       "span.model-box span.model-toggle:not(.collapsed)"
     ) as CastAny
   }
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return querySelectorAll(
     "span.model-box span.model-toggle.collapsed"
   ) as CastAny

@@ -20,10 +20,11 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
     // ## Arrange ##
     jest.mock("../QuerySelector/Document")
 
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         // No login
@@ -32,7 +33,7 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
       )
     )
 
-    // eslint-disable-next-line global-require
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     sut = require(".")
   })
 
@@ -69,10 +70,11 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
     // ## Arrange ##
     jest.mock("../QuerySelector/Document")
 
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         // No login
@@ -81,7 +83,7 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
       )
     )
 
-    // eslint-disable-next-line global-require
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     sut = require(".")
   })
 
@@ -115,10 +117,11 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
     // ## Arrange ##
     jest.mock("../QuerySelector/Document")
 
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         // logged in + dark mode
@@ -127,7 +130,7 @@ describe("GitHubPageHtml swagger 3.0 yaml tests", () => {
       )
     )
 
-    // eslint-disable-next-line global-require
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     sut = require(".")
   })
 
@@ -161,10 +164,11 @@ describe("GitHubPageHtml swagger 3.1 yaml tests", () => {
     // ## Arrange ##
     jest.mock("../QuerySelector/Document")
 
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         // logged in + dark mode
@@ -173,7 +177,7 @@ describe("GitHubPageHtml swagger 3.1 yaml tests", () => {
       )
     )
 
-    // eslint-disable-next-line global-require
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     sut = require(".")
   })
 
@@ -207,10 +211,11 @@ describe("empty page", () => {
     // ## Arrange ##
     jest.mock("../QuerySelector/Document")
 
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     mockDocument = require("../QuerySelector/Document")
     // mock化しているため、mockReturnValueは必ず存在する
     // 型の書き方が不明なため、any castしている
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     ;(mockDocument as CastAny).getDocument.mockReturnValue(
       createMockDocumentBy(
         `<!DOCTYPE html><html lang="en"><head><title>empty</title></head><body></body></html>`,
@@ -218,7 +223,7 @@ describe("empty page", () => {
       )
     )
 
-    // eslint-disable-next-line global-require
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     sut = require(".")
   })
 

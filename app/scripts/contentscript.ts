@@ -23,7 +23,8 @@ chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
     try {
       execConvertSwagger()
     } catch (_error) {
-      const error: Error = _error
+      // TODO do not use as cast
+      const error = _error as Error
       // eslint-disable-next-line no-alert
       alert(
         `No operation. Can not convert.
@@ -72,6 +73,6 @@ const injectApp = (): void => {
   elm.style.width = "-webkit-fill-available"
 
   // swagger-ui-reactの依存ライブラリのため追加
-  // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-var-requires
   global.Buffer = global.Buffer || require("buffer").Buffer
 }

@@ -11,12 +11,13 @@ describe("Basic test", () => {
   beforeAll(() => {
     // ## Arrange ##
     jest.mock("./Document")
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
     const mockDocument = require("./Document")
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     mockDocument.getDocument.mockReturnValue(createMockDocumentBy(testHtml))
 
-    // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     sut = require(".")
   })
 

@@ -6,6 +6,7 @@ describe("isAcceptableLocation", () => {
    * テストに使える必要最小限のMock Documentオブジェクトを返す
    */
   const createMockDocument = (hrefUrl: string): Document => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return {
       location: {
         href: hrefUrl,

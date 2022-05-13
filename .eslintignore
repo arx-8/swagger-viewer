@@ -3,3 +3,10 @@
 dist/*
 node_modules/*
 packages/*
+
+# TODO should not be ignore
+__mocks__/fileMock.js
+__mocks__/styleMock.js
+babel.config.js
+jest.config.js
+webextension-toolbox-config.js

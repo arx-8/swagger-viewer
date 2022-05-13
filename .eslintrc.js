@@ -1,4 +1,9 @@
-module.exports = {
+// @ts-check
+
+/**
+ * @type {import("eslint").Linter.Config}
+ */
+const config = {
   env: {
     browser: true,
     es6: true,
@@ -8,38 +13,46 @@ module.exports = {
     "standard",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:typescript-sort-keys/recommended",
     "plugin:react/recommended",
-    "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
     "react-app",
-    /** @see https://github.com/prettier/eslint-config-prettier#installation */
     "prettier",
-    "prettier/prettier",
-    "prettier/standard",
-    "prettier/@typescript-eslint",
-    "prettier/react",
+  ],
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      rules: {
+        "@typescript-eslint/explicit-function-return-type": [
+          2,
+          {
+            allowExpressions: true,
+          },
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": 2,
+      },
+    },
+    {
+      extends: ["plugin:jest/recommended"],
+      files: ["*.test.ts", "*.test.tsx"],
+    },
   ],
   parserOptions: {
-    sourceType: "module",
     project: "./tsconfig.json",
   },
-  parser: "@typescript-eslint/parser",
   plugins: [
     "@typescript-eslint",
-    "jest",
     "react",
     "sort-destructure-keys",
     "sort-keys-fix",
     "typescript-sort-keys",
-    // CircleCI で warn も検知可能にするため、全て error にする
-    "only-error",
   ],
   rules: {
-    "import/no-default-export": "error",
-    "jest/prefer-strict-equal": "error",
-    "no-alert": "error",
+    "import/no-default-export": 2,
+    "no-alert": 2,
     "no-restricted-globals": [
-      "error",
+      2,
       {
         name: "document",
         message: "Use getDocument().",
@@ -50,7 +63,7 @@ module.exports = {
       },
     ],
     "no-restricted-properties": [
-      "error",
+      2,
       {
         property: "innerText",
         message:
@@ -58,70 +71,50 @@ module.exports = {
       },
     ],
     "no-restricted-syntax": [
-      "error",
+      2,
       {
         selector: "TSEnumDeclaration",
         message:
           "Do not declare enums. Use `Plain Object` or `Literal Types` instead.",
       },
     ],
-    "react/jsx-boolean-value": "error",
+    "react/jsx-boolean-value": 2,
     // jsx pragma 次第で Short Syntax が使えないため
-    "react/jsx-fragments": ["error", "element"],
-    "react/jsx-sort-props": "error",
-    "react/no-access-state-in-setstate": "error",
-    "react/no-array-index-key": "error",
-    "react/no-did-mount-set-state": "error",
-    "react/no-unsafe": ["error", { checkAliases: true }],
-    "react/prefer-stateless-function": "error",
-    "react/prop-types": "off",
-    "react/jsx-boolean-value": "error",
-    "react/prop-types": "off",
-    "react/void-dom-elements-no-children": "error",
-    "sort-destructure-keys/sort-destructure-keys": "error",
-    "sort-keys-fix/sort-keys-fix": "error",
+    "react/jsx-fragments": [2, "element"],
+    "react/jsx-sort-props": 2,
+    "react/no-access-state-in-setstate": 2,
+    "react/no-array-index-key": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-unsafe": [2, { checkAliases: true }],
+    "react/prefer-stateless-function": 2,
+    "react/prop-types": 0,
+    "react/void-dom-elements-no-children": 2,
+    "sort-destructure-keys/sort-destructure-keys": 2,
+    "sort-keys-fix/sort-keys-fix": 2,
 
     // constructor のショートハンド（メンバーの省略記法）を使いたいため
-    "@typescript-eslint/no-parameter-properties": "off",
-    "@typescript-eslint/explicit-member-accessibility": "off",
-    "no-useless-constructor": "off",
-    "no-empty-function": "off",
+    "@typescript-eslint/no-parameter-properties": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "no-useless-constructor": 0,
+    "no-empty-function": 0,
 
     // ホイスティングの許可
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": "off",
-
-    // React Component の書き心地がとても悪くなるため
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/prefer-interface": "off",
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": 0,
 
     // ts と eslint の相性不良周りを解消するための設定
-    "import/no-unresolved": "off",
-    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
+    "import/no-unresolved": 0,
+    "react/jsx-filename-extension": [2, { extensions: [".tsx"] }],
 
     // for-of-awaitを使用するため
-    "no-await-in-loop": "off",
-
-    "typescript-sort-keys/interface": "error",
-    "typescript-sort-keys/string-enum": "error",
-
-    // constructor のショートハンド（メンバーの省略記法）を許可
-    "@typescript-eslint/explicit-member-accessibility": "off",
-    "@typescript-eslint/no-parameter-properties": "off",
+    "no-await-in-loop": 0,
 
     // React Component のボイラープレートコードを減らすため
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        allowExpressions: true,
-        allowTypedFunctionExpressions: true,
-      },
-    ],
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-definitions": [2, "type"],
 
     // バグの温床になりやすいコードを防ぐため
     "@typescript-eslint/no-unused-expressions": [
-      "error",
+      2,
       {
         allowShortCircuit: false,
         allowTernary: false,
@@ -130,17 +123,23 @@ module.exports = {
     ],
 
     // 有用なケースがあるため
-    camelcase: "off",
-    "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
+    camelcase: 0,
+    "@typescript-eslint/camelcase": 0,
 
     // Other
-    "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-misused-promises": "error",
-    "@typescript-eslint/prefer-readonly": "error",
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        checksVoidReturn: false,
+      },
+    ],
+    "@typescript-eslint/prefer-readonly": 2,
 
     // note you must disable the base rule as it can report incorrect errors
-    "require-await": "off",
-    "@typescript-eslint/require-await": "error",
+    "require-await": 0,
+    "@typescript-eslint/require-await": 2,
   },
 }
+
+module.exports = config

@@ -7,6 +7,7 @@ import { getDocument } from "./Document"
 export const querySelectorAll = (
   selector: string
 ): ReadonlyArray<HTMLElement> => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return Array.prototype.slice.call(getDocument().querySelectorAll(selector))
 }
 /**
@@ -36,6 +37,7 @@ export const querySelectorStrict = <T extends HTMLElement>(
   const founds = querySelectorAll(selector)
   if (founds.length === 1) {
     // なぜか型が合わないため無視
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return founds[0] as FixMeAny
   }
   throw new Error(`Logic Failure: "${selector}" is always 1 element exists`)
