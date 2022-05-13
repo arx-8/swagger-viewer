@@ -20,7 +20,7 @@ type Props = {
   swaggerJson: MaybeSwaggerJson | string
 }
 
-export const App: React.FC<Props> = ({ swaggerJson }) => {
+export const App = ({ swaggerJson }: Props): JSX.Element => {
   return (
     <Root>
       <Header>
