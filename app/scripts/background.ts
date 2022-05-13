@@ -8,7 +8,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
     throw new Error(`Unexpected tab: ${JSON.stringify(tab)}`)
   }
 
-  chrome.tabs.sendMessage(tab.id, ({
+  chrome.tabs.sendMessage(tab.id, {
     type: EXEC_CONVERT_SWAGGER,
-  } as CastAny) as ExecConvertSwaggerMessage)
+  } as CastAny as ExecConvertSwaggerMessage)
 })
