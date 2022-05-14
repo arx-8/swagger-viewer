@@ -52,22 +52,22 @@ consumes:
     const result = convertToObject(src)
     // ## Assert ##
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "consumes": Array [
+      {
+        "consumes": [
           "application/json",
         ],
-        "info": Object {
+        "info": {
           "title": "Simple API overview",
         },
-        "paths": Object {
-          "/": Object {
-            "get": Object {
+        "paths": {
+          "/": {
+            "get": {
               "operationId": "listVersionsv2",
-              "produces": Array [
+              "produces": [
                 "application/json",
               ],
-              "responses": Object {
-                "200": Object {
+              "responses": {
+                "200": {
                   "description": "200 300 response",
                 },
               },
@@ -100,7 +100,7 @@ consumes:
     const result = convertToObject(src)
     // ## Assert ##
     expect(result).toMatchInlineSnapshot(`
-      Object {
+      {
         "a": "a",
         "b": 2,
         "cc": null,

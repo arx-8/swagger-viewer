@@ -1,45 +1,44 @@
-import * as DocumentRepository from "."
+import { querySelector, querySelectorAll, querySelectorStrict } from "."
 import { createMockDocumentBy } from "../../__test__/Helper"
+import * as Document from "./Document"
 import { testHtml } from "./index.test.data"
 
 describe("Basic test", () => {
-  let sut: typeof DocumentRepository
-
   /**
    * @see https://facebook.github.io/jest/docs/en/mock-functions.html#mock-return-values
    */
   beforeAll(() => {
     // ## Arrange ##
-    jest.mock("./Document")
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
-    const mockDocument = require("./Document")
-
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-    mockDocument.getDocument.mockReturnValue(createMockDocumentBy(testHtml))
-
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    sut = require(".")
+    vi.mock("./Document", (): typeof Document => {
+      return {
+        getDocument: () => {
+          return createMockDocumentBy(testHtml)
+        },
+      }
+    })
   })
 
   describe("querySelectorAll", () => {
     it("要素がない", () => {
       // ## Arrange ##
       // ## Act ##
-      const elements = sut.querySelectorAll("not found query")
+      const elements = querySelectorAll("not found query")
       // ## Assert ##
       expect(elements).toStrictEqual([])
     })
+
     it("要素が1つある", () => {
       // ## Arrange ##
       // ## Act ##
-      const elements = sut.querySelectorAll("#test-id-unique")
+      const elements = querySelectorAll("#test-id-unique")
       // ## Assert ##
       expect(elements.length).toStrictEqual(1)
     })
+
     it("要素が2つ以上ある", () => {
       // ## Arrange ##
       // ## Act ##
-      const elements = sut.querySelectorAll(".test-class-name-used-a-lot")
+      const elements = querySelectorAll(".test-class-name-used-a-lot")
       // ## Assert ##
       expect(elements.length).toStrictEqual(3)
     })
@@ -49,14 +48,15 @@ describe("Basic test", () => {
     it("要素がない", () => {
       // ## Arrange ##
       // ## Act ##
-      const element = sut.querySelector("not found query")
+      const element = querySelector("not found query")
       // ## Assert ##
       expect(element).toStrictEqual(undefined)
     })
+
     it("要素が1つある", () => {
       // ## Arrange ##
       // ## Act ##
-      const element = sut.querySelector("#test-id-unique")
+      const element = querySelector("#test-id-unique")
       // ## Assert ##
       expect(element).toMatchInlineSnapshot(`
         <p
@@ -69,12 +69,13 @@ describe("Basic test", () => {
         </p>
       `)
     })
+
     it("要素が2つ以上ある", () => {
       // ## Arrange ##
       // ## Act ##
       // ## Assert ##
       expect(() => {
-        sut.querySelector(".test-class-name-used-a-lot")
+        querySelector(".test-class-name-used-a-lot")
       }).toThrow()
     })
   })
@@ -85,22 +86,24 @@ describe("Basic test", () => {
       // ## Act ##
       // ## Assert ##
       expect(() => {
-        sut.querySelectorStrict("not found query")
+        querySelectorStrict("not found query")
       }).toThrow()
     })
+
     it("要素が1つある", () => {
       // ## Arrange ##
       // ## Act ##
-      const element = sut.querySelectorStrict("#test-id-unique")
+      const element = querySelectorStrict("#test-id-unique")
       // ## Assert ##
       expect(element).toBeDefined()
     })
+
     it("要素が2つ以上ある", () => {
       // ## Arrange ##
       // ## Act ##
       // ## Assert ##
       expect(() => {
-        sut.querySelectorStrict(".test-class-name-used-a-lot")
+        querySelectorStrict(".test-class-name-used-a-lot")
       }).toThrow()
     })
   })

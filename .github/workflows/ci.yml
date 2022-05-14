@@ -38,4 +38,4 @@ jobs:
 
       - run: npm run lint-dry
 
-      - run: npm run test-ci
+      - run: npm run test

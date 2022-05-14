@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Render test Swagger json 2.0 1`] = `
+exports[`Render test > Swagger json 2.0 1`] = `
 .c0 {
   background-color: #fff;
 }
@@ -116,6 +116,14 @@ exports[`Render test Swagger json 2.0 1`] = `
               />
             </symbol>
             <symbol
+              id="large-arrow-up"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
+              />
+            </symbol>
+            <symbol
               id="jump-to"
               viewBox="0 0 24 24"
             >
@@ -141,79 +149,15 @@ exports[`Render test Swagger json 2.0 1`] = `
           <section
             className="block col-12"
           >
-            <div>
-              <div
-                className="info"
-              >
-                <hgroup
-                  className="main"
-                >
-                  <h2
-                    className="title"
-                  >
-                    Swagger Petstore
-                    <small>
-                      <pre
-                        className="version"
-                      >
-                         
-                        1.0.0
-                         
-                      </pre>
-                    </small>
-                  </h2>
-                  <pre
-                    className="base-url"
-                  >
-                    [ Base URL: 
-                    petstore.swagger.io
-                    /api
-                     ]
-                  </pre>
-                  
-                </hgroup>
-                <div
-                  className="description"
-                >
-                  <div
-                    className="markdown"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<p>A sample API that uses a petstore as an example to demonstrate features in the swagger-2.0 specification</p>
-",
-                      }
-                    }
-                  />
-                </div>
-                <div
-                  className="info__tos"
-                >
-                  <a
-                    className="link"
-                    href="http://swagger.io/terms/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Terms of service
-                  </a>
-                </div>
-                <div
-                  className="info__contact"
-                />
-                <div
-                  className="info__license"
-                >
-                  <span>
-                    MIT
-                  </span>
-                </div>
-                <a
-                  className="info__extdocs link"
-                  href=""
-                  rel="noopener noreferrer"
-                  target="_blank"
-                />
-              </div>
+            <div
+              className="fallback"
+            >
+              😱 
+              <i>
+                Could not render 
+                r
+                , see the console.
+              </i>
             </div>
           </section>
         </div>
@@ -256,7 +200,7 @@ exports[`Render test Swagger json 2.0 1`] = `
                 <div
                   className="opblock-tag-section is-open"
                 >
-                  <h4
+                  <h3
                     className="opblock-tag no-desc"
                     data-is-open={true}
                     data-tag="default"
@@ -273,180 +217,250 @@ exports[`Render test Swagger json 2.0 1`] = `
                       </span>
                     </a>
                     <small />
-                    <div />
                     <button
+                      aria-expanded={true}
                       className="expand-operation"
                       onClick={[Function]}
                       title="Collapse operation"
                     >
                       <svg
+                        aria-hidden="true"
                         className="arrow"
+                        focusable="false"
                         height="20"
                         width="20"
                       >
                         <use
-                          href="#large-arrow-down"
-                          xlinkHref="#large-arrow-down"
+                          href="#large-arrow-up"
+                          xlinkHref="#large-arrow-up"
                         />
                       </svg>
                     </button>
-                  </h4>
+                  </h3>
                   <div
                     className="no-margin"
                   >
                      
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-findPets"
-                      >
+                    <div
+                      className="operation-tag-content"
+                    >
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
+                          className="opblock opblock-get"
+                          id="operations-default-findPets"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-get"
                           >
-                            
+                            <button
+                              aria-expanded={false}
+                              aria-label="get ​/pets"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                GET
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/pets"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /pets
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              />
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-post"
-                        id="operations-default-addPet"
-                      >
+                      </span>
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-post"
-                          onClick={[Function]}
+                          className="opblock opblock-post"
+                          id="operations-default-addPet"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            POST
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-post"
                           >
-                            
+                            <button
+                              aria-expanded={false}
+                              aria-label="post ​/pets"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                POST
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/pets"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /pets
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              />
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-findPetById"
-                      >
+                      </span>
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
+                          className="opblock opblock-get"
+                          id="operations-default-findPetById"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets/{id}"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets​/{id}
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-get"
                           >
-                            
+                            <button
+                              aria-expanded={false}
+                              aria-label="get ​/pets​/{id}"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                GET
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/pets/{id}"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /pets
+                                    <wbr />
+                                    /{id}
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              />
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-delete"
-                        id="operations-default-deletePet"
-                      >
+                      </span>
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-delete"
-                          onClick={[Function]}
+                          className="opblock opblock-delete"
+                          id="operations-default-deletePet"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            DELETE
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/pets/{id}"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/pets​/{id}
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-delete"
                           >
-                            
+                            <button
+                              aria-expanded={false}
+                              aria-label="delete ​/pets​/{id}"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                DELETE
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/pets/{id}"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /pets
+                                    <wbr />
+                                    /{id}
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              />
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
+                      </span>
+                    </div>
                      
                   </div>
                 </div>
@@ -463,20 +477,26 @@ exports[`Render test Swagger json 2.0 1`] = `
             <section
               className="models is-open"
             >
-              <h4
-                onClick={[Function]}
-              >
-                <span>
-                  Models
-                </span>
-                <svg
-                  height="20"
-                  width="20"
+              <h4>
+                <button
+                  aria-expanded={true}
+                  className="models-control"
+                  onClick={[Function]}
                 >
-                  <use
-                    xlinkHref="#large-arrow-down"
-                  />
-                </svg>
+                  <span>
+                    Models
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    height="20"
+                    width="20"
+                  >
+                    <use
+                      xlinkHref="#large-arrow-up"
+                    />
+                  </svg>
+                </button>
               </h4>
               <div
                 className="no-margin"
@@ -493,29 +513,31 @@ exports[`Render test Swagger json 2.0 1`] = `
                   <span
                     className="model-box"
                   >
-                    <span
-                      className="pointer"
+                    <button
+                      aria-expanded={false}
+                      className="model-box-control"
                       onClick={[Function]}
                     >
                       <span
-                        className="model-box"
+                        className="pointer"
                       >
                         <span
-                          className="model model-title"
+                          className="model-box"
                         >
-                          Pet
+                          <span
+                            className="model model-title"
+                          >
+                            Pet
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span
-                      className="pointer"
-                      onClick={[Function]}
-                    >
                       <span
                         className="model-toggle collapsed"
                       />
-                    </span>
-                     
+                      <span>
+                         
+                      </span>
+                    </button>
                   </span>
                 </div>
                 <div
@@ -529,29 +551,31 @@ exports[`Render test Swagger json 2.0 1`] = `
                   <span
                     className="model-box"
                   >
-                    <span
-                      className="pointer"
+                    <button
+                      aria-expanded={false}
+                      className="model-box-control"
                       onClick={[Function]}
                     >
                       <span
-                        className="model-box"
+                        className="pointer"
                       >
                         <span
-                          className="model model-title"
+                          className="model-box"
                         >
-                          NewPet
+                          <span
+                            className="model model-title"
+                          >
+                            NewPet
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span
-                      className="pointer"
-                      onClick={[Function]}
-                    >
                       <span
                         className="model-toggle collapsed"
                       />
-                    </span>
-                     
+                      <span>
+                         
+                      </span>
+                    </button>
                   </span>
                 </div>
                 <div
@@ -565,29 +589,31 @@ exports[`Render test Swagger json 2.0 1`] = `
                   <span
                     className="model-box"
                   >
-                    <span
-                      className="pointer"
+                    <button
+                      aria-expanded={false}
+                      className="model-box-control"
                       onClick={[Function]}
                     >
                       <span
-                        className="model-box"
+                        className="pointer"
                       >
                         <span
-                          className="model model-title"
+                          className="model-box"
                         >
-                          ErrorModel
+                          <span
+                            className="model model-title"
+                          >
+                            ErrorModel
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span
-                      className="pointer"
-                      onClick={[Function]}
-                    >
                       <span
                         className="model-toggle collapsed"
                       />
-                    </span>
-                     
+                      <span>
+                         
+                      </span>
+                    </button>
                   </span>
                 </div>
                  
@@ -619,7 +645,7 @@ exports[`Render test Swagger json 2.0 1`] = `
 </div>
 `;
 
-exports[`Render test Swagger yaml 2.0 1`] = `
+exports[`Render test > Swagger yaml 2.0 1`] = `
 .c0 {
   background-color: #fff;
 }
@@ -732,6 +758,14 @@ exports[`Render test Swagger yaml 2.0 1`] = `
             >
               <path
                 d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
+              />
+            </symbol>
+            <symbol
+              id="large-arrow-up"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
               />
             </symbol>
             <symbol
@@ -781,16 +815,9 @@ exports[`Render test Swagger yaml 2.0 1`] = `
                       </pre>
                     </small>
                   </h2>
-                  
                 </hgroup>
                 <div
                   className="description"
-                />
-                <a
-                  className="info__extdocs link"
-                  href=""
-                  rel="noopener noreferrer"
-                  target="_blank"
                 />
               </div>
             </div>
@@ -808,7 +835,7 @@ exports[`Render test Swagger yaml 2.0 1`] = `
                 <div
                   className="opblock-tag-section is-open"
                 >
-                  <h4
+                  <h3
                     className="opblock-tag no-desc"
                     data-is-open={true}
                     data-tag="default"
@@ -825,104 +852,144 @@ exports[`Render test Swagger yaml 2.0 1`] = `
                       </span>
                     </a>
                     <small />
-                    <div />
                     <button
+                      aria-expanded={true}
                       className="expand-operation"
                       onClick={[Function]}
                       title="Collapse operation"
                     >
                       <svg
+                        aria-hidden="true"
                         className="arrow"
+                        focusable="false"
                         height="20"
                         width="20"
                       >
                         <use
-                          href="#large-arrow-down"
-                          xlinkHref="#large-arrow-down"
+                          href="#large-arrow-up"
+                          xlinkHref="#large-arrow-up"
                         />
                       </svg>
                     </button>
-                  </h4>
+                  </h3>
                   <div
                     className="no-margin"
                   >
                      
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-listVersionsv2"
-                      >
+                    <div
+                      className="operation-tag-content"
+                    >
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
+                          className="opblock opblock-get"
+                          id="operations-default-listVersionsv2"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-get"
                           >
-                            List API versions
+                            <button
+                              aria-expanded={false}
+                              aria-label="get ​/"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                GET
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              >
+                                List API versions
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
-                    <span>
-                      <div
-                        className="opblock opblock-get"
-                        id="operations-default-getVersionDetailsv2"
-                      >
+                      </span>
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-get"
-                          onClick={[Function]}
+                          className="opblock opblock-get"
+                          id="operations-default-getVersionDetailsv2"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            GET
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/v2"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/v2
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-get"
                           >
-                            Show API version details
+                            <button
+                              aria-expanded={false}
+                              aria-label="get ​/v2"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                GET
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/v2"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /v2
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              >
+                                Show API version details
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
+                      </span>
+                    </div>
                      
                   </div>
                 </div>
@@ -961,7 +1028,7 @@ exports[`Render test Swagger yaml 2.0 1`] = `
 </div>
 `;
 
-exports[`Render test Swagger yaml 3.0 1`] = `
+exports[`Render test > Swagger yaml 3.0 1`] = `
 .c0 {
   background-color: #fff;
 }
@@ -1074,6 +1141,14 @@ exports[`Render test Swagger yaml 3.0 1`] = `
             >
               <path
                 d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
+              />
+            </symbol>
+            <symbol
+              id="large-arrow-up"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
               />
             </symbol>
             <symbol
@@ -1134,16 +1209,9 @@ exports[`Render test Swagger yaml 3.0 1`] = `
                       </small>
                     </span>
                   </h2>
-                  
                 </hgroup>
                 <div
                   className="description"
-                />
-                <a
-                  className="info__extdocs link"
-                  href=""
-                  rel="noopener noreferrer"
-                  target="_blank"
                 />
               </div>
             </div>
@@ -1161,7 +1229,7 @@ exports[`Render test Swagger yaml 3.0 1`] = `
                 <div
                   className="opblock-tag-section is-open"
                 >
-                  <h4
+                  <h3
                     className="opblock-tag no-desc"
                     data-is-open={true}
                     data-tag="default"
@@ -1178,66 +1246,87 @@ exports[`Render test Swagger yaml 3.0 1`] = `
                       </span>
                     </a>
                     <small />
-                    <div />
                     <button
+                      aria-expanded={true}
                       className="expand-operation"
                       onClick={[Function]}
                       title="Collapse operation"
                     >
                       <svg
+                        aria-hidden="true"
                         className="arrow"
+                        focusable="false"
                         height="20"
                         width="20"
                       >
                         <use
-                          href="#large-arrow-down"
-                          xlinkHref="#large-arrow-down"
+                          href="#large-arrow-up"
+                          xlinkHref="#large-arrow-up"
                         />
                       </svg>
                     </button>
-                  </h4>
+                  </h3>
                   <div
                     className="no-margin"
                   >
                      
-                    <span>
-                      <div
-                        className="opblock opblock-post"
-                        id="operations-default-post_streams"
-                      >
+                    <div
+                      className="operation-tag-content"
+                    >
+                      <span>
                         <div
-                          className="opblock-summary opblock-summary-post"
-                          onClick={[Function]}
+                          className="opblock opblock-post"
+                          id="operations-default-post_streams"
                         >
-                          <span
-                            className="opblock-summary-method"
-                          >
-                            POST
-                          </span>
-                          <span
-                            className="opblock-summary-path"
-                            data-path="/streams"
-                            onCopyCapture={[Function]}
-                          >
-                            <a
-                              className="nostyle"
-                              href={null}
-                              onClick={null}
-                            >
-                              <span>
-                                ​/streams
-                              </span>
-                            </a>
-                          </span>
                           <div
-                            className="opblock-summary-description"
+                            className="opblock-summary opblock-summary-post"
                           >
-                            
+                            <button
+                              aria-expanded={false}
+                              aria-label="post ​/streams"
+                              className="opblock-summary-control"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="opblock-summary-method"
+                              >
+                                POST
+                              </span>
+                              <span
+                                className="opblock-summary-path"
+                                data-path="/streams"
+                              >
+                                <a
+                                  className="nostyle"
+                                  href={null}
+                                  onClick={null}
+                                >
+                                  <span>
+                                    /streams
+                                  </span>
+                                </a>
+                              </span>
+                              <div
+                                className="opblock-summary-description"
+                              />
+                              <svg
+                                aria-hidden="true"
+                                className="arrow"
+                                focusable="false"
+                                height="20"
+                                width="20"
+                              >
+                                <use
+                                  href="#large-arrow-down"
+                                  xlinkHref="#large-arrow-down"
+                                />
+                              </svg>
+                            </button>
                           </div>
+                          <noscript />
                         </div>
-                        <noscript />
-                      </div>
-                    </span>
+                      </span>
+                    </div>
                      
                   </div>
                 </div>
@@ -1276,7 +1365,7 @@ exports[`Render test Swagger yaml 3.0 1`] = `
 </div>
 `;
 
-exports[`Render test invalid swagger 1`] = `
+exports[`Render test > invalid swagger 1`] = `
 .c0 {
   background-color: #fff;
 }
@@ -1374,7 +1463,7 @@ exports[`Render test invalid swagger 1`] = `
 </div>
 `;
 
-exports[`Shallow render test shallow render and snapshot 1`] = `
+exports[`Shallow render test > shallow render and snapshot 1`] = `
 <styled.div>
   <styled.div>
     <Button
@@ -1391,22 +1480,49 @@ exports[`Shallow render test shallow render and snapshot 1`] = `
   <styled.div>
     <SwaggerUI
       deepLinking={false}
+      defaultModelRendering="example"
       defaultModelsExpandDepth={1}
+      displayRequestDuration={false}
       docExpansion="list"
+      filter={false}
       layout="BaseLayout"
-      presets={Array []}
+      persistAuthorization={false}
+      presets={Array {}}
+      queryConfigEnabled={false}
+      requestSnippets={
+        {
+          "defaultExpanded": true,
+          "generators": {
+            "curl_bash": {
+              "syntax": "bash",
+              "title": "cURL (bash)",
+            },
+            "curl_cmd": {
+              "syntax": "bash",
+              "title": "cURL (CMD)",
+            },
+            "curl_powershell": {
+              "syntax": "powershell",
+              "title": "cURL (PowerShell)",
+            },
+          },
+          "languages": null,
+        }
+      }
+      requestSnippetsEnabled={false}
+      showExtensions={false}
       spec=""
       supportedSubmitMethods={
-        Array [
-          "get",
-          "put",
-          "post",
-          "delete",
-          "options",
-          "head",
-          "patch",
-          "trace",
-        ]
+        Array {
+          "0": "get",
+          "1": "put",
+          "2": "post",
+          "3": "delete",
+          "4": "options",
+          "5": "head",
+          "6": "patch",
+          "7": "trace",
+        }
       }
     />
   </styled.div>

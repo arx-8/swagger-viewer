@@ -1,7 +1,6 @@
 {
   "files.eol": "\n",
   "files.encoding": "utf8",
-
   // To prevent misdetection
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.tsdk": "node_modules/typescript/lib",
@@ -38,5 +37,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "prettier.prettierPath": "./node_modules/prettier",
-  "cSpell.words": ["contentscript", "destructure", "webextension"]
+  "cSpell.words": ["contentscript", "destructure", "vite", "webextension"]
 }

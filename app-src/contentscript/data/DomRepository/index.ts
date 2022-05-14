@@ -24,6 +24,14 @@ export const getElmOfSrcCode = (): HTMLElement => {
   const selector = "#repo-content-pjax-container div.Box-body table"
   const element = querySelector(selector)
 
+  // console.log("----------------------")
+  // console.log("----------------------")
+  // console.log("----------------------")
+  // console.log(element?.textContent)
+  // console.log("----------------------")
+  // console.log("----------------------")
+  // console.log("----------------------")
+
   if (
     element?.textContent?.length == null ||
     element.textContent.length === 0

@@ -1,10 +1,10 @@
 /**
- * `npm test` が正しく動作することを確認するためのサンプル
- * UTの書き方のメモ代わり
- * @see https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#writing-tests
+ * Verify that UT works correctly.
  */
-describe("Example", () => {
-  it("testable", () => {
+describe("example", () => {
+  it("with TypeScript", () => {
+    expect.hasAssertions()
+
     // ## Arrange ##
     const list: readonly number[] = [...[1, 2, 3, 4, 5]]
 
@@ -15,11 +15,31 @@ describe("Example", () => {
       .reduce((l, r) => l + r)
 
     // ## Assert ##
-    expect(result).toStrictEqual(12)
+    expect(result).toBe(12)
   })
 })
 
-describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
+describe("when in doubt, use `toStrictEqual`. It is the most reliable.", () => {
+  /**
+   * @see https://jestjs.io/docs/en/expect#tostrictequalvalue
+   */
+  it("`toStrictEqual` is the strictest.", () => {
+    expect.hasAssertions()
+
+    class Protein {
+      flavor: string
+
+      constructor(flavor: string) {
+        this.flavor = flavor
+      }
+    }
+
+    /* eslint-disable jest/prefer-strict-equal */
+    expect(new Protein("lemon")).toEqual({ flavor: "lemon" })
+    expect(new Protein("lemon")).not.toStrictEqual({ flavor: "lemon" })
+    /* eslint-enable */
+  })
+
   class Human {
     constructor(private readonly name: string, private readonly age: number) {}
 
@@ -28,7 +48,10 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
     }
   }
 
-  it('toBe は "==="', () => {
+  it("toBe is `===`", () => {
+    expect.hasAssertions()
+
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
     // Literal
     expect(2).not.toBe("2")
     expect(2).not.toBe(true)
@@ -40,59 +63,71 @@ describe("toBe と toEqual の違いは、オブジェクトの比較", () => {
     expect([1, 2, 4]).not.toBe([1, 4, 2])
 
     // Object
-    expect({ v1: 1, v2: 2 }).not.toBe({ v1: 1, v2: 2 })
-    expect({ v1: 1, v2: 2 }).not.toBe({ v1: 1, v2: 2 })
-    const objInstance = { v1: 1, v2: 2 }
+    expect({ k0: 0, k1: 1 }).not.toBe({ k0: 0, k1: 1 })
+    expect({ k0: 0, k1: 1 }).not.toBe({ k1: 1, k0: 0 })
+    const objInstance = { k0: 0, k1: 1 }
     expect(objInstance).toBe(objInstance)
 
-    // class
+    // Class
     expect(new Human("taro", 20)).not.toBe(new Human("taro", 20))
     const classInstance = new Human("taro", 20)
     expect(classInstance).toBe(classInstance)
+    /* eslint-enable */
   })
 
-  it("toEqual は deepEqual", () => {
-    /* eslint-disable jest/prefer-strict-equal */
+  it("toEqual is `deep equal`", () => {
+    expect.hasAssertions()
+
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
     // Literal
-    expect(2).not.toEqual("2")
-    expect(2).not.toEqual(true)
-    expect(0).not.toEqual(false)
-    expect(false).toEqual(false)
+    expect(2).not.toBe("2")
+    expect(2).not.toBe(true)
+    expect(0).not.toBe(false)
+    expect(false).toBe(false)
 
     // Array
+    /* eslint-disable jest/prefer-strict-equal */
     expect([1, 2, 4]).toEqual([1, 2, 4])
     expect([1, 2, 4]).not.toEqual([1, 4, 2])
 
     // Object
-    expect({ v1: 1, v2: 2 }).toEqual({ v1: 1, v2: 2 })
-    expect({ v1: 1, v2: 2 }).toEqual({ v1: 1, v2: 2 })
-    const objInstance = { v1: 1, v2: 2 }
+    expect({ k0: 0, k1: 1 }).toEqual({ k0: 0, k1: 1 })
+    expect({ k0: 0, k1: 1 }).toEqual({ k1: 1, k0: 0 })
+    const objInstance = { k0: 0, k1: 1 }
     expect(objInstance).toEqual(objInstance)
 
-    // class
+    // Class
     expect(new Human("taro", 20)).toEqual(new Human("taro", 20))
     const classInstance = new Human("taro", 20)
     expect(classInstance).toEqual(classInstance)
     /* eslint-enable */
   })
+})
 
-  /**
-   * @see https://jestjs.io/docs/en/expect#tostrictequalvalue
-   */
-  describe("さらに toStrictEqual の方が厳格である", () => {
-    class LaCroix {
-      flavor: string
-
-      constructor(flavor: string) {
-        this.flavor = flavor
+describe("snapshot test", () => {
+  it("ok", () => {
+    expect.hasAssertions()
+    expect({ a: 0, b: "b1" }).toMatchSnapshot()
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
+    expect({ b: "b1", a: 0 }).toMatchInlineSnapshot(`
+      {
+        "a": 0,
+        "b": "b1",
       }
-    }
+    `)
+    /* eslint-enable */
+  })
+})
 
-    it("are not semantically the same", () => {
-      /* eslint-disable jest/prefer-strict-equal */
-      expect(new LaCroix("lemon")).toEqual({ flavor: "lemon" })
-      expect(new LaCroix("lemon")).not.toStrictEqual({ flavor: "lemon" })
-      /* eslint-enable */
-    })
+describe("exception test", () => {
+  const throwable = (): never => {
+    throw new Error("Lorem ipsum dolor sit")
+  }
+
+  it("assert exception message", () => {
+    expect.hasAssertions()
+    expect(() => {
+      throwable()
+    }).toThrowErrorMatchingInlineSnapshot('"Lorem ipsum dolor sit"')
   })
 })

@@ -1,8 +1,8 @@
+// @ts-check
 /* eslint-disable @typescript-eslint/no-var-requires, import/no-extraneous-dependencies */
 const { resolve } = require("path")
 const GlobEntriesPlugin = require("webpack-watched-glob-entries-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
-const babelOptions = require("./babel.config")
 /* eslint-enable */
 
 module.exports = {
@@ -41,7 +41,18 @@ module.exports = {
       use: [
         {
           loader: "babel-loader",
-          options: babelOptions,
+          options: {
+            // @see https://github.com/facebook/create-react-app/tree/v3.3.0/packages/babel-preset-react-app
+            presets: [
+              [
+                "react-app",
+                {
+                  flow: false,
+                  typescript: true,
+                },
+              ],
+            ],
+          },
         },
       ],
     })
