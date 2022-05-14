@@ -2,8 +2,8 @@
   "name": "swagger-viewer",
   "version": "3.0.0",
   "engines": {
-    "node": "^14",
-    "npm": "^6"
+    "node": "^16",
+    "npm": "^8"
   },
   "scripts": {
     "build": "webextension-toolbox build chrome",
@@ -17,13 +17,13 @@
     "lint:tsc": "tsc --noEmit",
     "lint": "npm-run-all --parallel --continue-on-error lint:*",
     "test": "vitest",
-    "update-all": "npx npm-check-updates@12.5.11 -u --reject \"/^(@types/node|css-loader|style-loader|terser-webpack-plugin)$/\""
+    "update-all": "npx --yes npm-check-updates@12.5.11 -u --reject \"/^(@types/node|css-loader|style-loader|terser-webpack-plugin)$/\""
   },
   "devDependencies": {
     "@types/chrome": "0.0.185",
     "@types/js-yaml": "4.0.5",
     "@types/jsdom": "16.2.14",
-    "@types/node": "14.14.31",
+    "@types/node": "16.11.7",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.4",
     "@types/react-test-renderer": "18.0.0",
