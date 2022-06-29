@@ -1487,7 +1487,7 @@ exports[`Shallow render test > shallow render and snapshot 1`] = `
       filter={false}
       layout="BaseLayout"
       persistAuthorization={false}
-      presets={Array {}}
+      presets={[]}
       queryConfigEnabled={false}
       requestSnippets={
         {
@@ -1513,16 +1513,16 @@ exports[`Shallow render test > shallow render and snapshot 1`] = `
       showExtensions={false}
       spec=""
       supportedSubmitMethods={
-        Array {
-          "0": "get",
-          "1": "put",
-          "2": "post",
-          "3": "delete",
-          "4": "options",
-          "5": "head",
-          "6": "patch",
-          "7": "trace",
-        }
+        [
+          "get",
+          "put",
+          "post",
+          "delete",
+          "options",
+          "head",
+          "patch",
+          "trace",
+        ]
       }
     />
   </styled.div>
