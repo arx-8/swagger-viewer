@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-npm i
+yarn
 ```
 
 ## npm scripts
@@ -11,55 +11,33 @@ npm i
 ### Development
 
 ```sh
-npm run dev
+yarn dev
 ```
 
-And load `dist/chrome` as Chrome extension.
+And load `dist/` as Chrome extension.
 
 ### Build
 
 ```sh
-npm run build
+yarn build
 ```
 
-#### Alternative build way
-
-If `npm run build` command has problems:
-
-1. `npm run dev`
-2. Stop watch. (ctrl + c)
-3. Delete dev files.
-   ```sh
-   find ./dist/chrome/ -name "*.ts" | xargs rm -f
-   find ./dist/chrome/ -name "*.js.map" | xargs rm -f
-   find ./dist/chrome/ -name "*react-syntax-highlighter*.js" | xargs rm -f
-   rm -rf ./dist/chrome/webextension-toolbox
-   ```
-4. Edit `./dist/chrome/manifest.json`
-   - Remove value of `.background.scripts[] == "webextension-toolbox/client.js"`
-5. Zip `./dist/chrome` to `swagger-viewer.v${version}.chrome.zip`
-   ```sh
-   cd ./dist
-   zip -r "swagger-viewer.v${version}.chrome.zip" chrome
-   ```
-
-And register builded zip as Chrome extension.
+And go to Chrome Web Store to register the zip.
 
 ### UnitTest
 
 ```sh
-npm t
+yarn test
 ```
 
-### Lint (ESLint autofix + type check)
+### Lint
 
+```sh
+yarn lint
+
+# dry-run
+yarn lint-dry
 ```
-npm run lint
-```
-
-## Docs
-
-- [webextension-toolbox](https://github.com/HaNdTriX/webextension-toolbox)
 
 ## Swagger examples
 
@@ -72,3 +50,7 @@ See: [License (Apache-2.0)](./LICENSE)
 ### Notice
 
 This app contains the deliverables distributed under the Apache License Version 2.0 license.
+
+## Tips
+
+- The output destination of console.log for background script is "background page".

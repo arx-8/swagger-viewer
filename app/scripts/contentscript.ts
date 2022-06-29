@@ -1,5 +1,3 @@
-// regenerator-runtime/runtime for async/await
-import "regenerator-runtime/runtime"
 import {
   extractSrc,
   getElmOfSrcCode,
@@ -62,17 +60,10 @@ const injectApp = (): void => {
   // 元srcのところにrenderする
   const injWrapper = getDocument().createElement("div")
   injWrapper.innerHTML = `
-<script>
-  var global = global || window;
-</script>
 <div id="${APP_RENDER_ID}"><div>
 `
 
   const elm = getElmOfSrcCode()
   elm.appendChild(injWrapper)
   elm.style.width = "-webkit-fill-available"
-
-  // swagger-ui-reactの依存ライブラリのため追加
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-var-requires
-  global.Buffer = global.Buffer || require("buffer").Buffer
 }

@@ -37,5 +37,11 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "prettier.prettierPath": "./node_modules/prettier",
-  "cSpell.words": ["contentscript", "destructure", "vite", "webextension"]
+  "cSpell.words": [
+    "contentscript",
+    "crxjs",
+    "destructure",
+    "vite",
+    "webextension"
+  ]
 }
