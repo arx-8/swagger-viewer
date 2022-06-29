@@ -67,12 +67,7 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     /* Other */
-    "forceConsistentCasingInFileNames": true,
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin"
-      }
-    ]
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": ["dist", "packages"]
 }
