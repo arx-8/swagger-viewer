@@ -41,7 +41,7 @@ yarn lint-dry
 
 ## Swagger examples
 
-https://github.com/OAI/OpenAPI-Specification/tree/master/examples
+https://github.com/OAI/OpenAPI-Specification/tree/main/examples
 
 ## License
 

@@ -35,7 +35,7 @@ Works completely offline.
 
 1.  Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/swagger-viewer/nfmkaonpdmaglhjjlggfhlndofdldfag)
 2.  Open swagger page in GitHub.
-    - Try: <https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml>
+    - Try: <https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml>
 3.  Click this app icon.
 4.  Have a good development!
 
