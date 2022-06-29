@@ -47,7 +47,7 @@ export const getElmOfSrcCode = (): HTMLElement => {
 export const extractSrc = (): string => {
   const elm = getElmOfSrcCode()
 
-  if (!elm.textContent) {
+  if (elm.textContent == null) {
     throw new Error("Unexpected null")
   }
 

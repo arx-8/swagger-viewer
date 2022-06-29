@@ -15,7 +15,7 @@ describe("example", () => {
       .reduce((l, r) => l + r)
 
     // ## Assert ##
-    expect(result).toBe(12)
+    expect(result).toStrictEqual(12)
   })
 })
 
@@ -78,15 +78,14 @@ describe("when in doubt, use `toStrictEqual`. It is the most reliable.", () => {
   it("toEqual is `deep equal`", () => {
     expect.hasAssertions()
 
-    /* eslint-disable sort-keys-fix/sort-keys-fix */
+    /* eslint-disable jest/prefer-strict-equal, sort-keys-fix/sort-keys-fix */
     // Literal
-    expect(2).not.toBe("2")
-    expect(2).not.toBe(true)
-    expect(0).not.toBe(false)
-    expect(false).toBe(false)
+    expect(2).not.toEqual("2")
+    expect(2).not.toEqual(true)
+    expect(0).not.toEqual(false)
+    expect(false).toEqual(false)
 
     // Array
-    /* eslint-disable jest/prefer-strict-equal */
     expect([1, 2, 4]).toEqual([1, 2, 4])
     expect([1, 2, 4]).not.toEqual([1, 4, 2])
 

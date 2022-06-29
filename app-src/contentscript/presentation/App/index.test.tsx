@@ -46,7 +46,7 @@ describe("Render test", () => {
   it("Swagger yaml 2.0", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_2_0)
-    if (!swaggerJson) {
+    if (swaggerJson == null) {
       throw new Error("Invalid fixture")
     }
     // ## Act ##
@@ -58,7 +58,7 @@ describe("Render test", () => {
   it("Swagger yaml 3.0", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerYaml_3_0)
-    if (!swaggerJson) {
+    if (swaggerJson == null) {
       throw new Error("Invalid fixture")
     }
     // ## Act ##
@@ -70,7 +70,7 @@ describe("Render test", () => {
   it("Swagger json 2.0", () => {
     // ## Arrange ##
     const swaggerJson = convertToObject(swaggerJson_2_0)
-    if (!swaggerJson) {
+    if (swaggerJson == null) {
       throw new Error("Invalid fixture")
     }
     // ## Act ##

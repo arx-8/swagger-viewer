@@ -46,7 +46,7 @@ const execConvertSwagger = (): void => {
     const swaggerJson = convertToObject(srcCode)
 
     injectApp()
-    render(swaggerJson || "")
+    render(swaggerJson == null ? "" : swaggerJson)
   }
 
   // App のアイコンをクリックされるたびに、src と swagger-ui を toggle する

@@ -7,14 +7,14 @@ const config = {
   env: {
     browser: true,
     es6: true,
-    webextensions: true,
   },
   extends: [
-    "standard",
     "eslint:recommended",
+    "standard",
+    "plugin:promise/recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "react-app",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:typescript-sort-keys/recommended",
@@ -36,69 +36,70 @@ const config = {
     {
       extends: ["plugin:jest/recommended"],
       files: ["*.test.ts", "*.test.tsx"],
+      rules: {
+        "jest/prefer-strict-equal": 2,
+      },
     },
   ],
   parserOptions: {
     project: "./tsconfig.json",
   },
-  plugins: [
-    "@typescript-eslint",
-    "react",
-    "sort-destructure-keys",
-    "sort-keys-fix",
-    "typescript-sort-keys",
-  ],
+  plugins: ["sort-destructure-keys", "sort-keys-fix", "typescript-sort-keys"],
   rules: {
-    "@typescript-eslint/camelcase": 0,
-
-    // React Component のボイラープレートコードを減らすため
+    "@typescript-eslint/ban-types": [
+      2,
+      {
+        types: {
+          /**
+           * `React.FC/VFC` can only be a disadvantage, because generics cannot be defined.
+           */
+          "React.FC": {
+            message: "Use `({...}: Props): JSX.Element => {...}` style instead",
+          },
+          "React.VFC": {
+            message: "Use `({...}: Props): JSX.Element => {...}` style instead",
+          },
+        },
+      },
+    ],
     "@typescript-eslint/consistent-type-definitions": [2, "type"],
-
-    "@typescript-eslint/explicit-member-accessibility": 0,
-
-    // Other
-    "@typescript-eslint/no-explicit-any": 2,
-
+    "@typescript-eslint/naming-convention": [
+      2,
+      {
+        // "type" naming should be PascalCase
+        custom: {
+          match: false,
+          regex: "send|start|find",
+        },
+        format: ["PascalCase"],
+        selector: "typeAlias",
+      },
+    ],
     "@typescript-eslint/no-misused-promises": [
-      2,
+      "error",
       {
-        checksVoidReturn: false,
+        checksVoidReturn: {
+          // e.g. Allow `<button onClick={doSomethingAsync} />`
+          attributes: false,
+        },
       },
     ],
-
-    // constructor のショートハンド（メンバーの省略記法）を使いたいため
-    "@typescript-eslint/no-parameter-properties": 0,
-
-    // バグの温床になりやすいコードを防ぐため
-    "@typescript-eslint/no-unused-expressions": [
-      2,
-      {
-        allowShortCircuit: false,
-        allowTaggedTemplates: false,
-        allowTernary: false,
-      },
-    ],
-
-    "@typescript-eslint/no-use-before-define": 0,
-
+    "@typescript-eslint/no-useless-constructor": 2,
     "@typescript-eslint/prefer-readonly": 2,
-
-    "@typescript-eslint/require-await": 2,
-
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+        allowAny: false,
+        allowNullableBoolean: false,
+        allowNullableNumber: false,
+        allowNullableObject: false,
+        allowNullableString: false,
+        allowNumber: false,
+        allowString: false,
+      },
+    ],
     camelcase: 0,
-
     "import/no-default-export": 2,
-
-    // ts と eslint の相性不良周りを解消するための設定
-    "import/no-unresolved": 0,
-
-    "no-alert": 2,
-
-    // for-of-awaitを使用するため
-    "no-await-in-loop": 0,
-
-    "no-empty-function": 0,
-
     "no-restricted-globals": [
       2,
       {
@@ -110,7 +111,6 @@ const config = {
         name: "Map",
       },
     ],
-
     "no-restricted-properties": [
       2,
       {
@@ -119,50 +119,25 @@ const config = {
         property: "innerText",
       },
     ],
-
     "no-restricted-syntax": [
       2,
       {
         message:
-          "Do not declare enums. Use `Plain Object` or `Literal Types` instead.",
+          "Do not use `enum`. Use `Plain Object` or `Literal Types` instead.",
         selector: "TSEnumDeclaration",
       },
     ],
-
-    // ホイスティングの許可
-    "no-use-before-define": 0,
-
-    "no-useless-constructor": 0,
-
-    "react/jsx-boolean-value": 2,
-
-    "react/jsx-filename-extension": [2, { extensions: [".tsx"] }],
-
-    // jsx pragma 次第で Short Syntax が使えないため
-    "react/jsx-fragments": [2, "element"],
-
-    "react/jsx-sort-props": 2,
-
-    "react/no-access-state-in-setstate": 2,
-
-    "react/no-array-index-key": 2,
-
-    "react/no-did-mount-set-state": 2,
-
-    "react/no-unsafe": [2, { checkAliases: true }],
-
-    "react/prefer-stateless-function": 2,
-
-    "react/prop-types": 0,
-
-    "react/void-dom-elements-no-children": 2,
-
     // note you must disable the base rule as it can report incorrect errors
-    "require-await": 0,
-
+    "no-useless-constructor": 0,
+    "prefer-template": 2,
+    "react/jsx-boolean-value": 2,
+    "react/jsx-sort-props": 2,
+    "react/no-array-index-key": 2,
+    "react/no-unsafe": [2, { checkAliases: true }],
+    "react/prefer-stateless-function": 2,
     "sort-destructure-keys/sort-destructure-keys": 2,
-
     "sort-keys-fix/sort-keys-fix": 2,
+    yoda: [2, "never", { onlyEquality: true }],
   },
 }
 
