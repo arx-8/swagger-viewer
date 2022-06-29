@@ -69,5 +69,11 @@
     /* Other */
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["dist", "packages"]
+  "include": [
+    ".eslintrc.js",
+    ".prettierrc.js",
+    "app",
+    "app-src",
+    "vite.config.ts"
+  ]
 }

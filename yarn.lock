@@ -1515,6 +1515,19 @@
   dependencies:
     "@types/node" "*"
 
+"@types/eslint@8.4.3":
+  version "8.4.3"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.4.3.tgz#5c92815a3838b1985c90034cd85f26f59d9d0ece"
+  integrity sha512-YP1S7YJRMPs+7KZKDb9G63n8YejIwW9BALq7a5j2+H4yl6iOv9CB29edho+cuFRrvmJbbaH2yiVChKLJVysDGw==
+  dependencies:
+    "@types/estree" "*"
+    "@types/json-schema" "*"
+
+"@types/estree@*":
+  version "0.0.52"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.52.tgz#7f1f57ad5b741f3d5b210d3b1f145640d89bf8fe"
+  integrity sha512-BZWrtCU0bMVAIliIV+HJO1f1PR41M7NKjfxrFJwwhKI1KwhwOxYw1SXg9ao+CIMt774nFuGiG6eU+udtbEI9oQ==
+
 "@types/filesystem@*":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/filesystem/-/filesystem-0.0.32.tgz#307df7cc084a2293c3c1a31151b178063e0a8edf"
@@ -1594,7 +1607,7 @@
     "@types/parse5" "*"
     "@types/tough-cookie" "*"
 
-"@types/json-schema@^7.0.9":
+"@types/json-schema@*", "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
   integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
