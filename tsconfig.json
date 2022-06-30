@@ -69,11 +69,5 @@
     /* Other */
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    ".eslintrc.js",
-    ".prettierrc.js",
-    "app",
-    "app-src",
-    "vite.config.ts"
-  ]
+  "include": [".eslintrc.js", ".prettierrc.js", "src", "vite.config.ts"]
 }

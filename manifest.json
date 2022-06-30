@@ -6,23 +6,23 @@
   "manifest_version": 3,
   "default_locale": "en",
   "icons": {
-    "16": "app/images/icon-16.png",
-    "48": "app/images/icon-48.png",
-    "128": "app/images/icon-128.png"
+    "16": "src/images/icon-16.png",
+    "48": "src/images/icon-48.png",
+    "128": "src/images/icon-128.png"
   },
   "background": {
-    "service_worker": "app/scripts/background.ts"
+    "service_worker": "src/service_worker.ts"
   },
   "action": {
     "default_title": "Convert!"
   },
   "options_ui": {
-    "page": "app/pages/options.html"
+    "page": "src/options.html"
   },
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["app/scripts/contentscript.ts"]
+      "js": ["src/content_scripts.ts"]
     }
   ]
 }

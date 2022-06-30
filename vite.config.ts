@@ -11,11 +11,6 @@ export default defineConfig({
     environment: "happy-dom",
     // This setting is required because at least `jest-styled-components` depends on `globals`.
     globals: true,
-    include: [
-      "app-src/**/*.test.ts",
-      "app-src/**/*.test.tsx",
-      "app/**/*.test.ts",
-      "app/**/*.test.tsx",
-    ],
+    include: ["src/**/*.test.ts", "src/**/*.test.tsx"],
   },
 })
