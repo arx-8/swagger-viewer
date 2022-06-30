@@ -68,8 +68,5 @@
     "react-dom": "18.2.0",
     "styled-components": "5.3.5",
     "swagger-ui-react": "4.12.0"
-  },
-  "resolutions": {
-    "has-symbols": "1.0.3"
   }
 }
