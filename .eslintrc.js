@@ -139,6 +139,11 @@ const config = {
     "sort-keys-fix/sort-keys-fix": 2,
     yoda: [2, "never", { onlyEquality: true }],
   },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
 }
 
 module.exports = config
