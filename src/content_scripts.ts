@@ -1,3 +1,5 @@
+import { APP_RENDER_ID, MessagePayload } from "src/universal/types/App"
+import { convertToObject } from "src/universal/utils/YmlUtils"
 import { render } from "./content_scripts/components"
 import {
   extractSrc,
@@ -7,31 +9,29 @@ import {
   toggleAppOrSrcCodeDom,
 } from "./content_scripts/data/DomRepository"
 import { getDocument } from "./content_scripts/data/QuerySelector/Document"
-import { convertToObject } from "./content_scripts/utils/YmlUtils"
-import { APP_RENDER_ID } from "./universal/constants/App"
-import { EXEC_CONVERT_SWAGGER } from "./universal/constants/SendMessageTypes"
-import { ExecConvertSwaggerMessage } from "./universal/types/SendMessage"
 
 /**
  * contentscriptのエントリーポイント
  * backgroundからイベントを受け取って実行
  */
-chrome.runtime.onMessage.addListener((message: ExecConvertSwaggerMessage) => {
-  if (message.type === EXEC_CONVERT_SWAGGER) {
-    try {
-      execConvertSwagger()
-    } catch (_error) {
-      // TODO do not use as cast
-      const error = _error as Error
-      // eslint-disable-next-line no-alert
-      alert(
-        `No operation. Can not convert.
+chrome.runtime.onMessage.addListener((message: MessagePayload) => {
+  if (message.type !== "CALL_CONVERT_SWAGGER") {
+    return
+  }
+
+  try {
+    execConvertSwagger()
+  } catch (_error) {
+    // TODO do not use as cast
+    const error = _error as Error
+    // eslint-disable-next-line no-alert
+    alert(
+      `No operation. Can not convert.
 
 [Cause]
 ${error.message}`
-      )
-      console.error(error.stack)
-    }
+    )
+    console.error(error.stack)
   }
 })
 
