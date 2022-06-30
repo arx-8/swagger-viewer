@@ -1,3 +1,11 @@
+## 3.1.0 (2022-06-30)
+
+### :hammer: Other
+
+- Update to Manifest V3.
+- Security update (Update all dependencies).
+- Migrate from webextension-toolbox to vite.
+
 ## 3.0.0 (2021-11-03)
 
 ### :fire: Breaking changes
