@@ -83,57 +83,66 @@ export const toggleAppOrSrcCodeDom = (): void => {
  * API定義・Modelsのタイトル（サマリー）の開閉エリアを取得して返す
  */
 export const getElmOfSwaggerDefOpener = (
-  isOpened: boolean
+  currentOpen: boolean
 ): readonly HTMLButtonElement[] => {
-  if (isOpened) {
+  if (currentOpen) {
+    // for tag headers
     const apiDefs = querySelectorAll(
-      `.opblock-tag-section .opblock-tag[data-is-open="true"]`
+      `#${APP_RENDER_ID} .opblock-tag-section .opblock-tag[data-is-open="true"]`
     )
-    const modelDefs = querySelectorAll(`section.models.is-open > h4`)
+
+    // for "Schemas"
+    const modelDefs = querySelectorAll(
+      `#${APP_RENDER_ID} section.models.is-open button`
+    )
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return [...apiDefs, ...modelDefs] as CastAny
   }
 
   const apiDefs = querySelectorAll(
-    `.opblock-tag-section .opblock-tag[data-is-open="false"] button`
+    `#${APP_RENDER_ID} .opblock-tag-section .opblock-tag[data-is-open="false"] button`
   )
-  const modelDefs = querySelectorAll(`section.models:not(.is-open) > h4`)
+  const modelDefs = querySelectorAll(
+    `#${APP_RENDER_ID} section.models:not(.is-open) button`
+  )
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return [...apiDefs, ...modelDefs] as CastAny
 }
 
 /**
  * Swaggerの各エンドポイント定義のヘッダー部分を取得して返す
- * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
+ * @param currentOpen true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
  */
 export const getElmOfSwaggerEndPointDefHeaders = (
-  isOpened: boolean
+  currentOpen: boolean
 ): readonly HTMLDivElement[] => {
-  if (isOpened) {
+  if (currentOpen) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return querySelectorAll("div.opblock.is-open > .opblock-summary") as CastAny
+    return querySelectorAll(
+      `#${APP_RENDER_ID} div.opblock.is-open .opblock-summary button`
+    ) as CastAny
   }
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return querySelectorAll(
-    "div.opblock:not(.is-open) > .opblock-summary"
+    `#${APP_RENDER_ID} div.opblock:not(.is-open) .opblock-summary button`
   ) as CastAny
 }
 
 /**
  * Swaggerの各Model定義の開閉アイコン部分を取得して返す
- * @param {boolean} isOpened true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
+ * @param currentOpen true: 開いてる状態のヘッダーのみ取得 | false: 閉じている状態のヘッダーのみ取得
  */
 export const getElmOfSwaggerSchemasModelHeaders = (
-  isOpened: boolean
+  currentOpen: boolean
 ): readonly HTMLDivElement[] => {
-  if (isOpened) {
+  if (currentOpen) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return querySelectorAll(
-      "span.model-box span.model-toggle:not(.collapsed)"
+      `#${APP_RENDER_ID} span.model-box span.model-toggle:not(.collapsed)`
     ) as CastAny
   }
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return querySelectorAll(
-    "span.model-box span.model-toggle.collapsed"
+    `#${APP_RENDER_ID} span.model-box span.model-toggle.collapsed`
   ) as CastAny
 }

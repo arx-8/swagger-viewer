@@ -39,17 +39,17 @@ export const App = ({ swaggerJson }: Props): JSX.Element => {
 }
 
 const onClickExpandAll = async (): Promise<void> => {
-  const isOpened = false
-  getElmOfSwaggerDefOpener(isOpened).forEach((e) => e.click())
+  const currentOpen = false
+  getElmOfSwaggerDefOpener(currentOpen).forEach((e) => e.click())
   await sleep(100)
 
-  getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
+  getElmOfSwaggerEndPointDefHeaders(currentOpen).forEach((e) => e.click())
 
   // ネストしたModelを全て展開する
   // 無限ループにさせないため、ある程度の数で打ち切る
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   for (const _ of range(0, 10)) {
-    const targets = getElmOfSwaggerSchemasModelHeaders(isOpened)
+    const targets = getElmOfSwaggerSchemasModelHeaders(currentOpen)
     if (targets.length === 0) {
       break
     }
@@ -61,11 +61,11 @@ const onClickExpandAll = async (): Promise<void> => {
 }
 
 const onClickCollapseAll = (): void => {
-  const isOpened = true
+  const currentOpen = true
   // 全ての Open 状態に対して「閉じる」ため、再帰処理は不要
-  getElmOfSwaggerEndPointDefHeaders(isOpened).forEach((e) => e.click())
-  getElmOfSwaggerSchemasModelHeaders(isOpened).forEach((e) => e.click())
-  getElmOfSwaggerDefOpener(isOpened).forEach((e) => e.click())
+  getElmOfSwaggerEndPointDefHeaders(currentOpen).forEach((e) => e.click())
+  getElmOfSwaggerSchemasModelHeaders(currentOpen).forEach((e) => e.click())
+  getElmOfSwaggerDefOpener(currentOpen).forEach((e) => e.click())
 }
 
 const Root = styled.div`
