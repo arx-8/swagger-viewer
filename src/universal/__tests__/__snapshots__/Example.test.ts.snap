@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`snapshot test > ok 1`] = `
+{
+  "a": 0,
+  "b": "b1",
+}
+`;
