@@ -1,5 +1,5 @@
+import { createMockDocumentBy } from "src/content_scripts/__tests__/Helper"
 import { querySelector, querySelectorAll, querySelectorStrict } from "."
-import { createMockDocumentBy } from "../../__tests__/Helper"
 import * as Document from "./Document"
 import { testHtml } from "./index.test.data"
 

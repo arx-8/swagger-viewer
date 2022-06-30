@@ -1,5 +1,5 @@
-import { FixMeAny } from "../../../universal/types/utils"
-import { getDocument } from "./Document"
+import { getDocument } from "src/content_scripts/data/QuerySelector/Document"
+import { FixMeAny } from "src/universal/types/utils"
 
 /**
  * document.querySelectorAll() をモック可能にするためのラッパー

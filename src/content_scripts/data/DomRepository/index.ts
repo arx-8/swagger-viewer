@@ -1,10 +1,10 @@
-import { APP_RENDER_ID } from "../../../universal/constants/App"
-import { CastAny } from "../../../universal/types/utils"
 import {
   querySelector,
   querySelectorAll,
   querySelectorStrict,
-} from "../QuerySelector"
+} from "src/content_scripts/data/QuerySelector"
+import { APP_RENDER_ID } from "src/universal/constants/App"
+import { CastAny } from "src/universal/types/utils"
 
 /**
  * DOMアクセス全般を実装する

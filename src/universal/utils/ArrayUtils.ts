@@ -1,8 +1,8 @@
-/**
- * lodashは重いため、機能を削った代替実装
- */
+import { CastAny } from "src/universal/types/utils"
 
-import { CastAny } from "../types/utils"
+/**
+ * alternative implementation of lodash because it is too heavy
+ */
 
 export const range = (from: number, to: number): readonly number[] => {
   if (to < from) {

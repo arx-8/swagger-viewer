@@ -1,6 +1,6 @@
+import * as Document from "src/content_scripts/data/QuerySelector/Document"
+import { createMockDocumentBy } from "src/content_scripts/__tests__/Helper"
 import { extractSrc, getElmOfSrcCode, isConverted } from "."
-import { createMockDocumentBy } from "../../__tests__/Helper"
-import * as Document from "../QuerySelector/Document"
 
 /**
  * Use 1 mock per file because it is not possible to reset the mocks in the same file.

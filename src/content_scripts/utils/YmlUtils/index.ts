@@ -1,5 +1,5 @@
 import jsYaml from "js-yaml"
-import { MaybeSwaggerJson } from "../../../universal/types/Swagger"
+import { MaybeSwaggerJson } from "src/universal/types/Swagger"
 
 /**
  * @param str yml string | json string

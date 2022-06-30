@@ -1,16 +1,16 @@
 import * as React from "react"
-import styled from "styled-components"
-import SwaggerUI from "swagger-ui-react"
-import "swagger-ui-react/swagger-ui.css"
-import { MaybeSwaggerJson } from "../../../universal/types/Swagger"
-import { range } from "../../../universal/utils/ArrayUtils"
-import { sleep } from "../../../universal/utils/SystemUtils"
+import { Button } from "src/content_scripts/components/Button"
 import {
   getElmOfSwaggerDefOpener,
   getElmOfSwaggerEndPointDefHeaders,
   getElmOfSwaggerSchemasModelHeaders,
-} from "../../data/DomRepository"
-import { Button } from "../Button"
+} from "src/content_scripts/data/DomRepository"
+import { MaybeSwaggerJson } from "src/universal/types/Swagger"
+import { range } from "src/universal/utils/ArrayUtils"
+import { sleep } from "src/universal/utils/SystemUtils"
+import styled from "styled-components"
+import SwaggerUI from "swagger-ui-react"
+import "swagger-ui-react/swagger-ui.css"
 
 type Props = {
   /**

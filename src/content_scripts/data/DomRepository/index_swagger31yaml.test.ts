@@ -1,6 +1,6 @@
+import * as Document from "src/content_scripts/data/QuerySelector/Document"
+import { createMockDocumentBy } from "src/content_scripts/__tests__/Helper"
 import { extractSrc, getElmOfSrcCode, isConverted } from "."
-import { createMockDocumentBy } from "../../__tests__/Helper"
-import * as Document from "../QuerySelector/Document"
 import { html as swagger30YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_yaml"
 
 /**
