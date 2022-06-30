@@ -3,7 +3,7 @@ import {
   querySelectorAll,
   querySelectorStrict,
 } from "src/content_scripts/data/QuerySelector"
-import { APP_RENDER_ID } from "src/universal/constants/App"
+import { APP_RENDER_ID } from "src/universal/types/App"
 import { CastAny } from "src/universal/types/utils"
 
 /**

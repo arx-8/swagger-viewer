@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react"
 import "jest-styled-components"
 import * as React from "react"
-import { convertToObject } from "src/content_scripts/utils/YmlUtils"
+import { convertToObject } from "src/universal/utils/YmlUtils"
 import { App } from "."
 import { swaggerJson_2_0 } from "./fixtures/SwaggerJson_2_0"
 import { swaggerYaml_2_0 } from "./fixtures/SwaggerYaml_2_0"
