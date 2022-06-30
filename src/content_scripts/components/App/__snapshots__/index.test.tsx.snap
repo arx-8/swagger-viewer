@@ -1,7 +1,8 @@
 // Vitest Snapshot v1
 
 exports[`Render test > Swagger json 2.0 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   background-color: #fff;
 }
 
@@ -42,611 +43,585 @@ exports[`Render test > Swagger json 2.0 1`] = `
 }
 
 <div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
-  </div>
-  <div
-    className="c2"
+    class="c0"
   >
     <div
-      className="swagger-ui"
+      class="c1"
     >
-      <div>
-        <svg
-          className="svg-assets"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <defs>
-            <symbol
-              id="unlocked"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"
-              />
-            </symbol>
-            <symbol
-              id="locked"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"
-              />
-            </symbol>
-            <symbol
-              id="close"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow-down"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow-up"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
-              />
-            </symbol>
-            <symbol
-              id="jump-to"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
-              />
-            </symbol>
-            <symbol
-              id="expand"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
-              />
-            </symbol>
-          </defs>
-        </svg>
-      </div>
-      <div>
-        <div
-          className="information-container wrapper"
-        >
-          <section
-            className="block col-12"
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
+    <div
+      class="c2"
+    >
+      <div
+        class="swagger-ui"
+      >
+        <div>
+          <svg
+            class="svg-assets"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <div
-              className="fallback"
-            >
-              😱 
-              <i>
-                Could not render 
-                r
-                , see the console.
-              </i>
-            </div>
-          </section>
-        </div>
-        <div
-          className="scheme-container"
-        >
-          <section
-            className="schemes wrapper block col-12"
-          >
-            <label
-              htmlFor="schemes"
-            >
-              <span
-                className="schemes-title"
+            <defs>
+              <symbol
+                id="unlocked"
+                viewBox="0 0 20 20"
               >
-                Schemes
-              </span>
-              <select
-                onChange={[Function]}
-                value="http"
+                <path
+                  d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"
+                />
+              </symbol>
+              <symbol
+                id="locked"
+                viewBox="0 0 20 20"
               >
-                <option
-                  value="http"
-                >
-                  http
-                </option>
-              </select>
-            </label>
-          </section>
+                <path
+                  d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"
+                />
+              </symbol>
+              <symbol
+                id="close"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow-down"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow-up"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
+                />
+              </symbol>
+              <symbol
+                id="jump-to"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
+                />
+              </symbol>
+              <symbol
+                id="expand"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
+                />
+              </symbol>
+            </defs>
+          </svg>
         </div>
-        <div />
-        <div
-          className="wrapper"
-        >
-          <section
-            className="block col-12 block-desktop col-12-desktop"
-          >
-            <div>
-              <span>
-                <div
-                  className="opblock-tag-section is-open"
-                >
-                  <h3
-                    className="opblock-tag no-desc"
-                    data-is-open={true}
-                    data-tag="default"
-                    id="operations-tag-default"
-                    onClick={[Function]}
-                  >
-                    <a
-                      className="nostyle"
-                      href={null}
-                      onClick={null}
-                    >
-                      <span>
-                        default
-                      </span>
-                    </a>
-                    <small />
-                    <button
-                      aria-expanded={true}
-                      className="expand-operation"
-                      onClick={[Function]}
-                      title="Collapse operation"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        className="arrow"
-                        focusable="false"
-                        height="20"
-                        width="20"
-                      >
-                        <use
-                          href="#large-arrow-up"
-                          xlinkHref="#large-arrow-up"
-                        />
-                      </svg>
-                    </button>
-                  </h3>
-                  <div
-                    className="no-margin"
-                  >
-                     
-                    <div
-                      className="operation-tag-content"
-                    >
-                      <span>
-                        <div
-                          className="opblock opblock-get"
-                          id="operations-default-findPets"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-get"
-                          >
-                            <button
-                              aria-expanded={false}
-                              aria-label="get ​/pets"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                GET
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/pets"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /pets
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              />
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
-                      </span>
-                      <span>
-                        <div
-                          className="opblock opblock-post"
-                          id="operations-default-addPet"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-post"
-                          >
-                            <button
-                              aria-expanded={false}
-                              aria-label="post ​/pets"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                POST
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/pets"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /pets
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              />
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
-                      </span>
-                      <span>
-                        <div
-                          className="opblock opblock-get"
-                          id="operations-default-findPetById"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-get"
-                          >
-                            <button
-                              aria-expanded={false}
-                              aria-label="get ​/pets​/{id}"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                GET
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/pets/{id}"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /pets
-                                    <wbr />
-                                    /{id}
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              />
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
-                      </span>
-                      <span>
-                        <div
-                          className="opblock opblock-delete"
-                          id="operations-default-deletePet"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-delete"
-                          >
-                            <button
-                              aria-expanded={false}
-                              aria-label="delete ​/pets​/{id}"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                DELETE
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/pets/{id}"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /pets
-                                    <wbr />
-                                    /{id}
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              />
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
-                      </span>
-                    </div>
-                     
-                  </div>
-                </div>
-              </span>
-            </div>
-          </section>
-        </div>
-        <div
-          className="wrapper"
-        >
-          <section
-            className="block col-12 block-desktop col-12-desktop"
+        <div>
+          <div
+            class="information-container wrapper"
           >
             <section
-              className="models is-open"
+              class="block col-12"
             >
-              <h4>
-                <button
-                  aria-expanded={true}
-                  className="models-control"
-                  onClick={[Function]}
-                >
-                  <span>
-                    Models
-                  </span>
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    height="20"
-                    width="20"
-                  >
-                    <use
-                      xlinkHref="#large-arrow-up"
-                    />
-                  </svg>
-                </button>
-              </h4>
               <div
-                className="no-margin"
+                class="fallback"
               >
-                 
-                <div
-                  className="model-container"
-                  data-name="Pet"
-                  id="model-Pet"
-                >
-                  <span
-                    className="models-jump-to-path"
-                  />
-                  <span
-                    className="model-box"
-                  >
-                    <button
-                      aria-expanded={false}
-                      className="model-box-control"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="pointer"
-                      >
-                        <span
-                          className="model-box"
-                        >
-                          <span
-                            className="model model-title"
-                          >
-                            Pet
-                          </span>
-                        </span>
-                      </span>
-                      <span
-                        className="model-toggle collapsed"
-                      />
-                      <span>
-                         
-                      </span>
-                    </button>
-                  </span>
-                </div>
-                <div
-                  className="model-container"
-                  data-name="NewPet"
-                  id="model-NewPet"
-                >
-                  <span
-                    className="models-jump-to-path"
-                  />
-                  <span
-                    className="model-box"
-                  >
-                    <button
-                      aria-expanded={false}
-                      className="model-box-control"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="pointer"
-                      >
-                        <span
-                          className="model-box"
-                        >
-                          <span
-                            className="model model-title"
-                          >
-                            NewPet
-                          </span>
-                        </span>
-                      </span>
-                      <span
-                        className="model-toggle collapsed"
-                      />
-                      <span>
-                         
-                      </span>
-                    </button>
-                  </span>
-                </div>
-                <div
-                  className="model-container"
-                  data-name="ErrorModel"
-                  id="model-ErrorModel"
-                >
-                  <span
-                    className="models-jump-to-path"
-                  />
-                  <span
-                    className="model-box"
-                  >
-                    <button
-                      aria-expanded={false}
-                      className="model-box-control"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="pointer"
-                      >
-                        <span
-                          className="model-box"
-                        >
-                          <span
-                            className="model model-title"
-                          >
-                            ErrorModel
-                          </span>
-                        </span>
-                      </span>
-                      <span
-                        className="model-toggle collapsed"
-                      />
-                      <span>
-                         
-                      </span>
-                    </button>
-                  </span>
-                </div>
-                 
+                😱 
+                <i>
+                  Could not render r, see the console.
+                </i>
               </div>
             </section>
-          </section>
+          </div>
+          <div
+            class="scheme-container"
+          >
+            <section
+              class="schemes wrapper block col-12"
+            >
+              <label
+                for="schemes"
+              >
+                <span
+                  class="schemes-title"
+                >
+                  Schemes
+                </span>
+                <select>
+                  <option
+                    selected=""
+                    value="http"
+                  >
+                    http
+                  </option>
+                </select>
+              </label>
+            </section>
+          </div>
+          <div />
+          <div
+            class="wrapper"
+          >
+            <section
+              class="block col-12 block-desktop col-12-desktop"
+            >
+              <div>
+                <span>
+                  <div
+                    class="opblock-tag-section is-open"
+                  >
+                    <h3
+                      class="opblock-tag no-desc"
+                      data-is-open="true"
+                      data-tag="default"
+                      id="operations-tag-default"
+                    >
+                      <a
+                        class="nostyle"
+                      >
+                        <span>
+                          default
+                        </span>
+                      </a>
+                      <small />
+                      <button
+                        aria-expanded="true"
+                        class="expand-operation"
+                        title="Collapse operation"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arrow"
+                          focusable="false"
+                          height="20"
+                          width="20"
+                        >
+                          <use
+                            href="#large-arrow-up"
+                            xlink:href="#large-arrow-up"
+                          />
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      class="no-margin"
+                    >
+                       
+                      <div
+                        class="operation-tag-content"
+                      >
+                        <span>
+                          <div
+                            class="opblock opblock-get"
+                            id="operations-default-findPets"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-get"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="get ​/pets"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  GET
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/pets"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /pets
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                />
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                        <span>
+                          <div
+                            class="opblock opblock-post"
+                            id="operations-default-addPet"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-post"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="post ​/pets"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  POST
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/pets"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /pets
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                />
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                        <span>
+                          <div
+                            class="opblock opblock-get"
+                            id="operations-default-findPetById"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-get"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="get ​/pets​/{id}"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  GET
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/pets/{id}"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /pets
+                                      <wbr />
+                                      /{id}
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                />
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                        <span>
+                          <div
+                            class="opblock opblock-delete"
+                            id="operations-default-deletePet"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-delete"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="delete ​/pets​/{id}"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  DELETE
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/pets/{id}"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /pets
+                                      <wbr />
+                                      /{id}
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                />
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                      </div>
+                       
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </section>
+          </div>
+          <div
+            class="wrapper"
+          >
+            <section
+              class="block col-12 block-desktop col-12-desktop"
+            >
+              <section
+                class="models is-open"
+              >
+                <h4>
+                  <button
+                    aria-expanded="true"
+                    class="models-control"
+                  >
+                    <span>
+                      Models
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="20"
+                      width="20"
+                    >
+                      <use
+                        xlink:href="#large-arrow-up"
+                      />
+                    </svg>
+                  </button>
+                </h4>
+                <div
+                  class="no-margin"
+                >
+                   
+                  <div
+                    class="model-container"
+                    data-name="Pet"
+                    id="model-Pet"
+                  >
+                    <span
+                      class="models-jump-to-path"
+                    />
+                    <span
+                      class="model-box"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="model-box-control"
+                      >
+                        <span
+                          class="pointer"
+                        >
+                          <span
+                            class="model-box"
+                          >
+                            <span
+                              class="model model-title"
+                            >
+                              Pet
+                            </span>
+                          </span>
+                        </span>
+                        <span
+                          class="model-toggle collapsed"
+                        />
+                        <span>
+                           
+                        </span>
+                      </button>
+                    </span>
+                  </div>
+                  <div
+                    class="model-container"
+                    data-name="NewPet"
+                    id="model-NewPet"
+                  >
+                    <span
+                      class="models-jump-to-path"
+                    />
+                    <span
+                      class="model-box"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="model-box-control"
+                      >
+                        <span
+                          class="pointer"
+                        >
+                          <span
+                            class="model-box"
+                          >
+                            <span
+                              class="model model-title"
+                            >
+                              NewPet
+                            </span>
+                          </span>
+                        </span>
+                        <span
+                          class="model-toggle collapsed"
+                        />
+                        <span>
+                           
+                        </span>
+                      </button>
+                    </span>
+                  </div>
+                  <div
+                    class="model-container"
+                    data-name="ErrorModel"
+                    id="model-ErrorModel"
+                  >
+                    <span
+                      class="models-jump-to-path"
+                    />
+                    <span
+                      class="model-box"
+                    >
+                      <button
+                        aria-expanded="false"
+                        class="model-box-control"
+                      >
+                        <span
+                          class="pointer"
+                        >
+                          <span
+                            class="model-box"
+                          >
+                            <span
+                              class="model model-title"
+                            >
+                              ErrorModel
+                            </span>
+                          </span>
+                        </span>
+                        <span
+                          class="model-toggle collapsed"
+                        />
+                        <span>
+                           
+                        </span>
+                      </button>
+                    </span>
+                  </div>
+                   
+                </div>
+              </section>
+            </section>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c3"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
+    <div
+      class="c3"
     >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Render test > Swagger yaml 2.0 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   background-color: #fff;
 }
 
@@ -687,349 +662,335 @@ exports[`Render test > Swagger yaml 2.0 1`] = `
 }
 
 <div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
-  </div>
-  <div
-    className="c2"
+    class="c0"
   >
     <div
-      className="swagger-ui"
+      class="c1"
     >
-      <div>
-        <svg
-          className="svg-assets"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <defs>
-            <symbol
-              id="unlocked"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"
-              />
-            </symbol>
-            <symbol
-              id="locked"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"
-              />
-            </symbol>
-            <symbol
-              id="close"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow-down"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow-up"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
-              />
-            </symbol>
-            <symbol
-              id="jump-to"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
-              />
-            </symbol>
-            <symbol
-              id="expand"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
-              />
-            </symbol>
-          </defs>
-        </svg>
-      </div>
-      <div>
-        <div
-          className="information-container wrapper"
-        >
-          <section
-            className="block col-12"
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
+    <div
+      class="c2"
+    >
+      <div
+        class="swagger-ui"
+      >
+        <div>
+          <svg
+            class="svg-assets"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <div>
-              <div
-                className="info"
+            <defs>
+              <symbol
+                id="unlocked"
+                viewBox="0 0 20 20"
               >
-                <hgroup
-                  className="main"
-                >
-                  <h2
-                    className="title"
-                  >
-                    Simple API overview
-                    <small>
-                      <pre
-                        className="version"
-                      >
-                         
-                        v2
-                         
-                      </pre>
-                    </small>
-                  </h2>
-                </hgroup>
-                <div
-                  className="description"
+                <path
+                  d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"
                 />
-              </div>
-            </div>
-          </section>
+              </symbol>
+              <symbol
+                id="locked"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"
+                />
+              </symbol>
+              <symbol
+                id="close"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow-down"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow-up"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
+                />
+              </symbol>
+              <symbol
+                id="jump-to"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
+                />
+              </symbol>
+              <symbol
+                id="expand"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
+                />
+              </symbol>
+            </defs>
+          </svg>
         </div>
-        <div />
-        <div
-          className="wrapper"
-        >
-          <section
-            className="block col-12 block-desktop col-12-desktop"
+        <div>
+          <div
+            class="information-container wrapper"
           >
-            <div>
-              <span>
+            <section
+              class="block col-12"
+            >
+              <div>
                 <div
-                  className="opblock-tag-section is-open"
+                  class="info"
                 >
-                  <h3
-                    className="opblock-tag no-desc"
-                    data-is-open={true}
-                    data-tag="default"
-                    id="operations-tag-default"
-                    onClick={[Function]}
+                  <hgroup
+                    class="main"
                   >
-                    <a
-                      className="nostyle"
-                      href={null}
-                      onClick={null}
+                    <h2
+                      class="title"
                     >
-                      <span>
-                        default
-                      </span>
-                    </a>
-                    <small />
-                    <button
-                      aria-expanded={true}
-                      className="expand-operation"
-                      onClick={[Function]}
-                      title="Collapse operation"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        className="arrow"
-                        focusable="false"
-                        height="20"
-                        width="20"
-                      >
-                        <use
-                          href="#large-arrow-up"
-                          xlinkHref="#large-arrow-up"
-                        />
-                      </svg>
-                    </button>
-                  </h3>
+                      Simple API overview
+                      <small>
+                        <pre
+                          class="version"
+                        >
+                           v2 
+                        </pre>
+                      </small>
+                    </h2>
+                  </hgroup>
                   <div
-                    className="no-margin"
-                  >
-                     
-                    <div
-                      className="operation-tag-content"
-                    >
-                      <span>
-                        <div
-                          className="opblock opblock-get"
-                          id="operations-default-listVersionsv2"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-get"
-                          >
-                            <button
-                              aria-expanded={false}
-                              aria-label="get ​/"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                GET
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              >
-                                List API versions
-                              </div>
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
-                      </span>
-                      <span>
-                        <div
-                          className="opblock opblock-get"
-                          id="operations-default-getVersionDetailsv2"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-get"
-                          >
-                            <button
-                              aria-expanded={false}
-                              aria-label="get ​/v2"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                GET
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/v2"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /v2
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              >
-                                Show API version details
-                              </div>
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
-                      </span>
-                    </div>
-                     
-                  </div>
+                    class="description"
+                  />
                 </div>
-              </span>
-            </div>
-          </section>
-        </div>
-        <div
-          className="wrapper"
-        >
-          <section
-            className="block col-12 block-desktop col-12-desktop"
-          />
+              </div>
+            </section>
+          </div>
+          <div />
+          <div
+            class="wrapper"
+          >
+            <section
+              class="block col-12 block-desktop col-12-desktop"
+            >
+              <div>
+                <span>
+                  <div
+                    class="opblock-tag-section is-open"
+                  >
+                    <h3
+                      class="opblock-tag no-desc"
+                      data-is-open="true"
+                      data-tag="default"
+                      id="operations-tag-default"
+                    >
+                      <a
+                        class="nostyle"
+                      >
+                        <span>
+                          default
+                        </span>
+                      </a>
+                      <small />
+                      <button
+                        aria-expanded="true"
+                        class="expand-operation"
+                        title="Collapse operation"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arrow"
+                          focusable="false"
+                          height="20"
+                          width="20"
+                        >
+                          <use
+                            href="#large-arrow-up"
+                            xlink:href="#large-arrow-up"
+                          />
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      class="no-margin"
+                    >
+                       
+                      <div
+                        class="operation-tag-content"
+                      >
+                        <span>
+                          <div
+                            class="opblock opblock-get"
+                            id="operations-default-listVersionsv2"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-get"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="get ​/"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  GET
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                >
+                                  List API versions
+                                </div>
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                        <span>
+                          <div
+                            class="opblock opblock-get"
+                            id="operations-default-getVersionDetailsv2"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-get"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="get ​/v2"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  GET
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/v2"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /v2
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                >
+                                  Show API version details
+                                </div>
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                      </div>
+                       
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </section>
+          </div>
+          <div
+            class="wrapper"
+          >
+            <section
+              class="block col-12 block-desktop col-12-desktop"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c3"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
+    <div
+      class="c3"
     >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Render test > Swagger yaml 3.0 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   background-color: #fff;
 }
 
@@ -1070,303 +1031,292 @@ exports[`Render test > Swagger yaml 3.0 1`] = `
 }
 
 <div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
-  </div>
-  <div
-    className="c2"
+    class="c0"
   >
     <div
-      className="swagger-ui"
+      class="c1"
     >
-      <div>
-        <svg
-          className="svg-assets"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <defs>
-            <symbol
-              id="unlocked"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"
-              />
-            </symbol>
-            <symbol
-              id="locked"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"
-              />
-            </symbol>
-            <symbol
-              id="close"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow-down"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
-              />
-            </symbol>
-            <symbol
-              id="large-arrow-up"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
-              />
-            </symbol>
-            <symbol
-              id="jump-to"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
-              />
-            </symbol>
-            <symbol
-              id="expand"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
-              />
-            </symbol>
-          </defs>
-        </svg>
-      </div>
-      <div>
-        <div
-          className="information-container wrapper"
-        >
-          <section
-            className="block col-12"
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
+    <div
+      class="c2"
+    >
+      <div
+        class="swagger-ui"
+      >
+        <div>
+          <svg
+            class="svg-assets"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <div>
-              <div
-                className="info"
+            <defs>
+              <symbol
+                id="unlocked"
+                viewBox="0 0 20 20"
               >
-                <hgroup
-                  className="main"
-                >
-                  <h2
-                    className="title"
-                  >
-                    Callback Example
-                    <span>
-                      <small>
-                        <pre
-                          className="version"
-                        >
-                           
-                          1.0.0
-                           
-                        </pre>
-                      </small>
-                      <small
-                        className="version-stamp"
-                      >
-                        <pre
-                          className="version"
-                        >
-                          OAS3
-                        </pre>
-                      </small>
-                    </span>
-                  </h2>
-                </hgroup>
-                <div
-                  className="description"
+                <path
+                  d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"
                 />
-              </div>
-            </div>
-          </section>
+              </symbol>
+              <symbol
+                id="locked"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"
+                />
+              </symbol>
+              <symbol
+                id="close"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow-down"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"
+                />
+              </symbol>
+              <symbol
+                id="large-arrow-up"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M 17.418 14.908 C 17.69 15.176 18.127 15.176 18.397 14.908 C 18.667 14.64 18.668 14.207 18.397 13.939 L 10.489 6.109 C 10.219 5.841 9.782 5.841 9.51 6.109 L 1.602 13.939 C 1.332 14.207 1.332 14.64 1.602 14.908 C 1.873 15.176 2.311 15.176 2.581 14.908 L 10 7.767 L 17.418 14.908 Z"
+                />
+              </symbol>
+              <symbol
+                id="jump-to"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"
+                />
+              </symbol>
+              <symbol
+                id="expand"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
+                />
+              </symbol>
+            </defs>
+          </svg>
         </div>
-        <div />
-        <div
-          className="wrapper"
-        >
-          <section
-            className="block col-12 block-desktop col-12-desktop"
+        <div>
+          <div
+            class="information-container wrapper"
           >
-            <div>
-              <span>
+            <section
+              class="block col-12"
+            >
+              <div>
                 <div
-                  className="opblock-tag-section is-open"
+                  class="info"
                 >
-                  <h3
-                    className="opblock-tag no-desc"
-                    data-is-open={true}
-                    data-tag="default"
-                    id="operations-tag-default"
-                    onClick={[Function]}
+                  <hgroup
+                    class="main"
                   >
-                    <a
-                      className="nostyle"
-                      href={null}
-                      onClick={null}
+                    <h2
+                      class="title"
                     >
+                      Callback Example
                       <span>
-                        default
-                      </span>
-                    </a>
-                    <small />
-                    <button
-                      aria-expanded={true}
-                      className="expand-operation"
-                      onClick={[Function]}
-                      title="Collapse operation"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        className="arrow"
-                        focusable="false"
-                        height="20"
-                        width="20"
-                      >
-                        <use
-                          href="#large-arrow-up"
-                          xlinkHref="#large-arrow-up"
-                        />
-                      </svg>
-                    </button>
-                  </h3>
-                  <div
-                    className="no-margin"
-                  >
-                     
-                    <div
-                      className="operation-tag-content"
-                    >
-                      <span>
-                        <div
-                          className="opblock opblock-post"
-                          id="operations-default-post_streams"
-                        >
-                          <div
-                            className="opblock-summary opblock-summary-post"
+                        <small>
+                          <pre
+                            class="version"
                           >
-                            <button
-                              aria-expanded={false}
-                              aria-label="post ​/streams"
-                              className="opblock-summary-control"
-                              onClick={[Function]}
-                            >
-                              <span
-                                className="opblock-summary-method"
-                              >
-                                POST
-                              </span>
-                              <span
-                                className="opblock-summary-path"
-                                data-path="/streams"
-                              >
-                                <a
-                                  className="nostyle"
-                                  href={null}
-                                  onClick={null}
-                                >
-                                  <span>
-                                    /streams
-                                  </span>
-                                </a>
-                              </span>
-                              <div
-                                className="opblock-summary-description"
-                              />
-                              <svg
-                                aria-hidden="true"
-                                className="arrow"
-                                focusable="false"
-                                height="20"
-                                width="20"
-                              >
-                                <use
-                                  href="#large-arrow-down"
-                                  xlinkHref="#large-arrow-down"
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <noscript />
-                        </div>
+                             1.0.0 
+                          </pre>
+                        </small>
+                        <small
+                          class="version-stamp"
+                        >
+                          <pre
+                            class="version"
+                          >
+                            OAS3
+                          </pre>
+                        </small>
                       </span>
-                    </div>
-                     
-                  </div>
+                    </h2>
+                  </hgroup>
+                  <div
+                    class="description"
+                  />
                 </div>
-              </span>
-            </div>
-          </section>
-        </div>
-        <div
-          className="wrapper"
-        >
-          <section
-            className="block col-12 block-desktop col-12-desktop"
-          />
+              </div>
+            </section>
+          </div>
+          <div />
+          <div
+            class="wrapper"
+          >
+            <section
+              class="block col-12 block-desktop col-12-desktop"
+            >
+              <div>
+                <span>
+                  <div
+                    class="opblock-tag-section is-open"
+                  >
+                    <h3
+                      class="opblock-tag no-desc"
+                      data-is-open="true"
+                      data-tag="default"
+                      id="operations-tag-default"
+                    >
+                      <a
+                        class="nostyle"
+                      >
+                        <span>
+                          default
+                        </span>
+                      </a>
+                      <small />
+                      <button
+                        aria-expanded="true"
+                        class="expand-operation"
+                        title="Collapse operation"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="arrow"
+                          focusable="false"
+                          height="20"
+                          width="20"
+                        >
+                          <use
+                            href="#large-arrow-up"
+                            xlink:href="#large-arrow-up"
+                          />
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      class="no-margin"
+                    >
+                       
+                      <div
+                        class="operation-tag-content"
+                      >
+                        <span>
+                          <div
+                            class="opblock opblock-post"
+                            id="operations-default-post_streams"
+                          >
+                            <div
+                              class="opblock-summary opblock-summary-post"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-label="post ​/streams"
+                                class="opblock-summary-control"
+                              >
+                                <span
+                                  class="opblock-summary-method"
+                                >
+                                  POST
+                                </span>
+                                <span
+                                  class="opblock-summary-path"
+                                  data-path="/streams"
+                                >
+                                  <a
+                                    class="nostyle"
+                                  >
+                                    <span>
+                                      /streams
+                                    </span>
+                                  </a>
+                                </span>
+                                <div
+                                  class="opblock-summary-description"
+                                />
+                                <svg
+                                  aria-hidden="true"
+                                  class="arrow"
+                                  focusable="false"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <use
+                                    href="#large-arrow-down"
+                                    xlink:href="#large-arrow-down"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                            <noscript />
+                          </div>
+                        </span>
+                      </div>
+                       
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </section>
+          </div>
+          <div
+            class="wrapper"
+          >
+            <section
+              class="block col-12 block-desktop col-12-desktop"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c3"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
+    <div
+      class="c3"
     >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Render test > invalid swagger 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   background-color: #fff;
 }
 
@@ -1407,60 +1357,57 @@ exports[`Render test > invalid swagger 1`] = `
 }
 
 <div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
-  </div>
-  <div
-    className="c2"
+    class="c0"
   >
     <div
-      className="swagger-ui"
+      class="c1"
+    >
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
+    <div
+      class="c2"
     >
       <div
-        className="loading-container"
+        class="swagger-ui"
       >
-        <h4>
-          No API definition provided.
-        </h4>
+        <div
+          class="loading-container"
+        >
+          <h4>
+            No API definition provided.
+          </h4>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c3"
-  >
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
+    <div
+      class="c3"
     >
-      Expand All
-    </button>
-    <button
-      className="btn"
-      onClick={[Function]}
-      type="button"
-    >
-      Collapse All
-    </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Expand All
+      </button>
+      <button
+        class="btn"
+        type="button"
+      >
+        Collapse All
+      </button>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Shallow render test > shallow render and snapshot 1`] = `

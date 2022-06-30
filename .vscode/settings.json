@@ -13,7 +13,7 @@
   /**
    * UI/DX関係
    */
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "search.exclude": {
     "**/dist": true
   },
