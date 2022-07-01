@@ -31,7 +31,7 @@ describe("empty page", () => {
       expect(() => {
         getElmOfSrcCode()
       }).toThrowErrorMatchingInlineSnapshot(
-        '"Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: \\"#repo-content-pjax-container div.Box-body table.swagger-viewer--original_src_area\\""'
+        '"Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: \\"#repo-content-turbo-frame div.Box-body table.swagger-viewer--original_src_area\\""'
       )
     })
 
@@ -40,7 +40,7 @@ describe("empty page", () => {
       expect(() => {
         extractSrc()
       }).toThrowErrorMatchingInlineSnapshot(
-        '"Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: \\"#repo-content-pjax-container div.Box-body table.swagger-viewer--original_src_area\\""'
+        '"Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: \\"#repo-content-turbo-frame div.Box-body table.swagger-viewer--original_src_area\\""'
       )
     })
   })

@@ -1,7 +1,7 @@
 import * as Document from "src/content_scripts/data/QuerySelector/Document"
 import { createMockDocumentBy } from "src/content_scripts/__tests__/Helper"
 import { extractSrc, getElmOfSrcCode, isConverted } from "."
-import { html as swagger30YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_yaml"
+import { html as swagger31YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_1_yaml"
 
 /**
  * Use 1 mock per file because it is not possible to reset the mocks in the same file.
@@ -14,8 +14,8 @@ describe("GitHubPageHtml swagger 3.1 yaml tests", () => {
         getDocument: () => {
           return createMockDocumentBy(
             // logged in + dark mode
-            swagger30YamlHtml,
-            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0.yaml"
+            swagger31YamlHtml,
+            "https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.yaml"
           )
         },
       }
