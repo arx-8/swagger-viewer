@@ -27,7 +27,7 @@ export const createMockDocumentBy = (
   // emulate injectApp()
   // src is scattered all over the place, and it's not good...
   const origSrcArea = dom.querySelector(
-    `#repo-content-pjax-container div.Box-body table`
+    `#repo-content-turbo-frame div.Box-body table`
   )
   origSrcArea?.classList.add(ORIGINAL_SRC_AREA_CLASS)
 

@@ -28,8 +28,8 @@ export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
   // To avoid this, after injection, it is searched with its own className.
   const selector =
     isInitial != null && isInitial
-      ? `#repo-content-pjax-container div.Box-body table`
-      : `#repo-content-pjax-container div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
+      ? `#repo-content-turbo-frame div.Box-body table`
+      : `#repo-content-turbo-frame div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
 
   const element = querySelector(selector)
 
