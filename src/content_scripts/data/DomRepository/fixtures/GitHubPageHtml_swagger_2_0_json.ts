@@ -162,7 +162,7 @@ export const html = `\
 
 
 
-    <link rel="canonical" href="https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" data-pjax-transient="">
+    <link rel="canonical" href="https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json" data-pjax-transient="">
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -213,7 +213,7 @@ export const html = `\
           </div>
 
         <div class="d-flex flex-items-center">
-              <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo" class="d-inline-block d-lg-none f5 color-text-white no-underline border color-border-default rounded-2 px-2 py-1 mr-3 mr-sm-5" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="846f87511134b4ad0615d69c1748b719b329fc3c580130c60925dfd723f01899">
+              <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo" class="d-inline-block d-lg-none f5 color-text-white no-underline border color-border-default rounded-2 px-2 py-1 mr-3 mr-sm-5" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="846f87511134b4ad0615d69c1748b719b329fc3c580130c60925dfd723f01899">
                 Sign&nbsp;up
               </a>
 
@@ -539,12 +539,12 @@ export const html = `\
           </div>
 
         <div class="position-relative mr-3 mb-4 mb-lg-0 d-inline-block">
-          <a href="/login?return_to=https%3A%2F%2Fgithub.com%2Farx-8%2Fswagger-viewer%2Fblob%2Fmaster%2Fswagger-viewer%2Fapp-src%2Fshared%2F__test__%2Ffixtures%2Fswagger_2_0.json" class="HeaderMenu-link flex-shrink-0 no-underline" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="62c905b71d20d580102aaa8665264fbaca724306ff6db30dce36b9659aeec9ca" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
+          <a href="/login?return_to=https%3A%2F%2Fgithub.com%2Farx-8%2Fswagger-viewer%2Fblob%2Fmaster%2Fswagger-viewer%2Fapp-src%2Fshared%2F__test__%2Ffixtures%2Fswagger_2_0.json" class="HeaderMenu-link flex-shrink-0 no-underline" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="62c905b71d20d580102aaa8665264fbaca724306ff6db30dce36b9659aeec9ca" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
             Sign in
           </a>
         </div>
 
-            <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo&amp;source_repo=arx-8%2Fswagger-viewer" class="HeaderMenu-link flex-shrink-0 d-inline-block no-underline border color-border-default rounded px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="62c905b71d20d580102aaa8665264fbaca724306ff6db30dce36b9659aeec9ca" data-analytics-event="{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/<user-name>/<repo-name>/blob/show;ref_cta:Sign up;ref_loc:header logged out&quot;}">
+            <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo&amp;source_repo=arx-8%2Fswagger-viewer" class="HeaderMenu-link flex-shrink-0 d-inline-block no-underline border color-border-default rounded px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="62c905b71d20d580102aaa8665264fbaca724306ff6db30dce36b9659aeec9ca" data-analytics-event="{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/<user-name>/<repo-name>/blob/show;ref_cta:Sign up;ref_loc:header logged out&quot;}">
               Sign up
             </a>
       </div>
@@ -626,7 +626,7 @@ export const html = `\
           <ul class="pagehead-actions flex-shrink-0 d-none d-md-inline" style="padding: 2px 0;">
 
   <li>
-      <a href="/login?return_to=%2Farx-8%2Fswagger-viewer" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="311a1b817555e2594c37c24deaeb53a8fc1ff6fb77f2f6448554e8cc77b0b24f" aria-label="You must be signed in to change notification settings" role="button" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn">
+      <a href="/login?return_to=%2Farx-8%2Fswagger-viewer" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="311a1b817555e2594c37c24deaeb53a8fc1ff6fb77f2f6448554e8cc77b0b24f" aria-label="You must be signed in to change notification settings" role="button" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn">
   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-bell">
     <path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path>
 </svg>
@@ -641,7 +641,7 @@ export const html = `\
 
     <li>
           <div>
-      <a href="/login?return_to=%2Farx-8%2Fswagger-viewer" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:177300705,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="0a69a29416b5c4e2d5661f4c48b49fce2f5ed8fd7e3b5f7213cd443864962cee" aria-label="You must be signed in to star a repository" role="button" data-view-component="true" class="tooltipped tooltipped-s btn-with-count btn-sm btn">
+      <a href="/login?return_to=%2Farx-8%2Fswagger-viewer" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:177300705,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="0a69a29416b5c4e2d5661f4c48b49fce2f5ed8fd7e3b5f7213cd443864962cee" aria-label="You must be signed in to star a repository" role="button" data-view-component="true" class="tooltipped tooltipped-s btn-with-count btn-sm btn">
   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star v-align-text-bottom mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
 </svg>
@@ -659,7 +659,7 @@ export const html = `\
     </li>
 
     <li>
-          <a href="/login?return_to=%2Farx-8%2Fswagger-viewer" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:177300705,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="6b993f25f74b44d8b1066d86ac701ca5cf46ed04eec70a9256d646a42e05cd40" aria-label="You must be signed in to fork a repository" role="button" data-view-component="true" class="tooltipped tooltipped-s btn-with-count btn-sm btn">
+          <a href="/login?return_to=%2Farx-8%2Fswagger-viewer" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:177300705,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="6b993f25f74b44d8b1066d86ac701ca5cf46ed04eec70a9256d646a42e05cd40" aria-label="You must be signed in to fork a repository" role="button" data-view-component="true" class="tooltipped tooltipped-s btn-with-count btn-sm btn">
   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked">
     <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
 </svg>
@@ -854,7 +854,7 @@ export const html = `\
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/arx-8/swagger-viewer/blob/747ec0227636c6ccba54840e2e5150ada34e8c8b/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/arx-8/swagger-viewer/blob/747ec0227636c6ccba54840e2e5150ada34e8c8b/src/content_scripts/__tests__/fixtures/swagger_2_0.json">Permalink</a>
 
     <div class="d-flex flex-items-start flex-shrink-0 pb-3 flex-wrap flex-md-nowrap flex-justify-between flex-md-justify-start">
       
@@ -916,7 +916,7 @@ export const html = `\
             </div>
 
               <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/arx-8/swagger-viewer/blob/{{ urlEncodedRefName }}/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
+  <a href="https://github.com/arx-8/swagger-viewer/blob/{{ urlEncodedRefName }}/src/content_scripts/__tests__/fixtures/swagger_2_0.json" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -947,7 +947,7 @@ export const html = `\
             </template>
 
               <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/arx-8/swagger-viewer/blob/{{ urlEncodedRefName }}/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
+  <a href="https://github.com/arx-8/swagger-viewer/blob/{{ urlEncodedRefName }}/src/content_scripts/__tests__/fixtures/swagger_2_0.json" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -978,7 +978,7 @@ export const html = `\
 </div>
 
       <h2 id="blob-path" class="breadcrumb flex-auto flex-self-center min-width-0 text-normal mx-2 width-full width-md-auto flex-order-1 flex-md-order-none mt-3 mt-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer"><span>swagger-viewer</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer"><span>swagger-viewer</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src"><span>app-src</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src/shared"><span>shared</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src/shared/__tests__"><span>__tests__</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src/shared/__tests__/fixtures"><span>fixtures</span></a></span><span class="separator">/</span><strong class="final-path">swagger_2_0.json</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer"><span>swagger-viewer</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer"><span>swagger-viewer</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src"><span>app-src</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src/shared"><span>shared</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/swagger-viewer/app-src/shared/__tests__"><span>__tests__</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="#repo-content-pjax-container" href="/arx-8/swagger-viewer/tree/master/src/content_scripts/__tests__/fixtures"><span>fixtures</span></a></span><span class="separator">/</span><strong class="final-path">swagger_2_0.json</strong>
       </h2>
       <a href="/arx-8/swagger-viewer/find/master" class="js-pjax-capture-input btn mr-2 d-none d-md-block" data-pjax="" data-hotkey="t">
         Go to file
@@ -996,7 +996,7 @@ export const html = `\
 </summary>
   <div data-view-component="true">          <ul class="dropdown-menu dropdown-menu-sw">
             <li class="d-block d-md-none">
-              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:177300705,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="81a57bae550ef012f8399c1bd90b72a78a207083288e7e20713c4fafedd8e541" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/arx-8/swagger-viewer/find/master">
+              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:177300705,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="81a57bae550ef012f8399c1bd90b72a78a207083288e7e20713c4fafedd8e541" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/arx-8/swagger-viewer/find/master">
                 <span class="flex-auto">Go to file</span>
                 <span class="text-small color-text-secondary" aria-hidden="true">T</span>
 </a>            </li>
@@ -1014,13 +1014,13 @@ export const html = `\
 </button>            </li>
             <li class="dropdown-divider" role="none"></li>
             <li>
-              <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy path" value="swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" data-view-component="true" class="dropdown-item cursor-pointer" tabindex="0" role="button">
+              <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy path" value="src/content_scripts/__tests__/fixtures/swagger_2_0.json" data-view-component="true" class="dropdown-item cursor-pointer" tabindex="0" role="button">
     
                 Copy path
 
 </clipboard-copy>            </li>
             <li>
-              <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy permalink" value="https://github.com/arx-8/swagger-viewer/blob/747ec0227636c6ccba54840e2e5150ada34e8c8b/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" data-view-component="true" class="dropdown-item cursor-pointer" tabindex="0" role="button">
+              <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy permalink" value="https://github.com/arx-8/swagger-viewer/blob/747ec0227636c6ccba54840e2e5150ada34e8c8b/src/content_scripts/__tests__/fixtures/swagger_2_0.json" data-view-component="true" class="dropdown-item cursor-pointer" tabindex="0" role="button">
     
                 <span class="d-flex flex-items-baseline">
                   <span class="flex-auto">Copy permalink</span>
@@ -1062,7 +1062,7 @@ export const html = `\
             <span itemprop="dateModified"><relative-time datetime="2019-04-21T14:36:36Z" class="no-wrap" title="2019年4月21日 23:36 JST">on 21 Apr 2019</relative-time></span>
           </span>
 
-          <a data-pjax="" href="/arx-8/swagger-viewer/commits/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" class="ml-3 no-wrap Link--primary no-underline">
+          <a data-pjax="" href="/arx-8/swagger-viewer/commits/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json" class="ml-3 no-wrap Link--primary no-underline">
             <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-history">
     <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"></path>
 </svg>
@@ -1085,7 +1085,7 @@ export const html = `\
         
         contributor
       </summary>
-      <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast" aria-label="Users who have contributed to this file" src="/arx-8/swagger-viewer/contributors-list/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" preload="" role="dialog" aria-modal="true">
+      <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast" aria-label="Users who have contributed to this file" src="/arx-8/swagger-viewer/contributors-list/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json" preload="" role="dialog" aria-modal="true">
         <div class="Box-header">
           <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog="">
             <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
@@ -1131,13 +1131,13 @@ export const html = `\
       
 
     <div class="BtnGroup">
-      <a href="/arx-8/swagger-viewer/raw/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">
+      <a href="/arx-8/swagger-viewer/raw/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">
   
   Raw
   
 
 </a>
-        <a href="https://github.com/arx-8/swagger-viewer/blame/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" data-hotkey="b" role="button" data-view-component="true" class="js-update-url-with-hash btn-sm btn BtnGroup-item">
+        <a href="https://github.com/arx-8/swagger-viewer/blame/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json" data-hotkey="b" role="button" data-view-component="true" class="js-update-url-with-hash btn-sm btn BtnGroup-item">
   
   Blame
   
@@ -1152,11 +1152,11 @@ export const html = `\
 </svg>
           </a>
 
-        <remote-clipboard-copy class="d-inline-block btn-octicon" style="height: 26px" data-src="/arx-8/swagger-viewer/raw/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" data-action="click:remote-clipboard-copy#remoteCopy" data-catalyst="" data-state-timeout="2000">
+        <remote-clipboard-copy class="d-inline-block btn-octicon" style="height: 26px" data-src="/arx-8/swagger-viewer/raw/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json" data-action="click:remote-clipboard-copy#remoteCopy" data-catalyst="" data-state-timeout="2000">
   
 
 
-  <span data-target="remote-clipboard-copy.idle">            <span class="tooltipped tooltipped-nw cursor-pointer" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;COPY_RAW_CONTENTS_BUTTON&quot;,&quot;repository_id&quot;:177300705,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="ca229e5a2896f2ffd1eeb853ba9b1d9a11fe6432f1d23ff1036c91e0258bc255" aria-label="Copy raw contents">
+  <span data-target="remote-clipboard-copy.idle">            <span class="tooltipped tooltipped-nw cursor-pointer" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;COPY_RAW_CONTENTS_BUTTON&quot;,&quot;repository_id&quot;:177300705,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="ca229e5a2896f2ffd1eeb853ba9b1d9a11fe6432f1d23ff1036c91e0258bc255" aria-label="Copy raw contents">
               <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy">
     <path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
 </svg>
@@ -1207,15 +1207,15 @@ export const html = `\
                 </a>
             </li>
           <li>
-            <a class="dropdown-item" href="/arx-8/swagger-viewer/raw/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json">
+            <a class="dropdown-item" href="/arx-8/swagger-viewer/raw/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json">
               View raw
             </a>
           </li>
             <li>
-              <remote-clipboard-copy class="dropdown-item" data-src="/arx-8/swagger-viewer/raw/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json" data-action="click:remote-clipboard-copy#remoteCopy" data-catalyst="" data-state-timeout="2000">
+              <remote-clipboard-copy class="dropdown-item" data-src="/arx-8/swagger-viewer/raw/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json" data-action="click:remote-clipboard-copy#remoteCopy" data-catalyst="" data-state-timeout="2000">
   
 
-  <span data-target="remote-clipboard-copy.idle">                  <span class="cursor-pointer" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;COPY_RAW_CONTENTS_BUTTON&quot;,&quot;repository_id&quot;:177300705,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="ca229e5a2896f2ffd1eeb853ba9b1d9a11fe6432f1d23ff1036c91e0258bc255">
+  <span data-target="remote-clipboard-copy.idle">                  <span class="cursor-pointer" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;COPY_RAW_CONTENTS_BUTTON&quot;,&quot;repository_id&quot;:177300705,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="ca229e5a2896f2ffd1eeb853ba9b1d9a11fe6432f1d23ff1036c91e0258bc255">
                     Copy raw contents
 </span></span>
   <span data-target="remote-clipboard-copy.fetching" hidden="">                  Copy raw contents
@@ -1238,7 +1238,7 @@ export const html = `\
 </span>
 </remote-clipboard-copy>            </li>
             <li>
-              <a class="dropdown-item" href="/arx-8/swagger-viewer/blame/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json">
+              <a class="dropdown-item" href="/arx-8/swagger-viewer/blame/master/src/content_scripts/__tests__/fixtures/swagger_2_0.json">
                 View blame
               </a>
             </li>
@@ -2115,7 +2115,7 @@ export const html = `\
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="https://github.com/arx-8/swagger-viewer/blame/747ec0227636c6ccba54840e2e5150ada34e8c8b/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="https://github.com/arx-8/swagger-viewer/blame/747ec0227636c6ccba54840e2e5150ada34e8c8b/src/content_scripts/__tests__/fixtures/swagger_2_0.json">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/arx-8/swagger-viewer/issues/new">Reference in new issue</a></li>
       </ul>
     </details-menu>
@@ -2160,10 +2160,10 @@ export const html = `\
   <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 color-fg-muted border-top color-border-muted ">
     <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
       <li class="mr-3 mr-lg-0">© 2021 GitHub, Inc.</li>
-        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2b50ee65596529bf9bbdf3617fee536e146a70c596870c97cceab3fd8863ac5a" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}">Terms</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="f053b79c95a8c63cf19f6c00888a352056024f39a056410e100f381019fb2ec7" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;}">Privacy</a></li>
-        <li class="mr-3 mr-lg-0"><a data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="8db54750e157efeac15287c89fdbec95d52b72bf831399ef08f22b3846a02798" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;}" href="https://github.com/security">Security</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://www.githubstatus.com/" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7bc15a4bd7114756b9f866e3bbcfcebcc44553f71bd44e84b5ced7109ea4c160" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;}">Status</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2b50ee65596529bf9bbdf3617fee536e146a70c596870c97cceab3fd8863ac5a" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}">Terms</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="f053b79c95a8c63cf19f6c00888a352056024f39a056410e100f381019fb2ec7" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;}">Privacy</a></li>
+        <li class="mr-3 mr-lg-0"><a data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="8db54750e157efeac15287c89fdbec95d52b72bf831399ef08f22b3846a02798" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;}" href="https://github.com/security">Security</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://www.githubstatus.com/" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7bc15a4bd7114756b9f866e3bbcfcebcc44553f71bd44e84b5ced7109ea4c160" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;}">Status</a></li>
         <li><a data-ga-click="Footer, go to help, text:Docs" href="https://docs.github.com">Docs</a></li>
     </ul>
 
@@ -2173,11 +2173,11 @@ export const html = `\
 </svg>
 </a>
     <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-        <li class="mr-3 mr-lg-0"><a href="https://support.github.com?tags=dotcom-footer" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d730eb7e0593b1e483b9f7078730886274a067142f8983dd8ec651c32a891631" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;}">Contact GitHub</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://github.com/pricing" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Pricing&quot;,&quot;label&quot;:&quot;text:Pricing&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="404a7be85adb2b1c355b20196432410a0c6c394795d0fe7bed80b6b4095b9a47" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Pricing&quot;,&quot;label&quot;:&quot;text:Pricing&quot;}">Pricing</a></li>
-      <li class="mr-3 mr-lg-0"><a href="https://docs.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to api&quot;,&quot;label&quot;:&quot;text:api&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="76bd12243b0223587e9708cd564e606ed0814110796fbbbd52e43887efd9801a" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to api&quot;,&quot;label&quot;:&quot;text:api&quot;}">API</a></li>
-      <li class="mr-3 mr-lg-0"><a href="https://services.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to training&quot;,&quot;label&quot;:&quot;text:training&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2efff75405baa1e2903af44e744b92f2a2e577966360fccf6579aeb4d91154b9" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to training&quot;,&quot;label&quot;:&quot;text:training&quot;}">Training</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://github.blog" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to blog&quot;,&quot;label&quot;:&quot;text:blog&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="44c43c512057d409e209c90678a490a3db01d1ab0cbeed665e1f740b5c27c9a5" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to blog&quot;,&quot;label&quot;:&quot;text:blog&quot;}">Blog</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://support.github.com?tags=dotcom-footer" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d730eb7e0593b1e483b9f7078730886274a067142f8983dd8ec651c32a891631" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;}">Contact GitHub</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.com/pricing" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Pricing&quot;,&quot;label&quot;:&quot;text:Pricing&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="404a7be85adb2b1c355b20196432410a0c6c394795d0fe7bed80b6b4095b9a47" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Pricing&quot;,&quot;label&quot;:&quot;text:Pricing&quot;}">Pricing</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://docs.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to api&quot;,&quot;label&quot;:&quot;text:api&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="76bd12243b0223587e9708cd564e606ed0814110796fbbbd52e43887efd9801a" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to api&quot;,&quot;label&quot;:&quot;text:api&quot;}">API</a></li>
+      <li class="mr-3 mr-lg-0"><a href="https://services.github.com" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to training&quot;,&quot;label&quot;:&quot;text:training&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2efff75405baa1e2903af44e744b92f2a2e577966360fccf6579aeb4d91154b9" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to training&quot;,&quot;label&quot;:&quot;text:training&quot;}">Training</a></li>
+        <li class="mr-3 mr-lg-0"><a href="https://github.blog" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to blog&quot;,&quot;label&quot;:&quot;text:blog&quot;,&quot;originating_url&quot;:&quot;https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="44c43c512057d409e209c90678a490a3db01d1ab0cbeed665e1f740b5c27c9a5" data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to blog&quot;,&quot;label&quot;:&quot;text:blog&quot;}">Blog</a></li>
         <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
     </ul>
   </div>

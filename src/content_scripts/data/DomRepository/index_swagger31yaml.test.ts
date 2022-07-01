@@ -15,7 +15,7 @@ describe("GitHubPageHtml swagger 3.1 yaml tests", () => {
           return createMockDocumentBy(
             // logged in + dark mode
             swagger30YamlHtml,
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_3_1.yaml"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0.yaml"
           )
         },
       }
