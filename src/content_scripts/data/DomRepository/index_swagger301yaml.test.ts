@@ -1,19 +1,21 @@
 import * as Document from "src/content_scripts/data/QuerySelector/Document"
 import { createMockDocumentBy } from "src/content_scripts/__tests__/Helper"
 import { extractSrc, getElmOfSrcCode, isConverted } from "."
+import { html as swagger301YamlHtml } from "./fixtures/GitHubPageHtml_swagger_3_0_1_yaml"
 
 /**
  * Use 1 mock per file because it is not possible to reset the mocks in the same file.
  */
-describe("empty page", () => {
+describe("GitHubPageHtml swagger 3.0.1 yaml tests", () => {
   beforeAll(() => {
     // ## Arrange ##
     vi.mock("../QuerySelector/Document", (): typeof Document => {
       return {
         getDocument: () => {
           return createMockDocumentBy(
-            `<!DOCTYPE html><html lang="en"><head><title>empty</title></head><body></body></html>`,
-            "https://example.com"
+            // logged in + dark mode
+            swagger301YamlHtml,
+            "https://github.com/arx-6/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0_1.yaml"
           )
         },
       }
@@ -27,21 +29,16 @@ describe("empty page", () => {
     })
 
     it("getElmOfSrcCode", () => {
+      // ## Act ##
+      const result = getElmOfSrcCode()
       // ## Assert ##
-      expect(() => {
-        getElmOfSrcCode()
-      }).toThrowErrorMatchingInlineSnapshot(
-        '"Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: \\"#repo-content-pjax-container div.Box-body table.swagger-viewer--original_src_area\\""'
-      )
+      expect(result.textContent != null).toStrictEqual(true)
+      expect(result.children.length).toStrictEqual(1)
     })
 
     it("extractSrc", () => {
       // ## Assert ##
-      expect(() => {
-        extractSrc()
-      }).toThrowErrorMatchingInlineSnapshot(
-        '"Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: \\"#repo-content-pjax-container div.Box-body table.swagger-viewer--original_src_area\\""'
-      )
+      expect(extractSrc()).toMatchSnapshot()
     })
   })
 })

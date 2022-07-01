@@ -1,4 +1,8 @@
-import { APP_RENDER_ID, MessagePayload } from "src/universal/types/App"
+import {
+  APP_RENDER_ID,
+  MessagePayload,
+  ORIGINAL_SRC_AREA_CLASS,
+} from "src/universal/types/App"
 import { convertToObject } from "src/universal/utils/YmlUtils"
 import { render } from "./content_scripts/components"
 import {
@@ -41,11 +45,10 @@ const execConvertSwagger = (): void => {
   }
 
   if (!isConverted()) {
-    // 描画前に、そもそも対象を処理できるか検査・変換しておく
+    injectApp()
+
     const srcCode = extractSrc()
     const swaggerJson = convertToObject(srcCode)
-
-    injectApp()
     render(swaggerJson == null ? "" : swaggerJson)
   }
 
@@ -54,10 +57,14 @@ const execConvertSwagger = (): void => {
 }
 
 /**
- * この App を描画するための DOM 等を inject する
+ * Inject DOM etc. to render this App.
  */
 const injectApp = (): void => {
-  // 元srcのところにrenderする
+  // For toggle Swagger-UI or Original src
+  const origSrcArea = getElmOfSrcCode(true)
+  origSrcArea?.classList.add(ORIGINAL_SRC_AREA_CLASS)
+
+  // For swagger-ui
   const injWrapper = getDocument().createElement("div")
   injWrapper.innerHTML = `
 <div id="${APP_RENDER_ID}"><div>

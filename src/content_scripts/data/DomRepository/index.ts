@@ -3,7 +3,7 @@ import {
   querySelectorAll,
   querySelectorStrict,
 } from "src/content_scripts/data/QuerySelector"
-import { APP_RENDER_ID } from "src/universal/types/App"
+import { APP_RENDER_ID, ORIGINAL_SRC_AREA_CLASS } from "src/universal/types/App"
 import { CastAny } from "src/universal/types/utils"
 
 /**
@@ -20,17 +20,18 @@ export const isConverted = (): boolean => {
   return querySelector(`#${APP_RENDER_ID}`) != null
 }
 
-export const getElmOfSrcCode = (): HTMLElement => {
-  const selector = "#repo-content-pjax-container div.Box-body table"
-  const element = querySelector(selector)
+/**
+ * @param isInitial == is not injected
+ */
+export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
+  // Swagger-UI also has a DOM in the same path, resulting in a miss-hit.
+  // To avoid this, after injection, it is searched with its own className.
+  const selector =
+    isInitial != null && isInitial
+      ? `#repo-content-pjax-container div.Box-body table`
+      : `#repo-content-pjax-container div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
 
-  // console.log("----------------------")
-  // console.log("----------------------")
-  // console.log("----------------------")
-  // console.log(element?.textContent)
-  // console.log("----------------------")
-  // console.log("----------------------")
-  // console.log("----------------------")
+  const element = querySelector(selector)
 
   if (
     element?.textContent?.length == null ||
@@ -63,10 +64,12 @@ export const extractSrc = (): string => {
   )
 }
 
+/**
+ * Toggle Swagger-UI or Original src
+ */
 export const toggleAppOrSrcCodeDom = (): void => {
   const elm = getElmOfSrcCode()
 
-  // 今は必ず1要素。自身ごと削除すると、DOM injectするのが大変なためchildを扱う
   const srcDom = elm.children[0] as HTMLElement
   if (srcDom.style.display === "none") {
     // App -> src

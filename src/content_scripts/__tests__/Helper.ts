@@ -1,4 +1,5 @@
 import { JSDOM } from "jsdom"
+import { ORIGINAL_SRC_AREA_CLASS } from "src/universal/types/App"
 
 /**
  * # 注意
@@ -19,7 +20,16 @@ export const createMockDocumentBy = (
   html: string,
   url = "about:blank"
 ): Document => {
-  return new JSDOM(html, {
+  const dom = new JSDOM(html, {
     url,
   }).window.document
+
+  // emulate injectApp()
+  // src is scattered all over the place, and it's not good...
+  const origSrcArea = dom.querySelector(
+    `#repo-content-pjax-container div.Box-body table`
+  )
+  origSrcArea?.classList.add(ORIGINAL_SRC_AREA_CLASS)
+
+  return dom
 }
