@@ -15,7 +15,7 @@ describe("GitHubPageHtml swagger 2.0 json tests", () => {
           return createMockDocumentBy(
             // No login
             swagger20JsonHtml,
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.json"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.json"
           )
         },
       }

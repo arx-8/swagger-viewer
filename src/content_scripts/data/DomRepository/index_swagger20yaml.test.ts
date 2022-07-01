@@ -18,7 +18,7 @@ describe("GitHubPageHtml swagger 2.0 yaml tests in Private browsing", () => {
           return createMockDocumentBy(
             // No login
             swagger20YamlHtml_InPrivateBrowsing,
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_2_0.yaml"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_2_0.yaml"
           )
         },
       }

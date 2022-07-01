@@ -26,23 +26,32 @@ export const isConverted = (): boolean => {
 export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
   // Swagger-UI also has a DOM in the same path, resulting in a miss-hit.
   // To avoid this, after injection, it is searched with its own className.
-  const selector =
+  const selector1 =
+    isInitial != null && isInitial
+      ? `#repo-content-turbo-frame div.Box-body table`
+      : `#repo-content-turbo-frame div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
+  {
+    const elm1 = querySelector(selector1)
+    if (elm1?.textContent?.length != null && elm1.textContent.length !== 0) {
+      return elm1
+    }
+  }
+
+  // fallback. The id changes depending on the state. For example, secret browse or direct link.
+  const selector2 =
     isInitial != null && isInitial
       ? `#repo-content-pjax-container div.Box-body table`
       : `#repo-content-pjax-container div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
-
-  const element = querySelector(selector)
-
-  if (
-    element?.textContent?.length == null ||
-    element.textContent.length === 0
-  ) {
-    throw new Error(
-      `Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector: "${selector}"`
-    )
+  {
+    const elm2 = querySelector(selector2)
+    if (elm2?.textContent?.length != null && elm2.textContent.length !== 0) {
+      return elm2
+    }
   }
 
-  return element
+  throw new Error(
+    `Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector1: "${selector1}", selector2: "${selector2}"`
+  )
 }
 
 export const extractSrc = (): string => {

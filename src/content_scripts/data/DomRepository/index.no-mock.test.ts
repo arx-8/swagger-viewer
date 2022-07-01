@@ -19,7 +19,7 @@ describe("isAcceptableLocation", () => {
       expect(
         isAcceptableLocation(
           createMockDocument(
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_3_0.yaml"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0.yaml"
           )
         )
       ).toStrictEqual(true)
@@ -59,7 +59,7 @@ describe("isAcceptableLocation", () => {
       expect(
         isAcceptableLocation(
           createMockDocument(
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_3_0.json"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0.json"
           )
         )
       ).toStrictEqual(true)
@@ -85,7 +85,7 @@ describe("isAcceptableLocation", () => {
       expect(
         isAcceptableLocation(
           createMockDocument(
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_3_0.yam"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0.yam"
           )
         )
       ).toStrictEqual(false)
@@ -94,7 +94,7 @@ describe("isAcceptableLocation", () => {
       expect(
         isAcceptableLocation(
           createMockDocument(
-            "https://github.com/arx-8/swagger-viewer/blob/master/swagger-viewer/app-src/shared/__tests__/fixtures/swagger_3_0.js"
+            "https://github.com/arx-8/swagger-viewer/blob/main/src/content_scripts/__tests__/fixtures/swagger_3_0.js"
           )
         )
       ).toStrictEqual(false)
