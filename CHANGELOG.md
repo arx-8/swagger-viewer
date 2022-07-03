@@ -1,3 +1,10 @@
+## 3.1.1 (2022-07-03)
+
+### :bug: Bugfix
+
+- [#69 - Some pages cannot be converted correctly.](https://github.com/arx-6/swagger-viewer/issues/69)
+- [#82 - Update GitHub DOM](https://github.com/arx-6/swagger-viewer/pull/82)
+
 ## 3.1.0 (2022-06-30)
 
 ### :hammer: Other
@@ -5,6 +12,7 @@
 - Update to Manifest V3.
 - Security update (Update all dependencies).
 - Migrate from webextension-toolbox to vite.
+- Reduce app size (Approx. 2.9 MB -> 1.3 MB)
 
 ## 3.0.0 (2021-11-03)
 
