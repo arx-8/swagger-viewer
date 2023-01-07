@@ -28,8 +28,8 @@ export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
   // To avoid this, after injection, it is searched with its own className.
   const selector1 =
     isInitial != null && isInitial
-      ? `#repo-content-turbo-frame div.Box-body table`
-      : `#repo-content-turbo-frame div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
+      ? `#repo-content-turbo-frame div.react-code-lines`
+      : `#repo-content-turbo-frame div.react-code-lines.${ORIGINAL_SRC_AREA_CLASS}`
   {
     const elm1 = querySelector(selector1)
     if (elm1?.textContent?.length != null && elm1.textContent.length !== 0) {
@@ -40,8 +40,8 @@ export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
   // fallback. The id changes depending on the state. For example, secret browse or direct link.
   const selector2 =
     isInitial != null && isInitial
-      ? `#repo-content-pjax-container div.Box-body table`
-      : `#repo-content-pjax-container div.Box-body table.${ORIGINAL_SRC_AREA_CLASS}`
+      ? `#repo-content-pjax-container div.react-code-lines`
+      : `#repo-content-pjax-container div.react-code-lines.${ORIGINAL_SRC_AREA_CLASS}`
   {
     const elm2 = querySelector(selector2)
     if (elm2?.textContent?.length != null && elm2.textContent.length !== 0) {
@@ -57,29 +57,18 @@ export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
 export const extractSrc = (): string => {
   const elm = getElmOfSrcCode()
 
-  if (elm.textContent == null) {
+  if (elm.outerText == null) {
     throw new Error("Unexpected null")
   }
 
-  return (
-    elm.textContent
-      .trim()
-      .split("\n")
-      // 各行の間に半角スペースだけの空行が取得できてしまうため
-      .filter((line) => line.trim().length !== 0)
-      // 各行の prefix に余分なインデントが付いているため、それを削除する
-      .map((line) => line.replace(/^ {10}/, ""))
-      .join("\n")
-  )
+  return elm.outerText
 }
 
 /**
  * Toggle Swagger-UI or Original src
  */
 export const toggleAppOrSrcCodeDom = (): void => {
-  const elm = getElmOfSrcCode()
-
-  const srcDom = elm.children[0] as HTMLElement
+  const srcDom = getElmOfSrcCode()
   if (srcDom.style.display === "none") {
     // App -> src
     srcDom.style.display = ""

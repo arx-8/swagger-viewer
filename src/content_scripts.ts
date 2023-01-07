@@ -66,11 +66,13 @@ const injectApp = (): void => {
 
   // For swagger-ui
   const injWrapper = getDocument().createElement("div")
-  injWrapper.innerHTML = `
-<div id="${APP_RENDER_ID}"><div>
-`
+  injWrapper.innerHTML = `<div id="${APP_RENDER_ID}"><div>`
 
-  const elm = getElmOfSrcCode()
-  elm.appendChild(injWrapper)
-  elm.style.width = "-webkit-fill-available"
+  const elm =
+    getElmOfSrcCode()?.parentElement?.parentElement?.parentElement
+      ?.parentElement
+  if (elm != null) {
+    elm.appendChild(injWrapper)
+    elm.style.width = "-webkit-fill-available"
+  }
 }
