@@ -49,8 +49,20 @@ export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
     }
   }
 
+  // fallback for the new code view (2023)
+  const selector3 =
+    isInitial != null && isInitial
+      ? `#repo-content-pjax-container section[aria-labelledby="file-name-id"]`
+      : `#repo-content-pjax-container section[aria-labelledby="file-name-id"].${ORIGINAL_SRC_AREA_CLASS}`
+  {
+    const elm3 = querySelector(selector3)
+    if (elm3?.textContent?.length != null && elm3.textContent.length !== 0) {
+      return elm3
+    }
+  }
+
   throw new Error(
-    `Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector1: "${selector1}", selector2: "${selector2}"`
+    `Unexpected DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector1: "${selector1}", selector2: "${selector2}, selector3: "${selector3}"`
   )
 }
 
@@ -61,15 +73,24 @@ export const extractSrc = (): string => {
     throw new Error("Unexpected null")
   }
 
-  return (
-    elm.textContent
-      .trim()
-      .split("\n")
-      // 各行の間に半角スペースだけの空行が取得できてしまうため
-      .filter((line) => line.trim().length !== 0)
-      // 各行の prefix に余分なインデントが付いているため、それを削除する
-      .map((line) => line.replace(/^ {10}/, ""))
-      .join("\n")
+  const selector1 = "td.blob-code"
+  {
+    const lines = querySelectorAll(selector1)
+    if (lines.length !== 0) {
+      return lines.map((td) => td.textContent).join("\n")
+    }
+  }
+
+  const selector2 = "div.react-code-line-contents"
+  {
+    const lines = querySelectorAll(selector2)
+    if (lines.length !== 0) {
+      return lines.map((div) => div.textContent).join("\n")
+    }
+  }
+
+  throw new Error(
+    `Unexpected source code DOM. Probably GitHub has been updated. Please contact the developer or wait until the extension is fixed. selector1: "${selector1}", selector2: "${selector2}"`
   )
 }
 

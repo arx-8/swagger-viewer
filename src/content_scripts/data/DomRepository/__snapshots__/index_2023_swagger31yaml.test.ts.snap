@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`GitHubPageHtml swagger 3.1 yaml tests > whole tests > extractSrc 1`] = `
+exports[`GitHubPageHtml new codeview(2023) with swagger 3.1 yaml tests > whole tests > extractSrc 1`] = `
 "openapi: 3.1.0
 info:
   title: Webhook Example
