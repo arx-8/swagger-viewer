@@ -42,7 +42,7 @@ export const createMockDocumentBy = (
   // fallback for the new code view (2023)
   {
     const elm3 = dom.querySelector(
-      `#repo-content-pjax-container section[aria-labelledby="file-name-id"]`
+      `#repo-content-turbo-frame section[aria-labelledby="file-name-id"]`
     )
     elm3?.classList.add(ORIGINAL_SRC_AREA_CLASS)
   }

@@ -52,8 +52,8 @@ export const getElmOfSrcCode = (isInitial?: boolean): HTMLElement => {
   // fallback for the new code view (2023)
   const selector3 =
     isInitial != null && isInitial
-      ? `#repo-content-pjax-container section[aria-labelledby="file-name-id"]`
-      : `#repo-content-pjax-container section[aria-labelledby="file-name-id"].${ORIGINAL_SRC_AREA_CLASS}`
+      ? `#repo-content-turbo-frame section[aria-labelledby="file-name-id"]`
+      : `#repo-content-turbo-frame section[aria-labelledby="file-name-id"].${ORIGINAL_SRC_AREA_CLASS}`
   {
     const elm3 = querySelector(selector3)
     if (elm3?.textContent?.length != null && elm3.textContent.length !== 0) {
