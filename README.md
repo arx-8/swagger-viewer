@@ -1,3 +1,11 @@
+# ⚠️Sorry! No longer supported.⚠️
+
+Dear Community,
+
+Due to time constraints, I'm archiving the swagger-viewer repository and ending support. Grateful for all contributions, please feel free to fork and continue the project. Thank you for your understanding.
+
+---
+
 # swagger-viewer
 
 ## Overview
